@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="assets/css/basic.css">
         <link rel="stylesheet" type="text/css" href="assets/css/inblog.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/pers-index.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/intro-pers.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -24,8 +24,8 @@
             <div id="cont--header">
                 <nav id="nav--header">
                     <ul id="list--header">
-                        <li class="item--nav"><a href="">Inicio</a></li>
-                        <li class="item--nav"><a href="javascript.html">JavaScript</a></li>
+                        <li class="item--nav"><a href="index.html">Inicio</a></li>
+                        <li class="item--nav"><a href="JavaScript.html">JavaScript</a></li>
                         <li class="item--nav"><a href="JQuery.html">JQuery</a></li>
                         <li class="item--nav"><a href="">Acerca de</a></li>
                     </ul>
@@ -40,21 +40,52 @@
                 <a href="#article--author"><div class="item--aside home">
                     <h3>Autores</h3>
                 </div></a>
-                <a href="#article--author"><div class="item--aside home">
-                    <h3>Prueba</h3>
+                <a href="#plantilla"><div class="item--aside home">
+                    <h3>1. Introducción JavaScript</h3>
                 </div></a>
             </aside> 
+
             <section>
                 <article class="main--article introduction">
                     <div id="article--comment">
-                        <img src="assets/icons/logo--simplified.svg" id="javascript--logo" class="img--article idk intro" alt="javascriptlogo">
+                        <img src="assets/icons/jqueryIcon.png" style="filter: invert(1);" id="javascript--logo" class="img--article idk intro" alt="jqueryicon">
                         <div>
-                            <h1 id="high--title">Team Factorización</h1>
-                            <p>Esto funcionará como página de incio para el blog, nose como comenzar, hola</p>
+                            <h1 id="high--title">JQuery</h1>
+                            <p>Esto funcionará como transición/introducción al contenido</p>
                         </div>
                     </div>
                 </article>
-            </section>        
+
+                <article class="main--article" id="plantilla">
+                    <h2 class="center">Tabla de contenido</h2>
+
+                    <a href=""><div class="item--aside">
+                        <img src="assets/icons/jquerypart/newicon.svg">
+                        <h3>Aspectos escenciales de JQuery</h3>
+                    </div></a>
+
+                    <a href=""><div class="item--aside">
+                        <img src="assets/icons/jquerypart/configicon.svg">
+                        <h3>Funcionalidad responsiva</h3>
+                    </div></a>
+
+                    <a href=""><div class="item--aside">
+                        <img src="assets/icons/jquerypart/domicon.svg">
+                        <h3>Manipulación del DOM</h3>
+                    </div></a>
+
+                    <a href=""><div class="item--aside">
+                        <img src="assets/icons/jquerypart/recdom.svg">
+                        <h3>Recorrido del DOM</h3>
+                    </div></a>
+
+                    <a href=""><div class="item--aside">
+                        <img src="assets/icons/jquerypart/ajax.svg">
+                        <h3>AJAX</h3>
+                    </div></a>
+
+                </article>
+            </section>
         </div>
 
         <footer id="footer--area">
