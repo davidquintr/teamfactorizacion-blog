@@ -1,0 +1,258 @@
+/*
+Este CSS está dedicado para modificar los aspectos escenciales de la página, como el header, body,
+footer... Siempre tiene que estar incluído para la estructura principal.
+*/
+
+*{
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+h2, h4{
+    margin: 10px 0 10px 0;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(193, 234, 255);
+}
+
+h1, h2, h3, h4, h5{
+    color: #fff;
+}
+
+h2{
+    color: #c1eaff;
+    font-size: 48px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+h4{
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+p, span{
+    font-size: 16px;
+}
+
+
+body, iframe{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--midtoneblack);
+}
+
+#main--header{
+    display: flex;
+    position:sticky;
+    justify-content:space-around;
+    align-items:center;
+    background-color: #151516c2;
+    margin: 0;
+    top: 0;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 2px rgba(255, 255, 255, 0.097);
+    z-index: 100;
+}
+
+article{
+    background-color: var(--lowtoneblack);
+}
+
+#list--header{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 100px;
+}
+
+.item--nav > a{
+    text-decoration: dotted;
+}
+
+.item--nav{
+    transition: transform 0.2s;
+}
+
+.item--nav:hover{
+    transform: translateY(5px);
+}
+
+#page--struct{
+    display: flex;
+    justify-content:center;
+}
+
+#brand--header{
+    width: 64px;
+    height: 64px;
+}
+
+#social--footer{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    gap: 30px;
+}
+
+#icon--social{
+    width: 32px;
+    filter: invert(1);
+}
+
+#title--header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+#item--icon{
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 32px;
+    height: 32px;
+}
+
+li{
+    list-style: none;
+}
+
+#desp--aside{
+    display: none;
+}
+
+#desp--aside > img{
+    filter: invert(1);
+    width: 64px;
+    height: 64px;
+}
+
+#main--aside{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    position: sticky;
+    z-index: 0;
+    margin: 0;
+    left: 5px;
+    top: 92px;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    align-items: flex-start;
+    background-color: var(--lowtoneblack);
+}
+
+.item--aside > h3{
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.item--aside{
+    display: inline-flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+    justify-content: center;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 0px;
+    background-color: var(--midtoneblack);
+    border-radius: 10px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.item--aside:hover{
+    cursor: pointer;
+    background-color: rgb(94, 146, 171);
+}
+
+.item--aside:active{
+    transform:scale(0.90);
+}
+
+
+#footer--area{
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--backtoneblack);
+    margin: 0;
+    top: 0;
+}
+
+#footer--area > h1{
+    margin: 0;
+}
+
+#brand--footer{
+    width: 64px;
+}
+
+
+section{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+article{
+    width: 80%;
+}
+
+#javascript--logo{
+    width: 250px;
+}
+
+@media screen and (max-width: 990px) {
+
+    #page--struct{
+        flex-direction: column;
+    }
+
+    #main--aside{
+        top: 84px;
+        flex-direction:row;
+        overflow-x: auto;
+    }
+
+    .item--aside{
+        min-width: 200px;
+    }
+
+    #list--header{
+        gap: 50px;
+    }
+
+    section{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    article{
+        width: auto;
+        max-width: 90%;
+    }
+      
+}
