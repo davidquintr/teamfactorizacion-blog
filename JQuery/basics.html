@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/basic.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/inblog.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+        <title>JQuery - Aspectos Escenciales</title>
+        <link rel="icon" href="/assets/icons/logo--simplified.svg">
+    </head>
+
+    <body>
+        <header id="main--header">
+            <div id="desp--aside">
+                <input type="checkbox" class="checkbox" id="menu-toogle"/>
+                <img src="..assets/icons/menuIcon.png">
+            </div>  
+            <div id="title--header">
+                <img src="../assets/icons/logo--simplified.svg" id="brand--header" alt="teamfactorizacion">
+                <h1>Team Factorización</h1>
+            </div>
+            <div id="cont--header">
+                <nav id="nav--header">
+                    <ul id="list--header">
+                        <li class="item--nav"><a href="../../index.html">Inicio</a></li>
+                        <li class="item--nav"><a href="../JavaScript.html">JavaScript</a></li>
+                        <li class="item--nav"><a href="../JQuery.html">JQuery</a></li>
+                        <li class="item--nav"><a href="">Acerca de</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        
+        <div id="page--struct">
+            
+            <aside id="main--aside">
+                <a href="#article--author"><div class="item--aside home">
+                    <h3>Autores</h3>
+                </div></a>
+                <a href="#plantilla"><div class="item--aside home">
+                    <h3>1. Introducción JavaScript</h3>
+                </div></a>
+            </aside> 
+
+            <section>
+                <article class="main--article introduction">
+                    <div id="article--comment">
+                        <img src="../assets/icons/jqueryIcon.png" id="javascript--logo" class="img--article idk intro" alt="jquerylogo" style="filter: invert(1);">
+                        <div>
+                            <h1 id="high--title">JQuery</h1>
+                            <h2>Aspectos escenciales de JQuery</h2>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>¿Cómo instalar JQuery?</h2>
+                    <h4>23 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Guía de instalación de JQuery</p>
+                    <span id="article--sep"></span>
+                    <p>JQuery es una biblioteca que funciona a partir de JavaScript, por tanto tenemos que implementarlo a partir de un documento HTML auxiliándonos de la web o por el contrario descargarlo e implementarlo localmente<br></p>
+                    
+                    <div id="article--comment">
+                        <img src="../assets/images/jquerypageimg.png" class="img--article idk">
+                        <p>Para esto, nos tenemos que dirigir a la página de <a href="https://jquery.com/" target="_blank">JQuery</a>, aquí nos iremos a uno de los elementos de descargas, estos estan visibles a simple vista.<br>A continuación nos aparecerá bastante texto, el cual ignoraremos para dar clic en <b>Download the compressed, production jQuery X.X.X</b></p>
+                    </div>
+
+                    <p>Tenemos dos manera para implementar la librería de JQuery, la primera es simplemente descargando la base de JQuery (El link a donde hemos entrado) y la segunda es simplemente copiando el link e implementándolo dentro de nuestro HTML.</p>
+
+                    <h3>Implementación localmente</h3>
+                    <p>Al descargar JQuery, nos dejará un archivo con un numbre parecido a <b>"jquery-3.6.1.min.js".</b>Entonces, dentro de nuestro body implementamos bajo la etiqueta script y src la ruta de nuestro JQuery, es recomendable dejarla en el root del proyecto.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;">script</span> <span style="color:rgb(255, 255, 255); font-weight:700;">src</span>=<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;jquery-3.6.1.min.js&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;">script</span>&gt;</span></code></pre>
+
+                    <h3>Implementación desde link</h3>
+                    <p>Por otra parte, si podemos usar siempre conexión a internet, simplemente podemos poner el link de donde adquirimos el JQuery e implementarlo así.</p>
+                    
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;">script</span> <span style="color:rgb(255, 255, 255); font-weight:700;">src</span>=<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;https://code.jquery.com/jquery-3.6.1.min.js&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;">script</span>&gt;</span></code></pre>
+
+                    <p>De esta manera, tendríamos ya implementado JQuery para solo usarlo en un fichero .js por aparte.</p>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>Sintaxis de JQuery</h2>
+                    <h4>23 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Introducción a la sintaxis de JQuery, de manera que se apreciará el proceso de selección y ejecución de comandos.</p>
+                    <span id="article--sep"></span>
+                    
+                    <p>Cuando usamos JQuery estamos pensando de manera distinta de cómo podríamos desarrollar una aplicación en JQuery, ya que estos mismos están pensados para hacerse de manera breve, a diferencia de JavaScript. <br><br>JQuery nos simplifica el manejo y tratamientos de los documentos HTML, animaciones, eventos e interacciones AJAX(Proveniente de web's externas).<br>De esta premisa se deriva el siguiente comando JQuery:</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">this</span>).hide()</code></pre>
+
+                    <p>JQuery funciona o se auxilia bajo los selectores predeterminados de HTML, hablamos de las Clases y los ID para hacer determinada acción, en este caso se oculta 'este' elemento.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;div&quot;</span>).hide()</code></pre>
+
+                    <p>JQuery también puede abarcar la totalidad de los elementos de alguna etiqueta, en este caso estamos ocultando todos los elementos con etiqueta div</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#comentario&quot;</span>).hide()<br>$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;.cajas&quot;</span>).hide()</code></pre>
+
+                    <p>De esta manera podemos seleccionar elementos con sus clases o id's.</p>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <footer id="footer--area">
+            <img src="../assets/icons/logo--simplified.svg" id="brand--footer" alt="teamfactorizacion">
+            <h1>Team Factorización</h1>
+            <span>©2022 Team Factorización</span>
+            <div id="social--footer">
+                <a href="https://www.facebook.com/profile.php?id=100022601452185" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/44/44646.png" id="icon--social"></a>
+                <a href="https://twitter.com/DavidQuintR" target="_blank"><img src="https://cobaev37mecatepec.neocities.org/twitter.png" id="icon--social"></a>
+                <a href="https://www.instagram.com/ponce3201/" target="_blank"><img src="https://www.pngmart.com/files/21/Instagram-Logo-Silhoutte-PNG-Image.png" id="icon--social"></a>
+            </div>
+        </footer>
+    </body>
+</html>

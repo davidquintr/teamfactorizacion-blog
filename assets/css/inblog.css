@@ -13,14 +13,13 @@ cuando sea una de las categorías a indagar (JQuery, JavaScript).
     --midtoneblack: #18191A;
     --lowtoneblack: #242526;
     --lightoneblack: #5B5F64;
-    --lightlightblack: #3A3B3C;
+        --lightlightblack: #3A3B3C;
 }
 
 pre{
     font-size: medium;
-   border-radius: 15px;
-   padding-top: 15px;
-    padding-bottom: 15px;
+    border-radius: 15px;
+    padding: 15px;
     background-color: var(--lightlightblack);
     white-space: pre-wrap; 
 }
@@ -62,6 +61,7 @@ iframe{
     display: flex;
     gap: 15px;
     margin-bottom: 10px;
+    justify-content: space-around;
     align-items: center;
 }
 
