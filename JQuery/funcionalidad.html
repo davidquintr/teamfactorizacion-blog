@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/basic.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/inblog.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+        <title>JQuery - Funcionalidad responsiva</title>
+        <link rel="icon" href="/assets/icons/logo--simplified.svg">
+    </head>
+
+    <body>
+        <header id="main--header">
+            <div id="desp--aside">
+                <input type="checkbox" class="checkbox" id="menu-toogle"/>
+                <img src="..assets/icons/menuIcon.png">
+            </div>  
+            <div id="title--header">
+                <img src="../assets/icons/logo--simplified.svg" id="brand--header" alt="teamfactorizacion">
+                <h1>Team Factorización</h1>
+            </div>
+            <div id="cont--header">
+                <nav id="nav--header">
+                    <ul id="list--header">
+                        <li class="item--nav"><a href="../../index.html">Inicio</a></li>
+                        <li class="item--nav"><a href="../JavaScript.html">JavaScript</a></li>
+                        <li class="item--nav"><a href="../JQuery.html">JQuery</a></li>
+                        <li class="item--nav"><a href="">Acerca de</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <div id="page--struct">
+    
+            <aside id="main--aside">
+                <a href="#sintaxis-jquery"><div class="item--aside home">
+                    <h3>Sintaxis de JQuery</h3>
+                </div></a>
+                <a href="#guia-instalacion"><div class="item--aside home">
+                    <h3>¿Cómo instalar JQuery?</h3>
+                </div></a>
+                <a href="#selectores-jquery"><div class="item--aside home">
+                    <h3>Selectores en JQuery</h3>
+                </div></a>
+                <a href="#eventos-jquery"><div class="item--aside home">
+                    <h3>Eventos de JQuery</h3>
+                </div></a>
+                <a href="#no-conflicto"><div class="item--aside home">
+                    <h3>Método noConflict()</h3>
+                </div></a>
+            </aside> 
+
+            <section>
+                <article class="main--article introduction">
+                    <div id="article--comment">
+                        <img src="../assets/icons/jqueryIcon.png" id="javascript--logo" class="img--article idk intro" alt="jquerylogo" style="filter: invert(1);">
+                        <div>
+                            <h1 id="high--title">JQuery</h1>
+                            <h2>Funcionalidad responsiva</h2>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="sintaxis-jquery">
+                    <h2>Desvanecimiento</h2>
+                    <h4>24 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Se aprenderán técnicas para aplicar desvanecimiento a un elemento del DOM</p>
+                    <span id="article--sep"></span>
+                    
+                    <p>Cuando queremos aplicar animaciones en JQuery, lo podemos realizar comandos para separarlos en varios ámbitos, para empezar tenemos: </p>
+                    
+                    <ul>
+                        <li>fadeIn()</li>
+                        <li>fadeOut()</li>
+                        <li>fadeToggle()</li>
+                        <li>fadeTo()</li>
+                    </ul>
+
+                    <p>El funcionamiento de este comando, es básicamente alternar los estados "display:none" y el original del elemento para lograr este efecto de intangibilidad antes de su desaparición.<br>Todos estos elementos funcionan brindándoles ningún o solo un parámetro, esto con excepción en "fadeTo()", estos parámetros son los que determinan la duración de la animación medido en milisegundos, en caso de no aplicarlo, será un valor por defecto.</p>
+
+                    <h3 class="center">Ejemplo:</h3>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).fadeIn(<span style="color:rgb(187, 204, 238); font-weight:400;">3000</span>);</code></pre>
+                    </div>
+
+                    <h3>FadeIn</h3>
+                    <p>Este funciona para cuando queremos animar el desvanecimiento de aparición en el DOM.</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).fadeIn();
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja2&quot;</span>).fadeIn(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;slow&quot;</span>);
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja3&quot;</span>).fadeIn(<span style="color:rgb(187, 204, 238); font-weight:400;">1500</span>);
+                               });
+                        });</code></pre>
+                        <img src="../assets/anims/animfadeto.gif" class="img--article">
+                    </div>
+
+                    <h3>FadeOut</h3>
+                    <p>Este funciona para cuando queremos animar el desvanecimiento al desaparecer del DOM.</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).fadeOut();
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja2&quot;</span>).fadeOut(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;slow&quot;</span>);
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja3&quot;</span>).fadeOut(<span style="color:rgb(187, 204, 238); font-weight:400;">1500</span>);
+                               });
+                        });</code></pre>
+                        <img src="../assets/anims/animfadeout.gif" class="img--article">
+                    </div>
+
+                    <h3>FadeToggle</h3>
+                    <p>Este funciona para cuando queremos animar el desvanecimiento al aparecer y desaparecer del DOM.</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).fadeToggle();
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja2&quot;</span>).fadeToggle(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;slow&quot;</span>);
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja3&quot;</span>).fadeToggle(<span style="color:rgb(187, 204, 238); font-weight:400;">1500</span>);
+                               });
+                        });</code></pre>
+                        <img src="../assets/anims/animfadetoggle.gif" class="img--article">
+                    </div>
+                    
+                    <h3>FadeTo</h3>
+                    <p>Esto funciona de una manera dinámica, pues especificamos directamente qué tanta transparencia le dejamos al objeto, en este caso su estado no es alternado entre "display:none" y el original, dejando un efecto similar a la propidad "opacity". Para la sintaxis, dentro de los paréntesis se tiene que colocar dos parámetros, uno la velocidad de la animación de desvanecimiento y la segunda la transparencia expresadas en decimales, siendo el máximo 1 para mostrarse totalmente.</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).fadeTo(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;slow&quot;</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">0.8</span>);
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja2&quot;</span>).fadeTo(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;slow&quot;</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">0.4</span>);
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja3&quot;</span>).fadeTo(<span style="color:rgb(187, 204, 238); font-weight:400;">1500</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">0</span>);
+                               });
+                           });</code></pre>
+                        <img src="../assets/anims/animfadetoggle.gif" class="img--article">
+                    </div>
+                    
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="mostrar-ocultar">
+                    <h2>Mostrar y ocultar</h2>
+                    <h4>24 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">A partir de lo aprendido en la introducción, se podrán alternar los valores para mostrar elementos en el DOM</p>
+                    <span id="article--sep"></span>
+                    
+                    <p>Bajo JQuery, se puede alternar los estados visuales de un elementos fácilmente bajo dos propiedades, show() y hide()</p>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#mostrar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;p&quot;</span>).show();
+                            });
+                               
+                             $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#ocultar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;p&quot;</span>).hide();
+                            });
+                         });</code></pre>
+                         <img src="../assets/anims/animhideshow.gif" class="img--article">
+                    </div>
+
+                    <p>De esta manera podemos cambiar la visibilidad de los elementos, en este caso se alterna entre la propiedad display que esté en asignada a "display:none" y se alternará de esa manera en caso se ponga en "hide", siempre que vuelva a "show" volverá a su propiedad display original.<br>Por otra parte, el hecho de colocar dos veces un botón para ocultar es redundante, se puede simplificar de la siguiente manera:</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;p&quot;</span>).toggle();
+                            });
+                        });</code></pre>
+                        <img src="../assets/anims/animtoggle.gif" class="img--article">   
+                    </div>
+
+                    <p>Por otra parte, si usamos nada más la propiedad toggle, además que simplificamos el código funciona de la misma manera.</p>
+
+                    
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <footer id="footer--area">
+            <img src="../assets/icons/logo--simplified.svg" id="brand--footer" alt="teamfactorizacion">
+            <h1>Team Factorización</h1>
+            <span>©2022 Team Factorización</span>
+            <div id="social--footer">
+                <a href="https://www.facebook.com/profile.php?id=100022601452185" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/44/44646.png" id="icon--social"></a>
+                <a href="https://twitter.com/DavidQuintR" target="_blank"><img src="https://cobaev37mecatepec.neocities.org/twitter.png" id="icon--social"></a>
+                <a href="https://www.instagram.com/ponce3201/" target="_blank"><img src="https://www.pngmart.com/files/21/Instagram-Logo-Silhoutte-PNG-Image.png" id="icon--social"></a>
+            </div>
+        </footer>
+    </body>
+</html>
