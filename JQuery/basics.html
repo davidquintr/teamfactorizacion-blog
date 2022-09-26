@@ -55,6 +55,29 @@
                 </article>
 
                 <article class="main--article" id="guia-instalacion">
+                    <h2>Método noConflict()</h2>
+                    <h4>23 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Evitar conflictos con JavaScript y derivados</p>
+                    <span id="article--sep"></span>
+                    <p>JQuery es una biblioteca que funciona a partir de JavaScript, por eso usamos el signo de dólar como acceso directo a los comandos propios de la libería.<br>Por otra parte, puede ser que de algún modo, alguna libería o implemntación propia de un código en JavaScript utilice este signo, para eso sirve el método o modo de no conflicto.<br><br>El método de no conflicto hace una separación del signo para que otros elementos o liberías no lo usen.</p>
+
+                    <pre><code>$.noConflict();</code></pre>
+
+                    <p>De esta manera reservamos JQuery para nuestro uso en un ámbito deseado, el modo de no conflicto no solo sirve para esto, también funciona para cambiar el comando de llamada a JQuery</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170);">var</span> jq = $.noConflict();<br>jq(<span style="color:rgb(221, 68, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170); ">function</span>(<span style="color:rgb(255, 255, 255);"></span>)</span>{<br>}</code></pre>
+
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="guia-instalacion">
                     <h2>Eventos de JQuery</h2>
                     <h4>23 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
