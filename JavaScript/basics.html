@@ -56,6 +56,117 @@
                 </article>
 
                 <article class="main--article" id="plantilla">
+                    <h2>Sintaxis</h2>
+                    <h4>23 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Sintaxis de JavaScript </p>
+                    <span id="article--sep"></span>
+
+                    <p>Cuando se trata de JavaScript, este se define en 2 tipos de valores, literales y variables.</p>
+
+                    <p>Para los valores literales las 2 reglas que siempre se tienen que tener en cuenta son: los numeros se escriben con o sin decimal y que los strings son textos escritos entre comillas dobles o simples</p>
+                    <pre><code id="htmlViewer" style="color:rgb(140, 34, 189)">
+24.50
+50
+<span style="color:rgb(27, 212, 67); font-weight:400;">&quot;Riuske&quot;</span>
+<span style="color:rgb(21, 211, 31); font-weight:400;">&#x27;Erick&#x27;</span></code></pre>
+
+                    <p>En el caso de las variables estan se usan para almacenar datos. JavaScript usa las palabras claves var, let y const para declarar variables, el "=" es para asignar valores.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(183, 50, 209); font-weight:700;">var</span> costo = <span style="color:rgb(46, 139, 192); font-weight:400;">90</span></code></pre>
+
+                    <p>En caso de los operadores se utiliza: +, -, * y / para calcular variables</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 250, 250)">(5 + 4)*6-10/18</code></pre>
+
+                    <p>Y en caso de querer poner comentarios se pueden utilizar // o /* al principio y */ al final</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(161, 159, 159)">// esto funciona como comentario</span>
+                        <span style="color:rgb(136, 136, 136); font-weight:400;">/*O de esta manera*/</span></code></pre>
+                        
+                        <div id="article--author" class="riuske">
+                            <img src="../assets/images/riuske.png" id="profile--author">
+                            <div>
+                                <span>Escrito por:</span>
+                                <h4>Riuske Nishime Robleto</h4>
+                            </div>
+                        </div>
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>JavaScript Declaraciones</h2>
+                    <h4>23 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Descripción de lo que se tiene que tener en cuenta a la hora de hacer declaraciones</p>
+                    <span id="article--sep"></span>
+
+                    <p>Las declaraciones estan compuestas por valores, operadores, expresiones, palabras claves y comentarios. Dichas declaraciones son ejecutadas una por una en el mismo orden que son codificadas.</p>
+                    <p>Los puntos y coma al final de cada ejecutable se encargan de separar las declaraciones de JavaScript. Cuando los ejecutables son se parados por punto y coma se permiten ubicar varias declaraciones en una linea.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 251, 251)"><span style="color:rgb(233, 233, 233); font-weight:700;">var</span> z = o;
+<span style="color:rgb(173, 37, 201); font-weight:700;">let</span> a; <span style="color:rgb(189, 57, 216); font-weight:700;">var</span> o = <span style="color:rgb(54, 140, 221); font-weight:400;">10</span>;</code></pre>
+
+                    <p>JavaScript tiene la función de agrupar declaraciones dentro de bloques de codigo dentro de llaves. Tiene el proposito de definir declaraciones que se ejecutan juntos.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(253, 253, 253)"><span style="color:rgb(255, 255, 255); font-weight:700;">function</span> <span style="color:rgb(136, 0, 0); font-weight:700;">bloques</span>(<span style="color:rgb(221, 221, 221); font-weight:400;"></span>)</span>{
+                    <span style="color:rgb(47, 158, 223); font-weight:400;">document</span>.getElementById(<span style="color:rgb(37, 224, 46); font-weight:400;">&quot;demo1&quot;</span>).innerHTML = <span style="color:rgb(7, 182, 30); font-weight:400;">&quot;Si&quot;</span>;
+                    <span style="color:rgb(42, 199, 219); font-weight:400;">document</span>.getElementByClassName(<span style="color:rgb(47, 214, 47); font-weight:400;">&quot;Lac&quot;</span>)[<span style="color:rgb(37, 25, 211); font-weight:400;">12</span>];
+                    }</code></pre>
+
+                    <table>
+                        <tbody>
+                            <thead>
+                                <td>Palabras claves</td>
+                                <td>Descripción</td>
+                            </thead>
+                            <tr>
+                                <td>var</td>
+                                <td>Declara variables</td>
+                            </tr>
+
+                            <tr>
+                                <td>let</td>
+                                <td>Declara bloques de variables</td>
+                            </tr>
+                                <td>const</td>
+                                <td>Declara un bloque de constante</td>
+
+
+                            <tr>
+                                <td>if</td>
+                                <td>Define un bloque de declaraciones que son ejecutados en una condición</td>
+                            </tr>
+
+                            <tr>
+                                <td>switch</td>
+                                <td>Define un bloque de declaraciones que son ejecutados en casos diferentes</td>
+                            </tr>
+
+                            <tr>
+                                <td>for</td>
+                                <td>Define un bloque de declaraciones que se ejecuta en un buqle</td> 
+                            </tr>
+
+                            <tr>
+                                <td>function</td>
+                                <td>Declara una función</td>
+                            </tr>
+
+                            <tr>
+                                <td>return</td>
+                                <td>Sale de una función</td>
+                            </tr>
+                            <tr>
+                                <td>try</td>
+                                <td>Implementa un error que manera un bloque de declaraciones</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </article>
+
+
+                <article class="main--article" id="plantilla">
                     <h2>Cambiar contenido HTML con JavaScript</h2>
                     <h4>17 de Septiembre de 2022</h4>
                     <img src="../assets/images/cel.png" class="topimg--article dino">
@@ -82,12 +193,7 @@
                         <iframe width="854" height="480" src="https://www.youtube.com/embed/j2Xcv0k-RwQ" title="Ubuntu VS Fedora ¿Cual es MEJOR sistema operativo? // Español 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 
-                    <pre>
-                        if(buttonEsp.style.backgroundColor == "rgb(24, 44, 57)")
-                        return;
-                    </pre>
-
-                    <table>
+                    <!--<table>
                         <tbody>
                             <thead>
                                 <td>Parte 1</td>
@@ -105,29 +211,8 @@
                                 <td>Spider-Man No way Godzilla</td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table>-->
 
-                    <div id="article--author">
-                        <img src="../assets/images/ponce.png" id="profile--author">
-                        <div>
-                            <span>Escrito por:</span>
-                            <h4>David Parrales Ponce</h4>
-                        </div>
-                    </div>
-                    <div id="article--author">
-                        <img src="../assets/images/deibi.png" id="profile--author">
-                        <div>
-                            <span>Escrito por:</span>
-                            <h4>David Quintanilla Ruiz</h4>
-                        </div>
-                    </div>
-                    <div id="article--author">
-                        <img src="../assets/images/erick.png" id="profile--author">
-                        <div>
-                            <span>Escrito por:</span>
-                            <h4>Erick González Gallegos</h4>
-                        </div>
-                    </div>
                     <div id="article--author" class="riuske">
                         <img src="../assets/images/riuske.png" id="profile--author">
                         <div>
@@ -136,8 +221,11 @@
                         </div>
                     </div>
                 </article>
+
             </section>
         </div>
+
+
 
         <footer id="footer--area">
             <img src="../assets/icons/logo--simplified.svg" id="brand--footer" alt="teamfactorizacion">
