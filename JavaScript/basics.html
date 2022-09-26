@@ -83,6 +83,24 @@
 
                     <pre><code id="htmlViewer" style="color:rgb(161, 159, 159)">// esto funciona como comentario</span>
                         <span style="color:rgb(136, 136, 136); font-weight:400;">/*O de esta manera*/</span></code></pre>
+
+                    <p>En HTML, lo que es codigo JavaScript se inserta dentro de las etiquetas "Script".</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(243, 9, 9); font-weight:700;">script</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">
+                       <span style="color:rgb(33, 224, 192); font-weight:400;">document</span>.getElementById(<span style="color:rgb(253, 125, 5); font-weight:400;">&quot;nose&quot;</span>).innerHTML = <span style="color:rgb(67, 241, 14); font-weight:400;">&quot;Ejemplo de Script&quot;</span>;
+                       </span><span style="color:rgb(255, 253, 253); font-weight:400;">&lt;/<span style="color:rgb(250, 0, 0); font-weight:700;">script</span>&gt;</span></code></pre>
+
+                    <p>Script también puede ser colocado tanto en el body como en el head. Al mismo tiempo pueden ser colocados en archivos externos.</p>
+
+                    <p>En caso de que un script se coloque de forma externa, este puede ser referenciado ya sea con un URL, con un camino o sin tener un sendero.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(255, 7, 7); font-weight:700;">script</span> <span style="color:rgb(146, 9, 173); font-weight:400;">src</span>=<span style="color:rgb(63, 219, 15); font-weight:400;">&quot;https://www.youtube.com/watch?v=KXxXr0RxGDE&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(248, 23, 23); font-weight:700;">script</span>&gt;</span>
+                       
+                       <span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(238, 1, 1); font-weight:700;">script</span> <span style="color:rgb(124, 14, 214); font-weight:400;">src</span>=<span style="color:rgb(25, 206, 8); font-weight:400;">&quot;/js/myScript.js&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(235, 8, 8); font-weight:700;">script</span>&gt;</span>
+                       
+                       <span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(255, 0, 0); font-weight:700;">script</span> <span style="color:rgba(150, 13, 192, 0.993); font-weight:400;">src</span>=<span style="color:rgb(59, 236, 15); font-weight:400;">&quot;myScript.js&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(255, 0, 0); font-weight:700;">script</span>&gt;</span></code></pre>
                         
                         <div id="article--author" class="riuske">
                             <img src="../assets/images/riuske.png" id="profile--author">
@@ -163,12 +181,57 @@
                         </tbody>
                     </table>
 
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>JavaScript Output</h2>
+                    <h4>24 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">JavaScript despliega datos de diferentes maneras</p>
+                    <span id="article--sep"></span>
+
+                    <p>JavaScript Output define las formas para mostrar la salida de un codigo. La salida puede mostrarse de cuatro maneras distintas.</p>
+
+                    <p>innerHTML: Se utiliza para acceder a un elemento HTML.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(245, 244, 244)"><span style="color:rgb(49, 165, 231); font-weight:400;">document</span>.getElementById(<span style="color:rgb(238, 199, 28); font-weight:400;">&quot;demo&quot;</span>).innerHTML = <span style="color:rgb(34, 231, 83); font-weight:400;">&quot;lo digo&quot;</span>;</code></pre>
+
+                    <p>document.write(): Se utiliza principalmente para propositos de prueba. En caso de que se utilice document.write() despues de un HTML, todos los HTML que existen se borraran.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(243, 162, 41)"><span style="color:rgb(52, 227, 233); font-weight:400;">document</span>.write(elemento);</code></pre>
+
+                    <p>window.alert(): muestra el contenido en una caja de alerta. Cabe aclarar que la palabra "window" se puede saltar al ser un objeto de alcance global.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(216, 32, 32); font-weight:400;">window</span>.alert(<span style="color:rgb(56, 216, 34); font-weight:400;">&quot;Alerta de prueba&quot;</span>);</code></pre>
+
+                    <p>console.log(): Se ocupa para fines de depuración.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(197, 17, 77); font-weight:700;">&lt;script&gt;</span>
+                               <span style="color:rgb(230, 226, 43); font-weight:700;">console</span>.log(<span style="color:rgb(46, 195, 221); font-weight:400;">20</span>+<span style="color:rgb(39, 220, 226); font-weight:400;">3</span>);
+                           <span style="color:rgb(168, 14, 91); font-weight:700;">&lt;/script&gt;</span></code></pre>
+
+                           <div id="article--author" class="riuske">
+                            <img src="../assets/images/riuske.png" id="profile--author">
+                            <div>
+                                <span>Escrito por:</span>
+                                <h4>Riuske Nishime Robleto</h4>
+                            </div>
+
                 </article>
 
 
                 <article class="main--article" id="plantilla">
                     <h2>Cambiar contenido HTML con JavaScript</h2>
-                    <h4>17 de Septiembre de 2022</h4>
+                    <h4>23 de Septiembre de 2022</h4>
                     <img src="../assets/images/cel.png" class="topimg--article dino">
                     <p id="article--desc" class="center">Etiquetas para cambiar contenido en HTML</p>
                     <span id="article--sep"></span>
@@ -192,26 +255,6 @@
                     <div id="article--insertcent">
                         <iframe width="854" height="480" src="https://www.youtube.com/embed/j2Xcv0k-RwQ" title="Ubuntu VS Fedora ¿Cual es MEJOR sistema operativo? // Español 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-
-                    <!--<table>
-                        <tbody>
-                            <thead>
-                                <td>Parte 1</td>
-                                <td>Parte 2</td>
-                                <td>Parte 3</td>
-                            </thead>
-                            <tr>
-                                <td>Doctor Strange</td>
-                                <td>WandaVision</td>
-                                <td>Doctor Strange in The Multiverse of Madness</td>
-                            </tr>
-                            <tr>
-                                <td>Spider-Man 2</td>
-                                <td>Spider-Man into the Spiderverse</td>
-                                <td>Spider-Man No way Godzilla</td>
-                            </tr>
-                        </tbody>
-                    </table>-->
 
                     <div id="article--author" class="riuske">
                         <img src="../assets/images/riuske.png" id="profile--author">
