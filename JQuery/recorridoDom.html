@@ -55,55 +55,78 @@
                     </div>
                 </article>
 
+                <!--POST JQUERY TRANSVERSING-->
                 <article class="main--article" id="plantilla">
                     <!--TITULO, DATOS Y CONTENIDO DEL POST-->
-                    <h2>Plantilla para todos</h2>
+                    <h2>jQuery Transversing</h2>
                     <h4>17 de Septiembre de 2022</h4>
                     <img src="../assets/images/cel.png" class="topimg--article dino">
-                    <p id="article--desc" class="center">Asi funciona un texto normal, de esta manera podemos hablar de lo que queramos, incluso podemos hablar de la santa inquisición, hitler y los judíos y más allá de eso, podemos hablar de la tierra plana y las falsedades de la NASA</p>
+                    <p id="article--desc" class="center"><b>traversing</b> jQuery, significa "moverse", se usa para moverse dentro del DOM y buscar elementos HTML basados en su relación con otros elementos. Con estos métodos transversales, podemos subir, bajar y recorrer todo el árbol DOM muy fácilmente.</p>
                     <span id="article--sep"></span>
 
                     <!--TEXTO CON IMAGEN-->
-                    <div id="article--comment">
-                        <p>Aqui podemos ver como comentamos una foto de una manera no optima, la verdad da asco lo cutre que queda pero no tengo de otra si quiero dejarlo bonito y no usar el asqueroso float. Por otra parte, esta foto es de cuando me encarcelaron por mis crímenes de lesa-humanidad en 32 paises distintos. <a href="https://youtu.be/BapxCy_J7Rc">Aqui pueden ver el video</a></p> 
-                        <img src="/../assets/images/dibujito 2.png" class="img--article idk">
+                    <div id="article--desc">
+                        <b>Ancentros:</b><br>
+                        <b>parent():</b>
+                        <span>Da el elemento principal del selector especificado</span><br>
+                        <b>Sintaxis:</b>
+                        <pre>$(selector).parent();</pre>
+
+                        <b>parents()</b>
+                        <span>proporciona toods los elementos antecesores del selector especificado</span><br>
+                        <b>Sintaxis:</b>
+                        <pre>$(selector).parents()</pre>
+
+                        <b>parentsUntil()</b>
+                        <span>proporciona todos los elementos antecesores entre el selector y los argumentos especificados.</span><br>
+                        <b>Sintaxis:</b>
+                        <pre>$(selector).parentsUntil(element, filter element)</pre>
+
+                        <b>Descendientes:</b><br>
+                        <b>children()</b>
+                        <span>proporciona los elementos secundarios de cada elemento seleccionado, opcionalmente filtrados por un selector.</span><br>
+                        <b>Sintaxis</b>
+                        <pre>$(selector).children();</pre>
+                        
+                        <b>find()</b>
+                        <span>Proporciona elementos descendientes de elementos especificos, filtradros por un selector, un objeto jQuery o un elemento.</span><br>
+                        <b>Sintaxis</b>
+                        <pre>$(selector).find('selector a encontrar')</pre>
+                        <b>Siblings</b><br>
+                        <b>siblings()</b>
+                        <span>Da todos los hermanos del selector especificado</span><br>
+                        <pre>$(selector).siblings();</pre>
+                        
+                        <b>next()</b>
+                        <span>Da el siguiente elemento hermano del selector especificado.</span>
+                        <b>Sintaxis</b>
+                        <pre>$(selector).next();</pre>
+
+                        <b>nextAll()</b>
+                        <span>De todos los siguientes elementos hermanos del selector especificado.</span>
+                        <br><b>Sintaxis</b>
+                        <pre>$(selector).nextAll();</pre>
+
+                        <b>nextUntil()</b>
+                        <span>proporciona todos los siguientes hermanos entre el selector y los argumentos especificados.</span>
+                        <br><b>Sintaxis</b>
+                        <pre>$(selector).nextUntil()</pre>
                     </div>
 
-                    <!--VIDEO INCRUSTADO DENTRO DEL POST-->
-                    <h3 class="center">Asi se verá un subtitulo y un video insertado</h3>
+                    <h3 class="center">Atravesando el DOM</h3>
+                    <p>
+                        <ol>
+                            <li>jQuery porporciona una variedad de métodos que nos permiten atravesar el DOM.</li>
+                            <br>
+                            <li>La categoría más grande de métodos transversales son los árboles transversales.</li>
+                            <br>
+                            <li>Los próximos capitulos nos motrarán cómo viajar hacia arriba, hacía abajo y hacía los lados en el árbol DOM.</li>
+                        </ol>
+                        
+                       
+                       
+                    </p>
                     
-                    <div id="article--insertcent">
-                        <iframe width="854" height="480" src="https://www.youtube.com/embed/j2Xcv0k-RwQ" title="Ubuntu VS Fedora ¿Cual es MEJOR sistema operativo? // Español 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-
-
-                    <!--ETIQUETA PRE PARA LOS EJEMPLOS DENTRO DEL POST-->
-                    <pre>
-                        if(buttonEsp.style.backgroundColor == "rgb(24, 44, 57)")
-                        return;
-                    </pre>
-
-                    <!--TABLA DE EJEMPLO DENTRO DEL POST-->
-                    <table>
-                        <tbody>
-                            <thead>
-                                <td>Parte 1</td>
-                                <td>Parte 2</td>
-                                <td>Parte 3</td>
-                            </thead>
-                            <tr>
-                                <td>Doctor Strange</td>
-                                <td>WandaVision</td>
-                                <td>Doctor Strange in The Multiverse of Madness</td>
-                            </tr>
-                            <tr>
-                                <td>Spider-Man 2</td>
-                                <td>Spider-Man into the Spiderverse</td>
-                                <td>Spider-Man No way Godzilla</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
                     <!--AUTORES DEL POST-->
                     <div id="article--author">
                         <img src="../assets/images/ponce.png" id="profile--author">
@@ -112,13 +135,74 @@
                             <h4>David Parrales Ponce</h4>
                         </div>
                     </div>
-                    <div id="article--author">
-                        <img src="../assets/images/deibi.png" id="profile--author">
+                  
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
                         <div>
                             <span>Escrito por:</span>
-                            <h4>David Quintanilla Ruiz</h4>
+                            <h4>Riuske Nishime Robleto</h4>
                         </div>
                     </div>
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>jQuery traversing - Ancestors</h2>
+                    <h4>17 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">
+                        Con jQuery puedes recorrer el árbol DOM para encontrar ancestros de un elemento.
+
+                        <h3>Atravesando el árbol DOM</h3>
+                        <ol>
+                            <li>parent()</li>
+                            <li>parents()</li>
+                            <li>parentsUntil()</li>
+                        </ol>
+                    </p>
+                    <span id="article--sep"></span>
+
+                    <h3 class="center">Método jQuery <b>parent()</b></h3>
+                    <p>Este método devuelve el elementro padre directo del elemento seleccionado. <br>
+                    Este método solo atraviesa un solo nivel en el árbol DOM.</p>
+                    <h3 class="center">Ejemplo - HTML</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">body</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;ancestors&quot;</span>&gt;</span> body (great-great-grandparent)
+                       
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">div</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">style</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;width:500px;&quot;</span>&gt;</span>div (gran-abuelo)
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">ul</span>&gt;</span>ul (abuelo)  
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>li (padre directo)
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">span</span>&gt;</span>span<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">span</span>&gt;</span>
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">ul</span>&gt;</span>   
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">div</span>&gt;</span>
+                       
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">body</span>&gt;</span></code></pre>
+                       
+                       
+                       <h3 class="center">CSS</h3>
+                       <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(153, 102, 68); font-weight:400;background:rgba(0, 0, 0, 0);">.ancestors</span> * { 
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">display</span>: block;
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">border</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">2px</span> solid lightgrey;
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">color</span>: lightgrey;
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">padding</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">5px</span>;
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">margin</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">15px</span>;
+                       }</code></pre>
+
+                       <h3 class="center">jQuery</h3>
+                       <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">$(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                         $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;span&quot;</span>).parent().css({<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;color&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;red&quot;</span>, <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;border&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;2px solid red&quot;</span>});
+                       });</code></pre>
+
+                       
+                    
+
+                   
+
+
+                    <!--AUTORES DEL POST-->
                     <div id="article--author">
                         <img src="../assets/images/erick.png" id="profile--author">
                         <div>
