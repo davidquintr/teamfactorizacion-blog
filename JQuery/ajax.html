@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/basic.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/inblog.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+        <title>Team Factorización - JQuery</title>
+        <link rel="icon" href="/assets/icons/logo--simplified.svg">
+    </head>
+
+    <body>
+        <header id="main--header">
+            <div id="desp--aside">
+                <input type="checkbox" class="checkbox" id="menu-toogle"/>
+                <img src="..assets/icons/menuIcon.png">
+            </div>  
+            <div id="title--header">
+                <img src="../assets/icons/logo--simplified.svg" id="brand--header" alt="teamfactorizacion">
+                <h1>Team Factorización</h1>
+            </div>
+
+            <!--BARRA DE NAVEGACION DE LA PAGINA-->
+            <div id="cont--header">
+                <nav id="nav--header">
+                    <ul id="list--header">
+                        <li class="item--nav"><a href="../../index.html">Inicio</a></li>
+                        <li class="item--nav"><a href="../JavaScript.html">JavaScript</a></li>
+                        <li class="item--nav"><a href="../JQuery.html">JQuery</a></li>
+                        <li class="item--nav"><a href="">Acerca de</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        
+        <div id="page--struct">
+            
+            <!--TABLA DE CONTENIDO DENTRO DEL BLOG-->
+            <aside id="main--aside">
+                <a href="#article--author">
+                <div class="item--aside home">
+                    <h3>Autores</h3>
+                </div></a>
+
+                <a href="#plantilla">
+                <div class="item--aside home">
+                    <h3>1. ¿Qué es AJAX?</h3>
+                </div></a>
+
+                <a href="#ajaxUse">
+                    <div class="item--aside home">
+                        <h3>2. Ejemplo de uso AJAX</h3>
+                    </div></a>
+
+                <a href="#ajaxLoad">
+                    <div class="item--aside home">
+                    <h3>3. Método ajax.load()</h3>
+                </div></a>
+
+                <a href="#ajaxGet">
+                    <div class="item--aside home">
+                    <h3>3. Método ajax.get()</h3>
+                </div></a>
+            </aside> 
+            <!--TERMINA LA TABLA DE CONTENIDO-->
+
+
+            <!--AQUI VAN LOS POST-->
+            <section>
+                
+                <!--ENCABEZADO DE LA PAGINA-->
+                <article class="main--article introduction">
+                    <div id="article--comment">
+                        <img src="../assets/icons/jqueryIcon.png" id="javascript--logo" class="img--article idk intro" alt="JQuerylogo">
+                        <div>
+                            <h1 id="high--title">JQuery</h1>
+                            <h2>Generalidades de AJAX</h2>
+                        </div>
+                    </div>
+                </article>
+
+                <!--POST - ¿QUE ES AJAX?-->
+                <!--CUERPO Y MENSAJE DEL POST-->
+                <article class="main--article" id="plantilla">
+                    <h2>¿Qué es AJAX?</h2>
+                    <h4>15 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">
+                        
+                        <b>AJAX significa JavaScript asíncrono y XML (Asynchronous JavaScript and XML)</b>.
+                        Es un grupo de tecnologías que se utilizan para el desarrollo de páginas, esta tecnica permite que las aplicaciones web funcionen de forma asincrona, procesando cualquier solicitud al servidor en segundo plano.</p>
+                    <span id="article--sep"></span>
+
+                    <div id="article--comment">
+                        <p> AJAX permite que la capa de presentación y la capa de datos trabajen de manera simultanea sin que interfiera una capa con la otra, algunos ejemplos son:
+                        </p> 
+                        <img src="../assets/images/dibujito 2.png" class="img--article idk">
+                    </div>
+                        <ol>
+                            <li><b>Sistemas de votación y calificación:</b> <br>
+                                Paginas con sistemas de calificación por ejemplo una pagina para comprar productos y utilizan un sistema de valoración, una vez se hace click en el botón de calificación el sitio web actualizará el cálculo pero la página completa permanecerá sin cambios.
+                                
+                            </li>
+                            <li>
+                                <br>
+                                <b>Sistema de chat:</b> <br>
+                                Algunas páginas web utilizan un chat incorporado para que sus visitantes consulten información o soliciten ayuda, cuando mandas un mensaje por este chat no tienes que preocuparte si quieres explorar la página al mismo tiempo que escribres, pues AJAX permite que la página no tenga que recargarse cada vez que mandas o recibes y un chat. 
+                            </li>
+                        </ol>
+                        <b>AJAX hace uso de las siguientes tecnologías:</b>
+                        <ol>
+                             
+                            <li>- XHTML y CSS para presentar la información.</li>
+                            <li>- DOM <b>(Document Object Model)</b> para   visualizar e interactuar de forma dinámica la información presentada.
+                            </li>
+                            <li>- XMLHttpRequest para manipular los datos de forma asincrona con el servidor web.</li>
+                            <li>- XML, HTML y XSLT para el intercambio y la manipulación de datos.</li>
+                            <li>- JavaScript para enlazar solicitudes e información de datos</li>
+                        </ol>
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <!--POST - EJEMPLO DE USO AJAX-->
+                <!--CUERPO Y MENSAJE DEL POST-->
+                <article class="main--article" id="ajaxUse">
+                    <h2>Ejemplo de uso AJAX</h2>
+                    <h4>17 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">
+                        En este post veremos un ejemplo de como usar AJAX, si quieren saber mas información sobre ¿qué es y para que sirve ajax? pueden seguir el siguiente enlace. <a href="#plantilla">¿Qué es AJAX?</a>
+                    </p>
+                    <span id="article--sep"></span>
+    
+
+                    <h3 class="center">Codigo HTML Página 1</h3>
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(255, 255, 255)">&lt;<span style="color:rgb(170, 119, 170)">button</span> <span style="color:rgb(255, 255, 255)">id</span> = <span style="color:rgb(187, 204, 238)">&quot;boton&quot;</span>&gt;</span>Cargar Sitio<span style="color:rgb(255, 255, 255)">&lt;/<span style="color:rgb(170, 119, 170)">button></span></span><br><span style="color:rgb(255, 255, 255)">&lt;<span style="color:rgb(170, 119, 170)">div</span> <span style="color:rgb(255, 255, 255)">id</span> = <span style="color:rgb(187, 204, 238)">&quot;response&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255)">&lt;/<span style="color:rgb(170, 119, 170)">div</span>&gt;</span></code></pre>
+
+                    <h3 class="center">Codigo HTML Página 2</h3>
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(255, 255, 255);">&lt;<span style="color:rgb(170, 119, 170); ">div</span> <span style="color:rgb(255, 255, 255); ">class</span>=<span style="color:rgb(187, 204, 238);">&quot;container&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255);">
+                    &lt;<span style="color:rgb(170, 119, 170); ">ol</span>&gt;</span>
+                        <span style="color:rgb(255, 255, 255);">&lt;<span style="color:rgb(170, 119, 170); ">li</span>&gt;</span>HTML<span style="color:rgb(255, 255, 255);">&lt;/<span style="color:rgb(170, 119, 170); ">li</span>&gt;</span>
+                        <span style="color:rgb(255, 255, 255);">&lt;<span style="color:rgb(170, 119, 170); ">li</span>&gt;</span>CSS<span style="color:rgb(255, 255, 255);">&lt;/<span style="color:rgb(170, 119, 170); ">li</span>&gt;</span>
+                        <span style="color:rgb(255, 255, 255);">&lt;<span style="color:rgb(170, 119, 170); ">li</span>&gt;</span>JavaScript<span style="color:rgb(255, 255, 255);">&lt;/<span style="color:rgb(170, 119, 170); ">li</span>&gt;</span>
+                        <span style="color:rgb(255, 255, 255);">&lt;<span style="color:rgb(170, 119, 170); ">li</span>&gt;</span>JQuery<span style="color:rgb(255, 255, 255);">&lt;/<span style="color:rgb(170, 119, 170); ">li</span>&gt;</span>
+                        <span style="color:rgb(255, 255, 255);">&lt;/<span style="color:rgb(170, 119, 170); ">ol</span>&gt;</span><span style="color:rgb(255, 255, 255);">
+&lt;/<span style="color:rgb(170, 119, 170); ">div</span>&gt;</span></code></pre>
+
+
+                    <h3 class="center">Codigo JQuery</h3>
+                    
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">&lt;script&gt;
+                <span style="color:rgb(255, 255, 255); "><span style="color:rgb(170, 119, 170); ">function</span> <span style="color:rgb(255, 255, 255); ">ajax</span>(<span style="color:rgb(255, 255, 255); "></span>)</span>{
+                <span style="color:rgb(170, 119, 170); ">const</span> http = <span style="color:rgb(170, 119, 170); ">new</span> XMLHttpRequest();
+                <span style="color:rgb(170, 119, 170); ">const</span> url = <span style="color:rgb(187, 204, 238); ">&#x27;example.html&#x27;</span>;
+                           
+                http.onreadystatechange = <span style="color:rgb(255, 255, 255); "><span style="color:rgb(170, 119, 170); ">function</span>(<span style="color:rgb(255, 255, 255); "></span>)</span>{
+                                       <span style="color:rgb(170, 119, 170); ">if</span>(<span style="color:rgb(221, 68, 0); ">this</span>.readyState == <span style="color:rgb(187, 204, 238); ">4</span> &amp;&amp; <span style="color:rgb(221, 68, 0); ">this</span>.status == <span style="color:rgb(187, 204, 238); ">200</span>)
+                                       {
+                                           <span style="color:rgb(221, 68, 0); ">console</span>.log(<span style="color:rgb(221, 68, 0); ">this</span>.responseText);
+                                           <span style="color:rgb(221, 68, 0); ">document</span>.getElementById(<span style="color:rgb(187, 204, 238); ">&quot;response&quot;</span>).innerHTML = <span style="color:rgb(221, 68, 0); ">this</span>.responseText;
+                                       }
+                                   }
+                           
+                                   http.open(<span style="color:rgb(187, 204, 238); ">&quot;GET&quot;</span>, url);
+                                   http.send();
+                           
+                                  }
+                           
+                                  <span style="color:rgb(221, 68, 0); ">document</span>.getElementById(<span style="color:rgb(187, 204, 238); ">&quot;boton&quot;</span>).addEventListener(<span style="color:rgb(187, 204, 238); ">&quot;click&quot;</span>, <span style="color:rgb(255, 255, 255); "><span style="color:rgb(170, 119, 170); ">function</span>(<span style="color:rgb(255, 255, 255); "></span>)</span>{
+                                       ajax();
+                                  });
+&lt;/script&gt;   </code></pre>
+
+                    
+                    <h3 class="center">Resultado del ejemplo</h3>
+                    <div id="article--insertcent">
+                        <iframe width="584" height="480" src="https://www.youtube.com/embed/jYbeIDtDfvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                   
+                </article>
+
+                <!--POST - AJAX.LOAD()-->
+                <!--CUERPO Y MENSAJE DEL POST-->
+
+                <article class="main--article" id="ajaxLoad">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>Método ajax.load()</h2>
+                    <h4>17 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">
+                        El método de JQuery load() es un método bastante sencillo pero útil.
+                        El método jQuery <b>load()</b> carga los datos de un servidor y lugo devuelve los datos dentro del elemento seleccionado en el árbol DOM. 
+                    </p>
+                    <span id="article--sep"></span>
+
+                    <h3 class="center">Sintaxis: </h3>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)">$(selector)<span style="color:rgb(153, 102, 68)">.load</span>(URL, data, callback)</code></pre>
+
+                    <!--TEXTO CON IMAGEN-->
+                    <div id="article--comment">
+                        <p>
+                            El <b>URL</b> se refiere al URL del contenido que se desea cargar.<br><br>
+
+                            El parámetro de datos opcional especifica un conjunto de de pares clave/valor de cadena de consulta para enviar junto con la solicitud.<br><br>
+
+                            El <b>callback</b> representa el nombre de la función que se ejecutará despues del <b>load()</b>
+                        </p> 
+                       
+                    </div>
+
+                    <!--VIDEO INCRUSTADO DENTRO DEL POST-->
+                    <h3 class="center">Ejemplo de uso jQuery <b>load()</b><br>HTML</h3>
+                    
+                    <!--ETIQUETA PRE PARA LOS EJEMPLOS DENTRO DEL POST-->
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(255, 255, 255);">&lt;<span style="color:rgb(170, 119, 170);">div</span> <span style="color:rgb(255, 255, 255);">id</span> =<span style="color:rgb(187, 204, 238);">&quot;div1&quot;</span>&gt;</span>
+                    <span style="color:rgb(255, 255, 255);">&lt;<span style="color:rgb(170, 119, 170);">h2</span>&gt;</span>Titulo del texto<span style="color:rgb(255, 255, 255);">&lt;/<span style="color:rgb(170, 119, 170);">h2</span>&gt;</span><span style="color:rgb(255, 255, 255);">
+&lt;/<span style="color:rgb(170, 119, 170);">div</span>&gt;</span><span style="color:rgb(255, 255, 255);">
+&lt;<span style="color:rgb(170, 119, 170);">button</span><span style="color:rgb(255, 255, 255);">id</span>=<span style="color:rgb(187, 204, 238);">&quot;boton&quot;</span>&gt;</span>Click para cambiar el contenido<span style="color:rgb(255, 255, 255);">&lt;/<span style="color:rgb(170, 119, 170);">button</span>&gt;</span>
+                    </code></pre>
+
+                    <h3 class="center">JQuery</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">script</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">
+                       $(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                       $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                       $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#div1&quot;</span>).load(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;text.txt&quot;</span>);
+                       });
+                       });
+                       </span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">
+&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">script</span>&gt;</span></code></pre>
+
+                    <h3 class="center">Contenido del archivo <b>text.txt</b></h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">&lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">h1</span>&gt;Esto es el contenido de text<span style="color:rgb(153, 102, 68); font-weight:400;background:rgba(0, 0, 0, 0);">.txt</span>&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">h1</span>&gt; 
+                       &lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&gt;Usamos el método load para cargar este archivo sin recargar la <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>ágina&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&gt; 
+                       </code></pre>
+
+                       <h3 class="center">Resultado del ejemplo</h3>
+                       <div id="article--insertcent">
+                        <iframe width="584" height="480" src="https://www.youtube.com/embed/WkAQyUSyZ48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                       </div>
+
+                    <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+        
+                    </div>
+                </article>
+
+
+
+                <!--POST - AJAX.GET()-->
+                <article class="main--article" id="ajaxGet">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>Método ajax.get()</h2>
+                    <h4>17 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">
+                        Los métodos jQuery get() y post() se utilizan para solicitar datos al servidor.
+                        <br>
+                        <b>get()</b> - Pide a los datos de un recurso especificado
+                        <br><br>
+                        GET se utiliza básicamente para conseguir justo (recuparar) algunos datos del servidor
+
+                    </p>
+                    <span id="article--sep"></span>
+
+                    <!--TEXTO CON IMAGEN-->
+                    <h3 class="center">Sintaxis: </h3>
+                    <pre>
+                        $.get(URL,callback);
+                    </pre>
+
+
+                    <div id="article--comment">
+                        <p>
+                            El <b>URL</b> se refiere al URL del contenido que se desea solicitar.<br><br>
+
+                            El párametro<b>callback</b> es el nombre de una función que se ejecuta si la solicitud se realizó correctamente.
+                        </p>
+                    </div>
+
+                    <h3 class="center">HTML</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">&lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">button</span>&gt;Envia una consulta&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">button</span>&gt;</code></pre>
+
+                    <h3 class="center">jQuery</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">script</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">
+                       $(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                       $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;button&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                       $.get(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;datos.asp&quot;</span>, <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span class="hljs-keyword">function</span>(<span class="hljs-params">data, status</span>)</span>{
+                       alert(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Data: &quot;</span> + data + <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;\nStatus: &quot;</span> + status);
+                       });
+                       });
+                       });
+                       </span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">script</span>&gt;</span></code></pre>
+                    
+                    <h3 class="center">Contenido archivo asp</h3>
+                    <pre>Texto proveniente de un archivo asp externo</pre>
+
+
+                    <h3 class="center">Resultado del ejemplo</h3>
+                    <div id="article--insertcent">
+                        <iframe width="584" height="480" src="https://www.youtube.com/embed/NQzIWF_8Nhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+
+            </section>
+        </div>
+
+       
+
+
+
+
+        <footer id="footer--area">
+            <img src="../assets/icons/logo--simplified.svg" id="brand--footer" alt="teamfactorizacion">
+            <h1>Team Factorización</h1>
+            <span>©2022 Team Factorización</span>
+            <div id="social--footer">
+                <a href="https://www.facebook.com/profile.php?id=100022601452185" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/44/44646.png" id="icon--social"></a>
+                <a href="https://twitter.com/DavidQuintR" target="_blank"><img src="https://cobaev37mecatepec.neocities.org/twitter.png" id="icon--social"></a>
+                <a href="https://www.instagram.com/ponce3201/" target="_blank"><img src="https://www.pngmart.com/files/21/Instagram-Logo-Silhoutte-PNG-Image.png" id="icon--social"></a>
+            </div>
+        </footer>
+    </body>
+</html>
