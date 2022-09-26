@@ -39,8 +39,14 @@
                 <a href="#article--author"><div class="item--aside home">
                     <h3>Autores</h3>
                 </div></a>
-                <a href="#plantilla"><div class="item--aside home">
+                <a href="#dom"><div class="item--aside home">
                     <h3>1. DOM</h3>
+                </div></a>
+                <a href="#traversingAncestors"><div class="item--aside home">
+                    <h3>2. jQuery traversing ancestors</h3>
+                </div></a>
+                <a href="#traversingDescendant"><div class="item--aside home">
+                    <h3>3. jQuery traversing descendants</h3>
                 </div></a>
             </aside> 
 
@@ -56,7 +62,7 @@
                 </article>
 
                 <!--POST JQUERY TRANSVERSING-->
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="dom">
                     <!--TITULO, DATOS Y CONTENIDO DEL POST-->
                     <h2>jQuery Transversing</h2>
                     <h4>17 de Septiembre de 2022</h4>
@@ -145,7 +151,7 @@
                     </div>
                 </article>
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="traversingAncestors">
                     <!--TITULO, DATOS Y CONTENIDO DEL POST-->
                     <h2>jQuery traversing - Ancestors</h2>
                     <h4>17 de Septiembre de 2022</h4>
@@ -196,13 +202,75 @@
                          $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;span&quot;</span>).parent().css({<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;color&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;red&quot;</span>, <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;border&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;2px solid red&quot;</span>});
                        });</code></pre>
 
-                       
+                    <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <!--POST TRAVERSING DESCENDANTS-->
+                <article class="main--article" id="traversingDescendant">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>jQuery traversing - descendant</h2>
+                    <h4>17 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">
+                    Con jQuery puede recorrer el árbol DOM hacia abajo para encontrar descendientes de un elemento
+
+                    Un descendiente es un hijo, un nieto, etc ...
+                    <h3>Atravesando el árbol DOM</h3>
+                    <ol>
+                        <li>children()</li>
+                        <li>find()</li>
+                    </ol>
+                    </p>
+                    <span id="article--sep"></span>
+
+                   <h3 class="center">HTML</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">div</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;descendants&quot;</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">style</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;width:500px;&quot;</span>&gt;</span>div (elemento actual) 
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>p (hijo)
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">span</span>&gt;</span>span (nieto0)<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">span</span>&gt;</span>   
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">div</span>&gt;</span></code></pre>
+
+                   <h3 class="center">CSS</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(153, 102, 68); font-weight:400;background:rgba(0, 0, 0, 0);">.descendants</span> * { 
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">display</span>: block;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">border</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">2px</span> solid lightgrey;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">color</span>: lightgrey;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">padding</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">5px</span>;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">margin</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">15px</span>;
+                   }</code></pre>
+
+                   <h3 class="center">jQuery</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">$(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                     $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;div&quot;</span>).children().css({<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;color&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;red&quot;</span>, <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;border&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;2px solid red&quot;</span>});
+                   });</code></pre>
                     
 
-                   
-
-
                     <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+                    </div>
+                
                     <div id="article--author">
                         <img src="../assets/images/erick.png" id="profile--author">
                         <div>
