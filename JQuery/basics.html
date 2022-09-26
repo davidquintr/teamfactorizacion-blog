@@ -35,20 +35,20 @@
         <div id="page--struct">
     
             <aside id="main--aside">
-                <a href="#sintaxis-jquery"><div class="item--aside home">
-                    <h3>Sintaxis de JQuery</h3>
-                </div></a>
-                <a href="#guia-instalacion"><div class="item--aside home">
-                    <h3>¿Cómo instalar JQuery?</h3>
-                </div></a>
-                <a href="#selectores-jquery"><div class="item--aside home">
-                    <h3>Selectores en JQuery</h3>
+                <a href="#no-conflicto"><div class="item--aside home">
+                    <h3>Método noConflict()</h3>
                 </div></a>
                 <a href="#eventos-jquery"><div class="item--aside home">
                     <h3>Eventos de JQuery</h3>
                 </div></a>
-                <a href="#no-conflicto"><div class="item--aside home">
-                    <h3>Método noConflict()</h3>
+                <a href="#selectores-jquery"><div class="item--aside home">
+                    <h3>Selectores en JQuery</h3>
+                </div></a>
+                <a href="#guia-instalacion"><div class="item--aside home">
+                    <h3>¿Cómo instalar JQuery?</h3>
+                </div></a>
+                <a href="#sintaxis-jquery"><div class="item--aside home">
+                    <h3>Sintaxis de JQuery</h3>
                 </div></a>
             </aside> 
 
@@ -205,13 +205,13 @@
                         <br></p>
                         <p>Ejemplo: </p>
 
-                        <pre style="width: 50%;"><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;p&quot;</span>)</code></pre>
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;p&quot;</span>)</code></pre>
                         
                         <p>JQuery se basa directamente en la organización de los elementos HTML, en este caso podemos usar la sintaxis directa de un ID, de la misma manera que lo haríamos para seleccionarlo en CSS.</p>
                         <h3>Selección por ID</h3>
-                        <pre style="width: 50%;"><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#descripcion&quot;</span>)</code></pre>
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#descripcion&quot;</span>)</code></pre>
                         <h3>Selección por clases</h3>
-                        <pre style="width: 50%;"><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;.autores&quot;</span>)</code></pre>                
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;.autores&quot;</span>)</code></pre>                
                         <h3>Ejemplo</h3>
                         <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
                             $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#botonxd&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
