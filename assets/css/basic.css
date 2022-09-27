@@ -141,10 +141,10 @@ li{
     flex-direction: column;
     height: fit-content;
     position: sticky;
-    z-index: 0;
+    z-index: 50;
     margin: 0;
     left: 5px;
-    top: 92px;
+    top: 90px;
     gap: 10px;
     padding-top: 10px;
     padding-bottom: 10px;

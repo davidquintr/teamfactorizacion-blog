@@ -18,8 +18,8 @@ cuando sea una de las categorías a indagar (JQuery, JavaScript).
 
 pre{
     font-size: medium;
-   border-radius: 15px;
-   padding: 15px;
+    border-radius: 15px;
+    padding: 15px; 
     background-color: var(--lightlightblack);
     white-space: pre-wrap; 
 }
@@ -61,6 +61,7 @@ iframe{
     display: flex;
     gap: 15px;
     margin-bottom: 10px;
+    justify-content: space-around;
     align-items: center;
 }
 
