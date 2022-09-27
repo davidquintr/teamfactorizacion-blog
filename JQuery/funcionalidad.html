@@ -64,6 +64,72 @@
                 </article>
 
                 <article class="main--article" id="sintaxis-jquery">
+                    <h2>Animaciones</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Se aprenderá la manera de cómo animar en JQuery</p>
+                    <span id="article--sep"></span>
+                    
+                    <p>Las animaciones de JQuery funcionan a partir de los parámetros que podemos encontrar en CSS, simplemente podemos acceder a las propiedades de animar con el siguiente código:</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).animate();</code></pre>
+                    </div>
+
+                    <p>De esta manera podríamos hacer una primera llamada para animar, por otra parte esto necesita de parámetros, estos los tomaremos de las propiedades bases de CSS y su sintaxis sería así:</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).animate({
+                                <span style="color:rgb(255, 255, 255); font-weight:700;">width</span>: <span style="color:rgb(187, 204, 238); font-weight:400;">&#x27;256px&#x27;</span>,
+                                <span style="color:rgb(255, 255, 255); font-weight:700;">height</span>: <span style="color:rgb(187, 204, 238); font-weight:400;">&#x27;256px&#x27;</span>
+                            });
+                        });</code></pre>
+                        <img src="../assets/anims/animatewidth.gif" class="img--article">
+                    </div>
+                    
+                    <p>No todos los elementos se pueden representar por medio de JQuery, para eso se necesitaría usar un plugin propio de JQuery.<br>Entre los elementos que se pueden alterar están:<br>width, height, left, right, top, bottom, opacity, fontSize.</p>
+                    
+                    <p>Por otra parte, podemos acumular animaciones para que se ejecuten de manera consecutiva:</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                <span style="color:rgb(170, 119, 170); font-weight:400;">var</span> caja = $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>)
+                                caja.animate({
+                                    <span style="color:rgb(255, 255, 255); font-weight:700;">width</span>: <span style="color:rgb(187, 204, 238); font-weight:400;">&#x27;256px&#x27;</span>,
+                                    <span style="color:rgb(255, 255, 255); font-weight:700;">height</span>: <span style="color:rgb(187, 204, 238); font-weight:400;">&#x27;256px&#x27;</span>
+                                });
+                                caja.animate({
+                                    <span style="color:rgb(255, 255, 255); font-weight:700;">width</span>: <span style="color:rgb(187, 204, 238); font-weight:400;">&#x27;512px&#x27;</span>,
+                                    <span style="color:rgb(255, 255, 255); font-weight:700;">height</span>: <span style="color:rgb(187, 204, 238); font-weight:400;">&#x27;512px&#x27;</span>
+                                });
+                            });
+                        });</code></pre>
+                        <img src="../assets/anims/animsvar.gif" class="img--article">
+                    </div>
+
+                    <p>Se puede añadir una propiedad que viene de las anteriores, que viene siendo la velocidad de la animación, esta propiedad se coloca después de finalizar la propiedad que queramos modificar en la animación.</p>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                <span style="color:rgb(170, 119, 170); font-weight:400;">var</span> caja = $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>)
+                                caja.animate({<span style="color:rgb(255, 255, 255); font-weight:700;">fontSize</span>: <span style="color:rgb(187, 204, 238); font-weight:400;">&#x27;52px&#x27;</span>},<span style="color:rgb(187, 204, 238); font-weight:400;">1000</span>);
+                            });
+                        });</code></pre>
+                        <img src="../assets/anims/animsfontvel.gif" class="img--article">
+                    </div>
+
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="sintaxis-jquery">
                     <h2>Deslizamiento</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
@@ -97,24 +163,24 @@
                     </div>
                     
                     <h3>slideUp</h3>
-                    <p>Este es la unificación de los dos anteriores, funciona para ambos estados.</p>
-
-                    <div id="article--comment">
-                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
-                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
-                                   $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).slideToggle(<span style="color:rgb(187, 204, 238); font-weight:400;">1000</span>);
-                               });
-                           });</code></pre>
-                        <img src="../assets/anims/slideupanims.gif" class="img--article">
-                    </div>
-
-                    <h3>slideToggle</h3>
                     <p>Este funciona para desplegar un elemento visible y lo alterna a "display:none" al terminar la animación.</p>
 
                     <div id="article--comment">
                         <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
                                    $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).slideUp(<span style="color:rgb(187, 204, 238); font-weight:400;">1000</span>);
+                               });
+                           });</code></pre>
+                        <img src="../assets/anims/slideupanims.gif" class="img--article">
+                    </div>
+
+                    <h3>slideToggle</h3>
+                    <p>Este es la unificación de los dos anteriores, funciona para ambos estados.</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                   $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).slideToggle(<span style="color:rgb(187, 204, 238); font-weight:400;">1000</span>);
                                });
                            });</code></pre>
                         <img src="../assets/anims/slidetoggleanims.gif" class="img--article">
