@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/basic.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/inblog.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+        <title>Team Factorización - JavaScript</title>
+        <link rel="icon" href="/assets/icons/logo--simplified.svg">
+    </head>
+
+    <body>
+        <header id="main--header">
+            <div id="desp--aside">
+                <input type="checkbox" class="checkbox" id="menu-toogle"/>
+                <img src="..assets/icons/menuIcon.png">
+            </div>  
+            <div id="title--header">
+                <img src="../assets/icons/logo--simplified.svg" id="brand--header" alt="teamfactorizacion">
+                <h1>Team Factorización</h1>
+            </div>
+            <div id="cont--header">
+                <nav id="nav--header">
+                    <ul id="list--header">
+                        <li class="item--nav"><a href="../../index.html">Inicio</a></li>
+                        <li class="item--nav"><a href="../JavaScript.html">JavaScript</a></li>
+                        <li class="item--nav"><a href="../JQuery.html">JQuery</a></li>
+                        <li class="item--nav"><a href="">Acerca de</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        
+        <div id="page--struct">
+            
+            <aside id="main--aside">
+                <a href="#article--author"><div class="item--aside home">
+                    <h3>Autores</h3>
+                </div></a>
+                <a href="#jqueryGet"><div class="item--aside home">
+                    <h3>1. Métodos get()</h3>
+                </div></a>
+            </aside> 
+
+            <section>
+                <article class="main--article introduction">
+                    <div id="article--comment">
+                        <img src="../assets/icons/javascriptIcon.png" id="javascript--logo" class="img--article idk intro" alt="javascriptlogo">
+                        <div>
+                            <h1 id="high--title">jQuery</h1>
+                            <h2>Manipulación del dom</h2>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="jqueryGet">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>jQuery método get()</h2>
+                    <h4>12 de Septiembre de 2022</h4>
+                    <img src="../assets/images/dom.png" class="topimg--article">
+                    <p id="article--desc" class="center">
+                        <b>DOM = Document Object Model (Modelo de Objeto de Documento)</b>
+                        Una funcionalidad muy util e importante de jQuery es que nos permite manipular el DOM. jQuery nos permite utilizar un motón de métodos relacionados al DOM que facilitan el acceso y la manipulación de loos elementos y atributos.
+                    </p>
+                    <span id="article--sep"></span>
+
+                    <p id="article--desc" class="center">
+                        Tenemos 3 métodos simples pero útiles
+                        <ol>
+                            <li><b>text()</b>: Este método devuelve el contenido de los elementos seleccionados</li><br>
+                            <li><b>html()</b>: Este método devuelve el contenido de los elmentos seleccionados <b>incluyendo el marcado HTML</b></li><br>
+                            <li><b>val()</b>: Este método devuelve el valor de los campos de formulario</li>
+                        </ol>
+                    </p>
+                    <h2 class="center">Ejemplo de uso</h2>
+                    <h3 class="center">HTML</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">h1</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;test&quot;</span>&gt;</span>Esto es un titulo <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">b</span>&gt;</span>H1<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">b</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">h1</span>&gt;</span>
+                       
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton1&quot;</span>&gt;</span>Mostrar Texto<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton2&quot;</span>&gt;</span>Mostrar HTML<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span></code></pre>
+
+                    
+                    <h3 class="center">jQuery</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">$(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{  
+                             
+                             $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton1&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                               alert(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Retorno de tipo texto: &quot;</span> + $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#test&quot;</span>).text());
+                             });
+                       
+                             $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton2&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                               alert(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Retorno de tipo HTML: &quot;</span> + $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#test&quot;</span>).html());
+                             });             
+                         });</code></pre>
+        
+                    <!--TEXTO CON IMAGEN-->
+                    <div id="article--comment">
+                        <p>
+                            get text():
+                        </p>
+                        <img src="/../assets/images/getText.png" 
+                        height="200px" width="300px">
+                    </div>   
+                    <br>  
+                    <div id="article--comment">
+                        <p>
+                            get html():
+                        </p>
+                        <img src="/../assets/images/getHTML.png" 
+                        height="200px" width="300px">
+                    </div> 
+
+                    <h2 class="center">Ejemplo de uso </h2>
+                    <h3 class="center">HTML</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>Comida: <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">input</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">type</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;text&quot;</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;test&quot;</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">value</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Carne&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">input</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton&quot;</span>&gt;</span>Mostrar valor<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                       </code></pre>
+
+                       <h3 class="center">jQuery</h3>
+                       <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">$(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{  
+                             
+                             $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                               alert(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Retorno del valor: &quot;</span> + $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#test&quot;</span>).val());
+                             });
+                         });
+                       </code></pre>
+
+                       <div id="article--comment">
+                        <p>
+                            get val():
+                        </p>
+                        <img src="/../assets/images/getVal.png" 
+                        height="200px" width="300px">
+                    </div> 
+
+
+                    <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+                    </div>
+                </article>
+                
+            </section>
+        </div>
+
+        <footer id="footer--area">
+            <img src="../assets/icons/logo--simplified.svg" id="brand--footer" alt="teamfactorizacion">
+            <h1>Team Factorización</h1>
+            <span>©2022 Team Factorización</span>
+            <div id="social--footer">
+                <a href="https://www.facebook.com/profile.php?id=100022601452185" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/44/44646.png" id="icon--social"></a>
+                <a href="https://twitter.com/DavidQuintR" target="_blank"><img src="https://cobaev37mecatepec.neocities.org/twitter.png" id="icon--social"></a>
+                <a href="https://www.instagram.com/ponce3201/" target="_blank"><img src="https://www.pngmart.com/files/21/Instagram-Logo-Silhoutte-PNG-Image.png" id="icon--social"></a>
+            </div>
+        </footer>
+    </body>
+</html>
