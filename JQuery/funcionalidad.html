@@ -35,20 +35,23 @@
         <div id="page--struct">
     
             <aside id="main--aside">
-                <a href="#sintaxis-jquery"><div class="item--aside home">
-                    <h3>Sintaxis de JQuery</h3>
+                <a href="#callback"><div class="item--aside home">
+                    <h3>Ejecución ordenada</h3>
                 </div></a>
-                <a href="#guia-instalacion"><div class="item--aside home">
-                    <h3>¿Cómo instalar JQuery?</h3>
+                <a href="#detener-animaciones"><div class="item--aside home">
+                    <h3>Detener animaciones</h3>
                 </div></a>
-                <a href="#selectores-jquery"><div class="item--aside home">
-                    <h3>Selectores en JQuery</h3>
+                <a href="#animaciones"><div class="item--aside home">
+                    <h3>Animaciones</h3>
                 </div></a>
-                <a href="#eventos-jquery"><div class="item--aside home">
-                    <h3>Eventos de JQuery</h3>
+                <a href="#deslizamiento"><div class="item--aside home">
+                    <h3>Deslizamiento</h3>
                 </div></a>
-                <a href="#no-conflicto"><div class="item--aside home">
-                    <h3>Método noConflict()</h3>
+                <a href="#desvanecimiento"><div class="item--aside home">
+                    <h3>Desvanecimiento</h3>
+                </div></a>
+                <a href="#mostrar-ocultar"><div class="item--aside home">
+                    <h3>Mostrar y ocultar</h3>
                 </div></a>
             </aside> 
 
@@ -63,7 +66,60 @@
                     </div>
                 </article>
 
-                <article class="main--article" id="sintaxis-jquery">
+                <article class="main--article" id="callback">
+                    <h2>Ejecución ordenada del código (callback)</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">En la ejecución de animaciones, se puede detener.</p>
+                    <span id="article--sep"></span>
+                    
+                    <p>La ejecución de los códigos en JavaScript puede ser secuencial, pero esto no siempre es así, puede ser que en algún momento una línea de código se ejecute antes de lo esperado, para eso existen las funciones dentro de otras operaciones, también llamado callback.</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">caja.hide(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;slow&quot;</span>,<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;h1&quot;</span>).text(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;Cambio el texto&quot;</span>);
+                        })</code></pre>                    
+                    </div>
+
+                    <p>En un ejemplo práctico, se puede hacer de la siguiente manera:</p>
+
+                    <div id="article--comment">
+                        <img src="../assets/anims/callbackoneanim.gif" class="img--article">
+                        <img src="../assets/anims/callbacktwoanim.gif" class="img--article">
+                    </div>
+                    
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                <span style="color:rgb(170, 119, 170); font-weight:400;">var</span> caja = $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>)
+                                caja.hide(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;slow&quot;</span>,<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                    $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;h1&quot;</span>).text(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;Cambio el texto&quot;</span>);
+                                })
+                            });
+                        });</code></pre>
+
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                <span style="color:rgb(170, 119, 170); font-weight:400;">var</span> caja = $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>)
+                                caja.hide(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;slow&quot;</span>,<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                })
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;h1&quot;</span>).text(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;Cambio el texto&quot;</span>);
+                            });
+                        });</code></pre>
+                    </div>
+
+                    <p>Como podemos observar en el ejemplo de la izquierda, al hacer uso del callback, la siguiente linea se ejecuta hasta que la animación se ha completado, en cambio con la derecha se ejecuta paralelamente a la ejecución de la línea anterior.</p>
+                    
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="detener-animaciones">
                     <h2>Detener animaciones</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
@@ -101,7 +157,7 @@
                     </div>
                 </article>
 
-                <article class="main--article" id="sintaxis-jquery">
+                <article class="main--article" id="animaciones">
                     <h2>Animaciones</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
@@ -167,7 +223,7 @@
                     </div>
                 </article>
 
-                <article class="main--article" id="sintaxis-jquery">
+                <article class="main--article" id="deslizamiento">
                     <h2>Deslizamiento</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
@@ -233,7 +289,7 @@
                     </div>
                 </article>
 
-                <article class="main--article" id="sintaxis-jquery">
+                <article class="main--article" id="desvanecimiento">
                     <h2>Desvanecimiento</h2>
                     <h4>24 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
