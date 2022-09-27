@@ -34,7 +34,8 @@
         </header>
         
         <div id="page--struct">
-            
+           
+            <!--MENU DE POST-->
             <aside id="main--aside">
                 <a href="#article--author"><div class="item--aside home">
                     <h3>Autores</h3>
@@ -48,6 +49,15 @@
                 <a href="#traversingDescendant"><div class="item--aside home">
                     <h3>3. jQuery traversing descendants</h3>
                 </div></a>
+                
+                <a href="#traversingSiblings"><div class="item--aside home">
+                    <h3>4. jQuery traversing siblings</h3>
+                </div></a>
+                
+                <a href="#traversingFiltering"><div class="item--aside home">
+                    <h3>5. jQuery traversing filtering</h3>
+                </div></a>
+
             </aside> 
 
             <section>
@@ -151,6 +161,7 @@
                     </div>
                 </article>
 
+                <!--POST TRAVERSING ANCESTORS-->
                 <article class="main--article" id="traversingAncestors">
                     <!--TITULO, DATOS Y CONTENIDO DEL POST-->
                     <h2>jQuery traversing - Ancestors</h2>
@@ -286,6 +297,205 @@
                         </div>
                     </div>
                 </article>
+
+                <!--POST TRAVERSING SIBLINGS-->
+                <article class="main--article" id="traversingSiblings">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>jQuery traversing - siblings</h2>
+                    <h4>17 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">
+                    Con jQuery puede recorrer el árbol DOM hacia abajo para encontrar descendientes de un elemento
+
+                    siblings() es un método incorporado en jQuery que se utiliza para encontrar todos los elementos hermanos del elemento seleccionado.
+                    Un hermano son todos aquellos elementos que tienen el mismo padre en el DOM
+                    <h3>Atravesando el árbol DOM</h3>
+                    <ol>
+                        <li>siblings()</li>
+                        <li>next()</li>
+                        <li>nextAll()</li>
+                        <li>nextUntil</li>
+                        <li>prev()</li>
+                        <li>prevAll()</li>
+                        <li>prevUntil()</li>
+                    </ol>
+                    </p>
+                    <span id="article--sep"></span>
+
+                   <h3 class="center">HTML</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">&lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&gt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span> (contenedor padre)
+                     &lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">span</span>&gt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">span</span>&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">span</span>&gt;
+                     &lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">h2</span>&gt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">h2</span>&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">h2</span>&gt;
+                     &lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">h3</span>&gt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">h3</span>&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">h3</span>&gt;
+                     &lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&gt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&gt;
+                   &lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&gt;</code></pre>
+
+                   <h3 class="center">CSS</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(153, 102, 68); font-weight:400;background:rgba(0, 0, 0, 0);">.siblings</span> * { 
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">display</span>: block;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">border</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">2px</span> solid lightgrey;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">color</span>: lightgrey;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">padding</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">5px</span>;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">margin</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">15px</span>;
+                   }</code></pre>
+
+
+                   <h3 class="center">jQuery</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">$(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                     $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;h3&quot;</span>).siblings().css({<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;color&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;white&quot;</span>, <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;border&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;2px solid orange&quot;</span>});
+                   });</code></pre>
+                    
+                   <h3 class="center">Método jQuery next()</h3>
+                   <p class="center">
+                        El método <b>next()</b> devuelve el siguiente elemento hermano del elemento seleccionado.
+                   </p>
+
+                   <h3 class="center">HTML</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">body</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;siblings&quot;</span>&gt;</span>
+                   
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">div</span>&gt;</span>div (cotenedor padre)
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">span</span>&gt;</span>span<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">span</span>&gt;</span>
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">h2</span>&gt;</span>h2<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">h2</span>&gt;</span>
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">h3</span>&gt;</span>h3<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">h3</span>&gt;</span>
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>p<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">div</span>&gt;</span>
+                   
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">body</span>&gt;</span></code></pre>
+
+                   <h3 class="center">CSS</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(153, 102, 68); font-weight:400;background:rgba(0, 0, 0, 0);">.siblings</span> * { 
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">display</span>: block;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">border</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">2px</span> solid lightgrey;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">color</span>: lightgrey;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">padding</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">5px</span>;
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">margin</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">15px</span>;
+                   }</code></pre>
+
+                   <h3 class="center">jQuery</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">$(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                     $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;span&quot;</span>).next().css({<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;color&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;green&quot;</span>, <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;border&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;2px solid orange&quot;</span>});
+                   });</code></pre>
+                   
+                   <div id="article--comment">
+                    <p> Resultado del ejemplo:
+                    </p> 
+                    <img src="../assets/images/siblingsNext.png" width="400px">
+                </div>
+
+                    <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+                    </div>
+                </article>
+            
+                <!--POST TRAVERSING FILTERING-->
+                <article class="main--article" id="traversingFiltering">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>jQuery traversing - filtering</h2>
+                    <h4>17 de Septiembre de 2022</h4>
+                    <p id="article--desc" class="center">
+                        El método <b>filter()</b> se usa para filtrar todos los elementos que no correspondan con los criterios seleccionados y se retornarán esas coincidencias.
+                    </p>
+                    <h3 class="center">Sintaxis</h3>
+                    <pre>$(selector).filter(criterios, function(index))</pre>
+
+                    <span id="article--sep"></span>
+
+                    <p id="article--desc" class="center">
+                        Los métodos de filtrado más basico son <b>first(), last() y eq()</b> los cuales permiten seleccionar un elemento especifico en función de su posición en un grupo de elementos.
+
+                        <b>filter() y not()</b> permiten seleccionar elementos que coinciden, o no coinciden, con un determinado criterio.
+                    </p>
+
+                    <h2 class="center">Ejemplo de filter</h2>
+                    <h3 class="center">HTML</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span>
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;primero&quot;</span>&gt;</span>Primer elemento<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;center&quot;</span>&gt;</span>Elemento central<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;center&quot;</span>&gt;</span>Elemento central<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">class</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;ultimo&quot;</span>&gt;</span>Ultimo elemento<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span></code></pre>
+                    
+                    <h3 class="center">jQuery</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">$(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                         $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;li&quot;</span>).filter(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;.primero, .ultimo&quot;</span>).css({<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;color&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;green&quot;</span>, <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;border&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;2px solid orange&quot;</span>});
+                       });</code></pre>
+
+                        <!--TEXTO CON IMAGEN-->
+                    <div id="article--comment">
+                        <p> Resultado del ejemplo: </p> 
+                        <img src="/../assets/images/traversingFiltering.png" class="img--article idk">
+                    </div>
+
+                       <h2 class="center">Ejemplo de first</h2>
+                       <h3 class="center">HTML</h3>
+                       <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">&lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&gt;&lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&gt;Texto en el primer <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&gt;&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&gt;
+                       
+                       &lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&gt;&lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&gt;Texto en el segundo <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&gt;&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&gt;
+                       
+                       &lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&gt;&lt;<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&gt;Texto en el tercer <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">p</span>&gt;&lt;/<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span>&gt;
+                       </code></pre>
+                       <h3 class="center">CSS</h3>
+                       <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">div</span> { 
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">width</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">200px</span>;
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">border</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">2px</span> solid lightgrey;
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">color</span>: lightgrey;
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">padding</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">5px</span>;
+                         <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">margin</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">15px</span>;
+                       }</code></pre>
+                       
+                       <h3 class="center">jQuery</h3>
+                       <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">$(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                         $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;div&quot;</span>).first().css({<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;color&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;green&quot;</span>, <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;border&quot;</span>: <span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;2px solid orange&quot;</span>});
+                       });</code></pre>
+                   
+                        <!--TEXTO CON IMAGEN-->
+                    <div id="article--comment">
+                        <p> Resultado del ejemplo: </p> 
+                        <img src="/../assets/images/traversingFirst.png" class="img--article idk">
+                    </div>
+            
+
+                    <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                   
+                </article>
+
             </section>
         </div>
 
