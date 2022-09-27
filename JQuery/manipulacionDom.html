@@ -67,7 +67,85 @@
                 </article>
 
                 <article class="main--article" id="mostrar-ocultar">
-                    <h2>Manejo de CSS en JQuery</h2>
+                    <h2>Dimensiones</h2>
+                    <h4>26 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Método para adquirir información sobre las dimensiones de algún objeto.</p>
+                    <span id="article--sep"></span>
+                    
+                    <div id="article--comment">
+                        <img src="https://www.w3schools.com/jquery/img_jquerydim.gif" class="img--article">
+                        <p>Cuando hablamos de dimensiones, estamos hablando de todos los elementos que conforman la resolución final de algún objeto, o puede ser que sin contar alguno, como lo puede ser border o padding.<br>A través de este método podemos establecer o conocer las dimensiones tomando o no en cuenta algún valor.</p>
+                    </div>
+
+                    <p>Observamos aquí todas las alternativas para saber las dimensiones de un objeto:</p>
+                    <table>
+                        <tbody> 
+                            <thead>
+                                <td>Método</td>
+                                <td>Descripción</td>
+                            </thead>
+                            <tr>
+                                <td>width()</td>
+                                <td>Asigna o devuelve la anchura, excluyendo padding, border y margin.</td>
+                            </tr>
+                            <tr>
+                                <td>height()</td>
+                                <td>Asigna o devuelve la altura, excluyendo padding, border y margin.</td>
+                            </tr>
+                            <tr>
+                                <td>innerWidth()</td>
+                                <td>Asigna o devuelve la anchura, esta vez incluyendo padding.</td>
+                            </tr>
+                            <tr>
+                                <td>innerHeight()</td>
+                                <td>Asigna o devuelve la altura, esta vez incluyendo padding.</td>
+                            </tr>
+                            <tr>
+                                <td>outerWidth()</td>
+                                <td>Asigna o devuelve la anchura, esta vez incluyendo padding y border.</td>
+                            </tr>
+                            <tr>
+                                <td>outerHeight()</td>
+                                <td>Asigna o devuelve la altura, esta vez incluyendo padding y border.</td>
+                            </tr>
+                            <tr>
+                                <td>outerWidth(true)</td>
+                                <td>Asigna o devuelve la anchura, esta vez incluyendo padding, margin y border.</td>
+                            </tr>
+                            <tr>
+                                <td>outerHeight(true)</td>
+                                <td>Asigna o devuelve la altura, esta vez incluyendo padding, margin y border.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Para cambiar el tamaño</h3>
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                        $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).width(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;250px&quot;</span>)
+                        });
+                    });</code></pre>
+                    
+                    <h3>Para adquirir y mostrar el tamaño de un objeto</h3>
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                        $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            alert($(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).width())
+                        });
+                    });</code></pre>
+
+
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="mostrar-ocultar">
+                    <h2>CSS</h2>
                     <h4>26 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
                     <p id="article--desc" class="center">Método para manipular las propiedades CSS desde JQuery</p>
@@ -89,6 +167,7 @@
                             });
                         });</code></pre>
                     </div>
+
                     <div id="article--author">
                         <img src="../assets/images/deibi.png" id="profile--author">
                         <div>
