@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/basic.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/inblog.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+        <title>JQuery - Manipulación del DOM</title>
+        <link rel="icon" href="/assets/icons/logo--simplified.svg">
+    </head>
+
+    <body>
+        <header id="main--header">
+            <div id="desp--aside">
+                <input type="checkbox" class="checkbox" id="menu-toogle"/>
+                <img src="..assets/icons/menuIcon.png">
+            </div>  
+            <div id="title--header">
+                <img src="../assets/icons/logo--simplified.svg" id="brand--header" alt="teamfactorizacion">
+                <h1>Team Factorización</h1>
+            </div>
+            <div id="cont--header">
+                <nav id="nav--header">
+                    <ul id="list--header">
+                        <li class="item--nav"><a href="../../index.html">Inicio</a></li>
+                        <li class="item--nav"><a href="../JavaScript.html">JavaScript</a></li>
+                        <li class="item--nav"><a href="../JQuery.html">JQuery</a></li>
+                        <li class="item--nav"><a href="">Acerca de</a></li>
+                    </ul>
+                </nav>
+            </div>
+          </header>
+
+        <div id="page--struct">
+            <aside id="main--aside">
+                <a href="#article--author"><div class="item--aside home">
+                    <h3>Autores</h3>
+                </div></a>
+                <a href="#jqueryGet"><div class="item--aside home">
+                    <h3>1. Métodos get()</h3>
+                </div></a>
+                
+                <a href="#metodoSet"><div class="item--aside home">
+                    <h3>2. Métodos set()</h3>
+                </div></a>
+                              <a href="#dimensiones"><div class="item--aside home">
+                    <h3>Dimensiones</h3>
+                </div></a>
+                <a href="#css"><div class="item--aside home">
+                    <h3>CSS</h3>
+                </div></a>
+                <a href="#manejo-clases"><div class="item--aside home">
+                    <h3>Manejo de clases</h3>
+                </div></a>
+            </aside> 
+
+            <section>
+                <article class="main--article introduction">
+                    <div id="article--comment">
+
+                        <img src="../assets/icons/jqueryIcon.png" id="javascript--logo" class="img--article idk intro" alt="jquerylogo" style="filter: invert(1);">
+                        <div>
+                            <h1 id="high--title">JQuery</h1>
+                            <h2>Manipulación del DOM</h2>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="dimensiones">
+                    <h2>Dimensiones</h2>
+                    <h4>26 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Método para adquirir información sobre las dimensiones de algún objeto.</p>
+                    <span id="article--sep"></span>
+                    
+                    <div id="article--comment">
+                        <img src="https://www.w3schools.com/jquery/img_jquerydim.gif" class="img--article">
+                        <p>Cuando hablamos de dimensiones, estamos hablando de todos los elementos que conforman la resolución final de algún objeto, o puede ser que sin contar alguno, como lo puede ser border o padding.<br>A través de este método podemos establecer o conocer las dimensiones tomando o no en cuenta algún valor.</p>
+                    </div>
+
+                    <p>Observamos aquí todas las alternativas para saber las dimensiones de un objeto:</p>
+                    <table>
+                        <tbody> 
+                            <thead>
+                                <td>Método</td>
+                                <td>Descripción</td>
+                            </thead>
+                            <tr>
+                                <td>width()</td>
+                                <td>Asigna o devuelve la anchura, excluyendo padding, border y margin.</td>
+                            </tr>
+                            <tr>
+                                <td>height()</td>
+                                <td>Asigna o devuelve la altura, excluyendo padding, border y margin.</td>
+                            </tr>
+                            <tr>
+                                <td>innerWidth()</td>
+                                <td>Asigna o devuelve la anchura, esta vez incluyendo padding.</td>
+                            </tr>
+                            <tr>
+                                <td>innerHeight()</td>
+                                <td>Asigna o devuelve la altura, esta vez incluyendo padding.</td>
+                            </tr>
+                            <tr>
+                                <td>outerWidth()</td>
+                                <td>Asigna o devuelve la anchura, esta vez incluyendo padding y border.</td>
+                            </tr>
+                            <tr>
+                                <td>outerHeight()</td>
+                                <td>Asigna o devuelve la altura, esta vez incluyendo padding y border.</td>
+                            </tr>
+                            <tr>
+                                <td>outerWidth(true)</td>
+                                <td>Asigna o devuelve la anchura, esta vez incluyendo padding, margin y border.</td>
+                            </tr>
+                            <tr>
+                                <td>outerHeight(true)</td>
+                                <td>Asigna o devuelve la altura, esta vez incluyendo padding, margin y border.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Para cambiar el tamaño</h3>
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                        $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).width(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;250px&quot;</span>)
+                        });
+                    });</code></pre>
+                    
+                    <h3>Para adquirir y mostrar el tamaño de un objeto</h3>
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                        $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            alert($(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).width())
+                        });
+                    });</code></pre>
+
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+                
+
+                <!--POST METODO SET-->
+                
+
+
+                <!--POST METODO ADD-->
+            
+                <article class="main--article" id="css">
+                    <h2>CSS</h2>
+                    <h4>26 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Método para manipular las propiedades CSS desde JQuery</p>
+                    <span id="article--sep"></span>
+
+                    <p>A través de un selector y la función CSS de JQuery, podemos cambiar la totalidad de los propiedades CSS:</p>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#cambiar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).css(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;background-color&quot;</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;black&quot;</span>)
+                            });
+                        });</code></pre>
+                    </div>
+                    <p>De esta manera se puede afectar más de una propiedad:</p>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#cambiar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).css({<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;background-color&quot;</span>:<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;black&quot;</span>, <span style="color:rgb(187, 204, 238); font-weight:400;">&quot;color&quot;</span>:<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;white&quot;</span>})
+                            });
+                        });</code></pre>
+                    </div>
+
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="manejo-clases">
+                    <h2>Manejo de clases en elementos del DOM</h2>
+                    <h4>26 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Método para agregar y remover clases a elementos del DOM</p>
+                    <span id="article--sep"></span>
+
+                    <p>En JQuery tenemos diferente métodos para conocer el qué hacer con un elemento del DOM y sus clases</p>
+                    <table>
+                        <tbody> 
+                            <thead>
+                                <td>Sintaxis</td>
+                                <td>Evento</td>
+                            </thead>
+                            <tr>
+                                <td>addClass()</td>
+                                <td>Agrega una o más clases a los elementos seleccionados.</td>
+                            </tr>
+                            <tr>
+                                <td>removeClass()</td>
+                                <td>Remove una o más clases a los elementos seleccionados.</td>
+                            </tr>
+                            <tr>
+                                <td>toggleClass()</td>
+                                <td>Alterna la disposición de las clases agregadas</td>
+                            </tr>
+                            <tr>
+                                <td>css()</td>
+                                <td>Configura o retorna los atributos de estilo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h3>addClass() & removeClass()</h3>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#poner&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).addClass(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;cajaran&quot;</span>)
+                            });
+                            
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#quitar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).removeClass(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;cajaran&quot;</span>)
+                            });
+                        });</code></pre>
+                        <img src="../assets/anims/addremoveclass.gif" class="img--article">
+                    </div>
+                    <p class="center">De esta manera, se puede comprobar el funcionamiento de colocar y quitar una clase a un elemento del DOM</p>
+
+                    <h3>toggleClass()</h3>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).toggleClass(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;cajaran&quot;</span>)
+                            });
+                        });</code></pre>
+                        <img src="../assets/anims/toggleclassanim.gif" class="img--article">
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="addElement">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>jQuery </h2>
+                    <h4>12 de Septiembre de 2022</h4>
+                    
+                    <p>Para agregar contenido en jQuery se utilizan cuatro métodos</p>
+                    <p id="article--desc" class="center">
+                        <ol>
+                            <li><b>append()</b>: Inserta contenido al final del elemento seleccionado</li>
+                            <br>
+                            <li><b>prepend()</b>: Inserta contenido al principio de los elementos seleccionados</li>
+                            <br>
+                            <li><b>after()</b>: Inserta contenido después de los elmentos seleccionados</li>
+                            <br>
+                            <li><b>before()</b>: Inserta contenido antes de los elementos seleccionados</li>
+                        </ol>
+                    </p>
+                    <span id="article--sep"></span>
+
+                   <h2 class="center">Ejemplo de uso</h2> 
+                   <h3 class="center">HTML</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;p1&quot;</span>&gt;</span>Texto<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span>
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>elmento<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span>
+                   
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton1&quot;</span>&gt;</span>adjuntar texto<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton2&quot;</span>&gt;</span>adjuntar elemento<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                   
+                   </code></pre>
+                   <h3 class="center">CSS</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">  $(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                     
+                       $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton1&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                         $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#p1&quot;</span>).append(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;&lt;i&gt; Texto agregado&lt;/i&gt;&quot;</span>);
+                       });
+                     
+                       $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton2&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                         $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;ol&quot;</span>).append(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;&lt;li&gt;elemento agregado&lt;/li&gt;&quot;</span>);
+                       });
+                   
+                     
+                     });
+                   </code></pre>
+
+
+                <div id="article--insertcent">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xjvhq6j1yr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+                </div>
+
+                    <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+                    </div>
+                    
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+                    </div>
+
+                </article>
+
+                <article class="main--article" id="metodoSet">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>jQuery método set()</h2>
+                    <h4>10 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">
+                        <b>DOM = Document Object Model (Modelo de Objeto de Documento)</b>
+                        Una funcionalidad muy util e importante de jQuery es que nos permite manipular el DOM. jQuery nos permite utilizar un motón de métodos relacionados al DOM que facilitan el acceso y la manipulación de loos elementos y atributos.
+                    </p>
+                    <span id="article--sep"></span>
+
+                    <p id="article--desc" class="center">
+                        El método set establece contenido de tipo: text(), html()  val()
+                        <ol>
+                            <li><b>text()</b>: Este método establece el contenido de los elementos seleccionados</li><br>
+                            <li><b>html()</b>: Este método establece el contenido de los elmentos seleccionados <b>incluyendo el marcado HTML</b></li><br>
+                            <li><b>val()</b>: Este método establece el valor de los campos de formulario</li>
+                        </ol>
+                    </p>
+
+                    <h2 class="center">Ejemplo de uso</h2>
+                    <h3 class="center">HTML</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;p1&quot;</span>&gt;</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;p2&quot;</span>&gt;</span>Esto es un parrafo con unas cuantas lineas<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>
+                       
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>Entrada de texto <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">input</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">type</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;text&quot;</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;input1&quot;</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">value</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Carne Asada&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>
+                       
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton1&quot;</span>&gt;</span>Set Text<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton2&quot;</span>&gt;</span>Set HTML<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton3&quot;</span>&gt;</span>Set Value<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                       
+                       </code></pre>
+                    <h3 class="center">jQuery</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"> $(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                         
+                           $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton1&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                             $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#p1&quot;</span>).text(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Esto es lo que hace el set&quot;</span>);
+                           });
+                         
+                           $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton2&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                             $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#p2&quot;</span>).html(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;&lt;b&gt;Esto es otro parrafo pero en negrita&lt;/b&gt;&quot;</span>);
+                           });
+                         
+                           $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton3&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                             $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#input1&quot;</span>).val(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Enchilada&quot;</span>);
+                           });
+                         
+                         });
+                       </code></pre>
+
+                       <h2 class="center">Resultados del ejemplo</h2>
+                       <div id="article--insertcent">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZbPdG0-SsSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                       
+
+                    <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+                    </div>
+                    
+                </article>
+
+                <!--POST METODO GET-->
+                <article class="main--article" id="jqueryGet">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>jQuery método get()</h2>
+                    <h4>8 de Septiembre de 2022</h4>
+                    <img src="../assets/images/dom.png" class="topimg--article">
+                    <p id="article--desc" class="center">
+                        <b>DOM = Document Object Model (Modelo de Objeto de Documento)</b>
+                        Una funcionalidad muy util e importante de jQuery es que nos permite manipular el DOM. jQuery nos permite utilizar un motón de métodos relacionados al DOM que facilitan el acceso y la manipulación de loos elementos y atributos.
+                    </p>
+                    <span id="article--sep"></span>
+
+                    <p>Tenemos 3 métodos simples pero útiles</p>
+                    <p id="article--desc" class="center">
+                        <ol>
+                            <li><b>text()</b>: Este método devuelve el contenido de los elementos seleccionados</li><br>
+                            <li><b>html()</b>: Este método devuelve el contenido de los elmentos seleccionados <b>incluyendo el marcado HTML</b></li><br>
+                            <li><b>val()</b>: Este método devuelve el valor de los campos de formulario</li>
+                        </ol>
+                    </p>
+                    <h2 class="center">Ejemplo de uso</h2>
+                    <h3 class="center">HTML</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">h1</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;test&quot;</span>&gt;</span>Esto es un titulo <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">b</span>&gt;</span>H1<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">b</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">h1</span>&gt;</span>
+                       
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton1&quot;</span>&gt;</span>Mostrar Texto<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton2&quot;</span>&gt;</span>Mostrar HTML<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span></code></pre>
+
+                    
+                    <h3 class="center">jQuery</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">$(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{  
+                             
+                             $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton1&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                               alert(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Retorno de tipo texto: &quot;</span> + $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#test&quot;</span>).text());
+                             });
+                       
+                             $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton2&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                               alert(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Retorno de tipo HTML: &quot;</span> + $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#test&quot;</span>).html());
+                             });             
+                         });</code></pre>
+        
+                    <!--TEXTO CON IMAGEN-->
+                    <div id="article--comment">
+                        <h3>get text():</h3>
+                        <img src="/../assets/images/getText.png" class="img--article">
+                    </div>   
+                    <br>  
+                    <div id="article--comment">
+                        <h3>get html():</h2>
+                        <img src="/../assets/images/getHTML.png" class="img--article">
+                    </div> 
+
+                    <h2 class="center">Ejemplo de uso </h2>
+                    <h3 class="center">HTML</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>Comida: <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">input</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">type</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;text&quot;</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;test&quot;</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">value</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Carne&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">input</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>
+                       <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton&quot;</span>&gt;</span>Mostrar valor<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                       </code></pre>
+
+                       <h3 class="center">jQuery</h3>
+                       <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">$(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{  
+                             
+                             $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                               alert(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;Retorno del valor: &quot;</span> + $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#test&quot;</span>).val());
+                             });
+                         });
+                       </code></pre>
+
+                       <div id="article--comment">
+                        <h3>get val():</h3>
+                        <img src="/../assets/images/getVal.png" class="img--article">
+                    </div> 
+
+
+                    <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+
+        <footer id="footer--area">
+            <img src="../assets/icons/logo--simplified.svg" id="brand--footer" alt="teamfactorizacion">
+            <h1>Team Factorización</h1>
+            <span>©2022 Team Factorización</span>
+            <div id="social--footer">
+                <a href="https://www.facebook.com/profile.php?id=100022601452185" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/44/44646.png" id="icon--social"></a>
+                <a href="https://twitter.com/DavidQuintR" target="_blank"><img src="https://cobaev37mecatepec.neocities.org/twitter.png" id="icon--social"></a>
+                <a href="https://www.instagram.com/ponce3201/" target="_blank"><img src="https://www.pngmart.com/files/21/Instagram-Logo-Silhoutte-PNG-Image.png" id="icon--social"></a>
+            </div>
+        </footer>
+    </body>
+</html>

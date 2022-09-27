@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/basic.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/inblog.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+        <title>Team Factorización - JavaScript</title>
+        <link rel="icon" href="/assets/icons/logo--simplified.svg">
+    </head>
+
+    <body>
+        <header id="main--header">
+            <div id="desp--aside">
+                <input type="checkbox" class="checkbox" id="menu-toogle"/>
+                <img src="..assets/icons/menuIcon.png">
+            </div>  
+            <div id="title--header">
+                <img src="../assets/icons/logo--simplified.svg" id="brand--header" alt="teamfactorizacion">
+                <h1>Team Factorización</h1>
+            </div>
+            <div id="cont--header">
+                <nav id="nav--header">
+                    <ul id="list--header">
+                        <li class="item--nav"><a href="../../index.html">Inicio</a></li>
+                        <li class="item--nav"><a href="../JavaScript.html">JavaScript</a></li>
+                        <li class="item--nav"><a href="../JQuery.html">JQuery</a></li>
+                        <li class="item--nav"><a href="">Acerca de</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        
+        <div id="page--struct">
+            
+            <aside id="main--aside">
+                <a href="#article--author"><div class="item--aside home">
+                    <h3>Autores</h3>
+                </div></a>
+                <a href="#plantilla"><div class="item--aside home">
+                    <h3>1. Introducción JavaScript</h3>
+                </div></a>
+            </aside> 
+            <!--aspectos esenciales de javascript-->
+            <section>
+                <article class="main--article introduction">
+                    <div id="article--comment">
+                        <img src="../assets/icons/javascriptIcon.png" id="javascript--logo" class="img--article idk intro" alt="javascriptlogo">
+                        <div>
+                            <h1 id="high--title">JavaScript</h1>
+                            <h2>Manejo de fechas</h2>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>Salida de fechas</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Maneras de generar objetos de tiempo en JavaScript</p>
+                    <span id="article--sep"></span>
+
+                    <p>JavaScript por defecto utiliza la zona horaria del navegador y muestra una fecha como un string.</p>
+                    <p>Para crear objetos de tiempo se utiliza el constructor new Date(), sin embargo este tiene 4 maneras de hacerlo:</p>
+                    
+                    <p>-Para generar la fecha y el tiempo actual.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(184, 4, 169); font-weight:700;">const</span> actual = <span style="color:rgb(165, 2, 165); font-weight:700;">new</span> <span style="color:rgb(255, 255, 255); font-weight:400;">Date</span>();</code></pre>
+                     
+                    <p>-En caso de que se quiera generar una fecha y tiempo en especifico.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 242, 242)"><span style="color:rgb(129, 0, 180); font-weight:700;">const</span> d = new Date(<span style="color:rgb(2, 106, 190); font-weight:400;">2022</span>, <span style="color:rgb(0, 114, 180); font-weight:400;">07</span>, <span style="color:rgb(1, 110, 173); font-weight:400;">18</span>, <span style="color:rgb(5, 121, 167); font-weight:400;">18</span>, <span style="color:rgb(0, 128, 160); font-weight:400;">24</span>, <span style="color:rgb(6, 138, 161); font-weight:400;">10</span>, <span style="color:rgb(4, 123, 153); font-weight:400;">40</span>);</code></pre>
+
+                    <p>Cabe aclarar que el orden que se tiene que poner los valores es el siguiente: año, mes, dia, hora, minuto, segundos y milisegundos. Ademas de que si se intenta especificar un valor mayor al limite hara un overflow para al proximo valor.</p>
+                    <p>Por ejemplo si se pone en mes un 13 el valor y el año es 2003, pasara un overflow y el año pasara a ser 2004. Igualmente si se intenta hacer los mismo con los otros valores pasaria lo mismo.</p>
+
+                    <p>-El new Date(dateString) crea un nuevo objeto de tiempo desde un date string.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(133, 3, 184); font-weight:700;">const</span> tiempoString = <span style="color:rgb(135, 4, 196); font-weight:700;">new</span> <span style="color:rgb(255, 255, 255); font-weight:400;">Date</span>(<span style="color:rgb(61, 255, 22); font-weight:400;">&quot;Junio, 2019 09:33:29&quot;</span>);</code></pre>
+
+                    <p>-Por ultimo el new Date(miliseconds) crea un objeto tiempo como tiempo cero mas milisegundos. Es decir JavaScript almacena las fechas en milisegundos desde 1 de enero de 1970 00:00:00 UTC(esto significa hora universal coordinada), desde esa fecha se suman los milisegundos puestos. </p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 254, 254)"><span style="color:rgb(150, 4, 163); font-weight:700;">const</span> milisegundos = <span style="color:rgb(161, 4, 161); font-weight:700;">new</span> <span style="color:rgb(57, 115, 0); font-weight:400;">Date</span>(<span style="color:rgb(0, 108, 170); font-weight:400;">1000000000000</span>);</code></pre>
+
+                        <div id="article--author" class="riuske">
+                            <img src="../assets/images/riuske.png" id="profile--author">
+                            <div>
+                                <span>Escrito por:</span>
+                                <h4>Riuske Nishime Robleto</h4>
+                            </div>
+                        </div>
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>Formatos de fecha</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Diferentes formatos que se utilizan a la hora de utilizar alguna función de fecha</p>
+                    <span id="article--sep"></span>
+
+
+                    <table>
+                        <tbody>
+                            <thead>
+                                <td>Tipo</td>
+                                <td>Descripción</td>
+                                <td>Ejemplo</td>
+                            </thead>
+                            <tr>
+                                <td>Fecha ISO</td>
+                                <td>La sintaxis de este formato es (YYYY-MM-DD). 
+                                    En caso de agregar tiempo es (YYYY-MM-DDTHH:MM:SSZ)</td>
+                                <td>const ISO = new Date("2019-11-23"); 
+                                    const ISO = new Date("2019-11-23T21:00:10");</td>
+                            </tr>
+
+                            <tr>
+                                <td>Fecha corta</td>
+                                <td>Se escriben de esta manera: "MM/DD/YYYY"</td>
+                                <td>const corto = new Date("10/18/2020")</td>
+                            </tr>
+
+                            <tr>
+                                <td>Fecha larga</td>
+                                <td>La sintaxis es "MMM DD YYYY". 
+                                    Los meses y dias pueden cambiar de orden y los meses tambien pueden ser escritos con el nombre completo</td>
+                                <td>const largo = new Date("Jul 18 2040");
+                                    const largo = new Date("17 enero 2010");
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>Metodos Get Date</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Metedos utilizables para conseguir información de un objeto fecha</p>
+                    <span id="article--sep"></span>
+
+                    <table>
+                        <tbody>
+                            <thead>
+                                <td>Tipo</td>
+                                <td>Descripción</td>
+                                <td>Sintaxis</td>
+                            </thead>
+                            <tr>
+                                <td>getFullYear()</td>
+                                <td>Obtiene el año como número de 4 dígitos(YYYY)</td>
+                                <td>Const year = new Date();     year.getFullYear();</td>
+                            </tr>
+
+                            <tr>
+                                <td>getMonth()</td>
+                                <td>Obtiene el mes en número del 0 al 11</td>
+                                <td>Const mes = new Date();     mes.getMonth();</td>
+                            </tr>
+
+                            <tr>
+                                <td>getDate();</td>
+                                <td>Obtiene el dia en núnmero del 1 al 31</td>
+                                <td>Const fecha = new Date();     fecha.getDate();</td>
+                            </tr>
+
+                            <tr>
+                                <td>getHours();</td>
+                                <td>retorna la hora de una fecha como número del 0 al 23</td>
+                                <td>Const hora = new Date();     hora.getHours();</td>
+                            </tr>
+
+                            <tr>
+                                <td>getMinutes();</td>
+                                <td>Retorna los minutos de una fecha como número del 0 al 59</td>
+                                <td>Const minutos = new Date();     minutos.getMinutes();</td>
+                            </tr>
+
+                            <tr>
+                                <td>getSeconds();</td>
+                                <td>Retorna los segundos de una fecha como número del 0 al 59</td>
+                                <td>Const segundos = new Date();     dia.getSeconds();</td>
+                            </tr>
+
+                            <tr>
+                                <td>getMiliseconds();</td>
+                                <td>Retorna los milisegundos de una fecha como número del 0 al 999</td>
+                                <td>Const milisegundos = new Date();     milisegundos.getMiliseconds();</td>
+                            </tr>
+
+                            <tr>
+                                <td>getDay();</td>
+                                <td>Retorna el dia de la semana como número del 0 al 6</td>
+                                <td>Const dia = new Date();     dia.getDay();</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                           <div id="article--author" class="riuske">
+                            <img src="../assets/images/riuske.png" id="profile--author">
+                            <div>
+                                <span>Escrito por:</span>
+                                <h4>Riuske Nishime Robleto</h4>
+                            </div>
+
+                </article>
+
+
+                <article class="main--article" id="plantilla">
+                    <h2>Metodos set Date</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center"></p>
+                    <span id="article--sep"></span>
+
+                    
+                    <table>
+                        <tbody>
+                            <thead>
+                                <td>Tipo</td>
+                                <td>Descripción</td>
+                                <td>Sintaxis</td>
+                            </thead>
+                            <tr>
+                                <td>setFullYear()</td>
+                                <td>Establece el año como número</td>
+                                <td>Const year = new Date();     year.setFullYear(2005);</td>
+                            </tr>
+
+                            <tr>
+                                <td>setMonth()</td>
+                                <td>Establece el mes de una fecha del 0 al 11</td>
+                                <td>Const mes = new Date();     mes.setMonth(2);</td>
+                            </tr>
+
+                            <tr>
+                                <td>setDate();</td>
+                                <td>Establece el dia de una fecha del 1 al 31</td>
+                                <td>Const fecha = new Date();     fecha.setDate(25);</td>
+                            </tr>
+
+                            <tr>
+                                <td>setHours();</td>
+                                <td>Establece las horas de una fecha del 0 al 23</td>
+                                <td>Const hora = new Date();     hora.setHours(14);</td>
+                            </tr>
+
+                            <tr>
+                                <td>setMinutes();</td>
+                                <td>Establece los minutos de una fecha del 0 al 59</td>
+                                <td>Const minutos = new Date();     minutos.setMinutes(58);</td>
+                            </tr>
+
+                            <tr>
+                                <td>setSeconds();</td>
+                                <td>Establece los segundos de una fecha del 0 al 59</td>
+                                <td>Const segundos = new Date();     dia.setSeconds(5);</td>
+                            </tr>
+
+                            <tr>
+                                <td>setTime();</td>
+                                <td>Establece la fecha y el tiempo al sumar o restar en miliseconds</td>
+                                <td>Const fechas = new Date();     fechas.setTime(120000000000);</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+
+
+
+        <footer id="footer--area">
+            <img src="../assets/icons/logo--simplified.svg" id="brand--footer" alt="teamfactorizacion">
+            <h1>Team Factorización</h1>
+            <span>©2022 Team Factorización</span>
+            <div id="social--footer">
+                <a href="https://www.facebook.com/profile.php?id=100022601452185" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/44/44646.png" id="icon--social"></a>
+                <a href="https://twitter.com/DavidQuintR" target="_blank"><img src="https://cobaev37mecatepec.neocities.org/twitter.png" id="icon--social"></a>
+                <a href="https://www.instagram.com/ponce3201/" target="_blank"><img src="https://www.pngmart.com/files/21/Instagram-Logo-Silhoutte-PNG-Image.png" id="icon--social"></a>
+            </div>
+        </footer>
+    </body>
+</html>

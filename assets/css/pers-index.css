@@ -1,3 +1,129 @@
 #main--aside{
     display: none;
 }
+
+.introduction{
+    display: flex;
+    background-color: #5086c1;
+    justify-content: center;
+    margin-bottom: 0;
+    height: 300px;
+}
+
+#cssdoc{
+    margin: 5px;
+}
+
+.logotf{
+    width: 100px;
+}
+
+section{
+    width: 90%;
+}
+
+.not-all{
+    display: flex;
+    flex-direction: column;
+}
+
+.not-all, #article--sep{
+    width: 70%;       
+}
+
+.img--article{
+    filter: invert(1);
+    max-width: 30%;
+}
+
+#element1, #element2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    height: 90%;
+    align-items: center;
+    justify-content:center;
+}
+
+#element2{
+    width: 100%;
+    background-color: var(--midtoneblack);
+    transition: background-color 0.2s, transform 0.5s;
+}
+
+#element2:hover{
+    filter: invert(1);
+    transform: scale(0.9);
+}
+
+#backforicon{
+    height: 320px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content:center;
+}
+
+#backforicon > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+#destacadosjs{
+    flex-wrap:wrap;
+    margin-top: 0;
+}
+
+#internal--element{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 200px;
+    background-color: var(--backtoneblack);
+    padding: 10px;
+    padding-top: 0;
+    margin: 5px;
+    margin-top: 10px;
+    transition: background-color 0.2s, transform 0.5s;
+}
+
+#internal--element:hover{
+    filter: invert(1);
+    transform: scale(0.95);
+}
+
+#internal--element > img{
+    border-radius: 15px;
+    width: 90%;
+}
+
+#internal--element > h3{
+    color: #c1eaff;
+    font-size: 20px;
+    margin: 5px;
+}
+
+#internal--element > p{
+    font-size: 12px;
+    margin: 5px;
+}
+
+#elements--carrs{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#cg--color{
+    margin: 5px;
+    color: #c1eaff;
+}
