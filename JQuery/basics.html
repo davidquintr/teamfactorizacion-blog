@@ -6,7 +6,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
-        <title>JQuery - Aspectos Escenciales</title>
+        <title>JQuery - Aspectos Esenciales</title>
         <link rel="icon" href="/assets/icons/logo--simplified.svg">
     </head>
 
@@ -30,17 +30,25 @@
                     </ul>
                 </nav>
             </div>
-
         </header>
         
         <div id="page--struct">
-            
+    
             <aside id="main--aside">
-                <a href="#article--author"><div class="item--aside home">
-                    <h3>Autores</h3>
+                <a href="#no-conflicto"><div class="item--aside home">
+                    <h3>Método noConflict()</h3>
                 </div></a>
-                <a href="#plantilla"><div class="item--aside home">
-                    <h3>1. Introducción JavaScript</h3>
+                <a href="#eventos-jquery"><div class="item--aside home">
+                    <h3>Eventos de JQuery</h3>
+                </div></a>
+                <a href="#selectores-jquery"><div class="item--aside home">
+                    <h3>Selectores en JQuery</h3>
+                </div></a>
+                <a href="#guia-instalacion"><div class="item--aside home">
+                    <h3>¿Cómo instalar JQuery?</h3>
+                </div></a>
+                <a href="#sintaxis-jquery"><div class="item--aside home">
+                    <h3>Sintaxis de JQuery</h3>
                 </div></a>
             </aside> 
 
@@ -50,12 +58,211 @@
                         <img src="../assets/icons/jqueryIcon.png" id="javascript--logo" class="img--article idk intro" alt="jquerylogo" style="filter: invert(1);">
                         <div>
                             <h1 id="high--title">JQuery</h1>
-                            <h2>Aspectos escenciales de JQuery</h2>
+                            <h2>Aspectos esenciales de JQuery</h2>
                         </div>
                     </div>
                 </article>
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="no-conflicto">
+                    <h2>Método noConflict()</h2>
+                    <h4>23 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Evitar conflictos con JavaScript y derivados</p>
+                    <span id="article--sep"></span>
+                    <p>JQuery es una biblioteca que funciona a partir de JavaScript, por eso usamos el signo de dólar como acceso directo a los comandos propios de la libería.<br>Por otra parte, puede ser que de algún modo, alguna libería o implemntación propia de un código en JavaScript utilice este signo, para eso sirve el método o modo de no conflicto.<br><br>El método de no conflicto hace una separación del signo para que otros elementos o liberías no lo usen.</p>
+
+                    <pre><code>$.noConflict();</code></pre>
+
+                    <p>De esta manera reservamos JQuery para nuestro uso en un ámbito deseado, el modo de no conflicto no solo sirve para esto, también funciona para cambiar el comando de llamada a JQuery</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170);">var</span> jq = $.noConflict();<br>jq(<span style="color:rgb(221, 68, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170); ">function</span>(<span style="color:rgb(255, 255, 255);"></span>)</span>{<br>}</code></pre>
+
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="eventos-jquery">
+                    <h2>Eventos de JQuery</h2>
+                    <h4>23 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Contribuye al formato responsivo en JQuery y HTML</p>
+                    <span id="article--sep"></span>
+
+                    <p>Con respecto a los eventos de JQuery, es algo similar a lo que podemos ver en lenguajes de programación de de escritorio, como lo pueden ser los actionlistener en C# y Java.<br>
+                    Estos eventos precisan la acción que pueda realizar un usuario en ciertas cosas como: </p>
+                    <ul>
+                        <li>Mover el mouse sobre un elemento</li>
+                        <li>Realizar acciones sobre checkbox</li>
+                        <li>Hacer clic en un elemento</li>
+                    </ul>
+
+                    <p>Es una lista algo limitada de acciones que se pueden hacer, pero es bastante útil, si se quisiera tener más control, sería una mejor opción usar JavaScript puro.</p>
+
+                    <table>
+                        <tbody> 
+                            <thead>
+                                <td>Eventos de mouse</td>
+                                <td>Eventos de teclado</td>
+                                <td>Eventos de formulario</td>
+                                <td>Eventos del documento/ventana</td>
+                            </thead>
+                            <tr>
+                                <td>click</td>
+                                <td>keypress</td>
+                                <td>submit</td>
+                                <td>load</td>
+                            </tr>
+                            <tr>
+                                <td>dblclick</td>
+                                <td>keydown</td>
+                                <td>change</td>
+                                <td>resize</td>
+                            </tr>
+                            <tr>
+                                <td>mouseenter</td>
+                                <td>keyup</td>
+                                <td>focus</td>
+                                <td>scroll</td>
+                            </tr>
+                            <tr>
+                                <td>mouseleave</td>
+                                <td></td>
+                                <td>blur</td>
+                                <td>unload</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>Al realizar la selección del elemento, necesitamos saber qué hacer con el y por eso ocupamos function para operar.</p>
+                    <h3>Ejemplo:</h3>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#botonxd&quot;</span>).dblclick    (<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#togglew&quot;</span>).toggle();
+                            });
+                        });</code></pre>
+
+                        <img src="../assets/anims/pruebacode.gif" class="img--article">
+                    </div>
+
+                    <h3>Interacción con el mouse (enter, leave y click)</h3>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                        $(<span style="color:rgb(187, 204, 238);">&quot;#pass&quot;</span>).mouseenter(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#pass&quot;</span>).css(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;background-color&quot;</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;chocolate&quot;</span>);
+                            });
+
+                            $(<span style="color:rgb(187, 204, 238);">&quot;#pass&quot;</span>).mouseleave(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#pass&quot;</span>).css(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;background-color&quot;</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;coral&quot;</span>);
+                            });
+
+                            $(<span style="color:rgb(187, 204, 238);">&quot;#pass&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#pass&quot;</span>).css(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;background-color&quot;</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#86b6f1&quot;</span>);
+                            });
+                        });</code></pre>
+                        <img src="../assets/anims/passmouseanim.gif" class="img--article">
+                    </div>
+
+                    <h3>Simplificación del código</h3>
+                    <p>Como una de las características, JQuery puede resumir estas líneas de código y simplificarlas con el evento on de la siguiente manera:</p>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255);"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#pass&quot;</span>).on({
+                               <span style="color:rgb(255, 255, 255); font-weight:700;">mouseenter</span>:<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                   $(<span style="color:rgb(221, 68, 0); font-weight:400;">this</span>).css(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;background-color&quot;</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;chocolate&quot;</span>);
+                               },
+                               <span style="color:rgb(255, 255, 255); font-weight:700;">mouseleave</span>:<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                   $(<span style="color:rgb(221, 68, 0); font-weight:400;">this</span>).css(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;background-color&quot;</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;coral&quot;</span>);
+                               },
+                               <span style="color:rgb(255, 255, 255); font-weight:700;">click</span>:<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                   $(<span style="color:rgb(221, 68, 0); font-weight:400;">this</span>).css(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;background-color&quot;</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#86b6f1&quot;</span>);
+                               }
+                           });
+                       });</code></pre>
+
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="selectores-jquery">
+                    <h2>Selectores en JQuery</h2>
+                    <h4>23 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Se enseñarán a usar los selectores en JQuery.</p>
+                    <span id="article--sep"></span>
+                    <p>Los selectores te permiten en principio manipular todos los elementos accesibles en el DOM. Básicamente, te permiten buscar y seleccionar los elemntos basados en distintos atributos como nombre, ID, clases o tipos.<br>
+                        Siempre en JQuery, se comienza a seleccionar anteponiendo el signo de dólar y paréntesis: $().
+                        <br></p>
+                        <p>Ejemplo: </p>
+
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;p&quot;</span>)</code></pre>
+                        
+                        <p>JQuery se basa directamente en la organización de los elementos HTML, en este caso podemos usar la sintaxis directa de un ID, de la misma manera que lo haríamos para seleccionarlo en CSS.</p>
+                        <h3>Selección por ID</h3>
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#descripcion&quot;</span>)</code></pre>
+                        <h3>Selección por clases</h3>
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;.autores&quot;</span>)</code></pre>                
+                        <h3>Ejemplo</h3>
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#botonxd&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#togglew&quot;</span>).toggle();
+                            });
+                        });</code></pre>
+                        <h3>Lista de selectores</h3>
+
+                        <table>
+                            <tbody>
+                                <thead>
+                                    <td>Parámetro</td>
+                                    <td>Descripción</td>
+                                </thead>
+                                <tr>
+                                    <td>$(*)</td>
+                                    <td>Seleciciona todos los elementos.</td>
+                                </tr>
+                                <tr>
+                                    <td>$(this)</td>
+                                    <td>Selecciona el elemento HTML actual.</td>
+                                </tr>
+                                <tr>
+                                    <td>$(div."class")</td>
+                                    <td>Seleeciona el elemento div con la clase especificada</td>
+                                </tr>
+                                <tr>
+                                    <td>$(div:first)</td>
+                                    <td>Seleeciona el primer elemento div</td>
+                                </tr>
+                                <tr>
+                                    <td>$(div h1:first)</td>
+                                    <td>Selecciona el primer elemento hijo H1 de div</td>
+                                </tr>
+                                <tr>
+                                    <td>$(div h1:first-child)</td>
+                                    <td>Selecciona el primer elemento hijo de H1 en div</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="guia-instalacion">
                     <h2>¿Cómo instalar JQuery?</h2>
                     <h4>23 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
@@ -90,7 +297,7 @@
                     </div>
                 </article>
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="sintaxis-jquery">
                     <h2>Sintaxis de JQuery</h2>
                     <h4>23 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
