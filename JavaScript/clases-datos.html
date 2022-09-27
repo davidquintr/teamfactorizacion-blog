@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/basic.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/inblog.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+        <title>Team Factorización - JavaScript</title>
+        <link rel="icon" href="/assets/icons/logo--simplified.svg">
+    </head>
+
+    <body>
+        <header id="main--header">
+            <div id="desp--aside">
+                <input type="checkbox" class="checkbox" id="menu-toogle"/>
+                <img src="..assets/icons/menuIcon.png">
+            </div>  
+            <div id="title--header">
+                <img src="../assets/icons/logo--simplified.svg" id="brand--header" alt="teamfactorizacion">
+                <h1>Team Factorización</h1>
+            </div>
+            <div id="cont--header">
+                <nav id="nav--header">
+                    <ul id="list--header">
+                        <li class="item--nav"><a href="../../index.html">Inicio</a></li>
+                        <li class="item--nav"><a href="../JavaScript.html">JavaScript</a></li>
+                        <li class="item--nav"><a href="../JQuery.html">JQuery</a></li>
+                        <li class="item--nav"><a href="">Acerca de</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        
+        <div id="page--struct">
+            
+            <aside id="main--aside">
+                <a href="#article--author"><div class="item--aside home">
+                    <h3>Autores</h3>
+                </div></a>
+                <a href="#plantilla"><div class="item--aside home">
+                    <h3>1. Introducción JavaScript</h3>
+                </div></a>
+            </aside> 
+
+            <section>
+                <article class="main--article introduction">
+                    <div id="article--comment">
+                        <img src="../assets/icons/javascriptIcon.png" id="javascript--logo" class="img--article idk intro" alt="javascriptlogo">
+                        <div>
+                            <h1 id="high--title">JavaScript</h1>
+                            <h2>Clases y manejo de datos externos</h2>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>Clases</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center"></p>
+                    <span id="article--sep"></span>
+
+                    <p>Cuando se tiene una clase, esta puede crear objetos</p>
+                    <p>El metodo constructor debe tener el nombre exacto del constructor, es ejecutado automaticamente y es utilizado para analizar las propiedades del objeto.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 247, 247)"><span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(179, 4, 202); font-weight:700;">class</span> <span style="color:rgb(255, 255, 255); font-weight:700;">ClassName</span> </span>{
+                         <span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(255, 255, 255); font-weight:700;">constructor</span>(<span style="color:rgb(247, 247, 247); font-weight:400;"></span>)</span> { ... }
+                         <span style="color:rgb(255, 249, 249); font-weight:400;"><span style="color:rgb(248, 240, 240); font-weight:700;">method_1</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span> { ... }
+                         <span style="color:rgb(255, 251, 251); font-weight:400;"><span style="color:rgb(240, 240, 240); font-weight:700;">method_2</span>(<span style="color:rgb(255, 253, 253); font-weight:400;"></span>)</span> { ... }
+                         <span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(255, 254, 254); font-weight:700;">method_3</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span> { ... }
+                       }
+                       
+                       </code></pre>
+
+                        <div id="article--author" class="riuske">
+                            <img src="../assets/images/riuske.png" id="profile--author">
+                            <div>
+                                <span>Escrito por:</span>
+                                <h4>Riuske Nishime Robleto</h4>
+                            </div>
+                        </div>
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>Modulo</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center"></p>
+                    <span id="article--sep"></span>
+
+                    <p>Los modulos de javascript permiten separar el codigo en archivos diferentes, haciendo más facil mantener la base del codigo.</p>
+
+                    <p>Se permite exportar una función o variable de cualquier archivo. Existen 2 formas de exportar, por lineas individuales y todo junto.</p>
+                    
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(136, 136, 136); font-weight:400;">//Exportar por lineas separadas</span>
+                       
+                       <span style="color:rgb(180, 4, 196); font-weight:700;">export</span> <span style="color:rgb(184, 4, 190); font-weight:700;">const</span> tiempo = <span style="color:rgb(7, 190, 190); font-weight:400;">20</span>;
+                       <span style="color:rgb(207, 8, 207); font-weight:700;">export</span> <span style="color:rgb(189, 3, 173); font-weight:700;">const</span> nombre = <span style="color:rgb(24, 245, 35); font-weight:400;">&quot;Richard&quot;</span>
+                       
+                       <span style="color:rgb(136, 136, 136); font-weight:400;">//Todos en uno</span>
+                       
+                       <span style="color:rgb(191, 2, 197); font-weight:700;">const</span> tiempo = <span style="color:rgb(7, 149, 206); font-weight:400;">20</span>;
+                       <span style="color:rgb(194, 1, 184); font-weight:700;">const</span> nombre = <span style="color:rgb(22, 235, 40); font-weight:400;">&quot;Richard&quot;</span>
+                       
+                       <span style="color:rgb(178, 3, 184); font-weight:700;">export</span> {tiempo, nombre};
+                       
+                       
+                       </code></pre>
+
+                    <p>Se puede importar modulos en un archivo ya sea con los nombres de los exportados o desde los default.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(136, 136, 136); font-weight:400;">//importar por los nombres</span>
+                       
+                       <span style="color:rgb(196, 0, 186); font-weight:700;">import</span> {tiempo, nombre} <span style="color:rgb(255, 255, 255); font-weight:700;">from</span> <span style="color:rgb(23, 243, 23); font-weight:400;">&quot;./registroTiempo.js&quot;</span>;
+                       
+                       <span style="color:rgb(136, 136, 136); font-weight:400;">//importar por defecto</span>
+                       
+                       <span style="color:rgb(189, 0, 148); font-weight:700;">import</span> registro desde <span style="color:rgb(0, 243, 0); font-weight:400;">&quot;./registroTiempo.js&quot;</span></code></pre>
+
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>Declaraciones condicionales</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center"></p>
+                    <span id="article--sep"></span>
+
+                    <p>Las declaraciones condicionales permiten que bloques de codigo puedan realizar diferentes acciones. Entre dichas declaraciones tenemos:</p>
+                    <p>if: Especifica a un bloque de codigo sea ejecutado solamente si la condición se cumpla.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(161, 4, 161); font-weight:700;">if</span> (condicion) {
+                         <span style="color:rgb(136, 136, 136); font-weight:400;">// codigo a ejecutar</span>
+                       }
+                       
+                       <span style="color:rgb(135, 1, 153); font-weight:700;">if</span> (edad &lt; <span style="color:rgb(4, 158, 185); font-weight:400;">7</span>) {
+                         permiso = <span style="color:rgb(6, 201, 49); font-weight:400;">&quot;Puede entrar&quot;</span>;
+                       }</code></pre>
+
+                    <p>else: Especifica a un bloque de codigo sea ejecutado si la condicion en falsa.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(169, 4, 175); font-weight:700;">if</span> (condicion) {
+                         <span style="color:rgb(136, 136, 136); font-weight:400;">// codigo a ejecutar</span>
+                       }<span style="color:rgb(180, 5, 172); font-weight:700;">else</span> {
+                         <span style="color:rgb(136, 136, 136); font-weight:400;">//  codigo a ejecutar si la condicion anterior fue falsa.</span>
+                       }
+                       
+                       <span style="color:rgb(182, 3, 182); font-weight:700;">if</span> (edad &lt; <span style="color:rgb(3, 194, 201); font-weight:400;">7</span>) {
+                         permiso = <span style="color:rgb(17, 230, 81); font-weight:400;">&quot;Puede entrar&quot;</span>;
+                       }<span style="color:rgb(174, 3, 197); font-weight:700;">else</span> {
+                         permiso = <span style="color:rgb(17, 231, 45); font-weight:400;">&quot;No puede entrar&quot;</span>
+                       }</code></pre>
+
+                       <p>else if: Especifica a una nueva condicion, si la primera es falsa.</p>
+
+                       <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 249, 249)"><span style="color:rgb(195, 2, 212); font-weight:700;">if</span> (primera condicion) {
+                         <span style="color:rgb(165, 162, 162); font-weight:400;">//</span>  codigo ejecutado si se cumple la primera condicion
+                       } <span style="color:rgb(204, 5, 223); font-weight:700;">else</span> <span style="color:rgb(186, 4, 223); font-weight:700;">if</span> (segunda condicion) {
+                         <span style="color:rgb(182, 174, 174); font-weight:400;">//</span>  codigo que se cumple si la primera condicion es falsa <span style="color:rgb(196, 188, 188); font-weight:700;">y</span> la segunda es verdadera
+                       } <span style="color:rgb(167, 4, 207); font-weight:700;">else</span> {
+                         <span style="color:rgb(182, 182, 182); font-weight:400;">//</span>  Codigo que se ejecuta si las otras <span style="color:rgb(163, 162, 162); font-weight:400;">2</span> condiciones <span style="color:rgb(177, 175, 175); font-weight:700;">no</span> se cumplen
+                       }
+                       
+                       <span style="color:rgb(190, 4, 207); font-weight:700;">if</span> (tiemCarrera &lt; <span style="color:rgb(4, 212, 185); font-weight:400;">15</span>) {
+                         premio = <span style="color:rgb(67, 221, 20); font-weight:400;">&quot;carro&quot;</span>;
+                       } <span style="color:rgb(202, 2, 186); font-weight:700;">else</span> <span style="color:rgb(194, 0, 201); font-weight:700;">if</span> (tiemCarrera &lt; <span style="color:rgb(30, 221, 5); font-weight:400;">20</span>) {
+                         premio = <span style="color:rgb(56, 230, 13); font-weight:400;">&quot;moto&quot;</span>;
+                       } <span style="color:rgb(226, 9, 197); font-weight:700;">else</span> {
+                         premio = <span style="color:rgb(56, 233, 12); font-weight:400;">&quot;dinero&quot;</span>;
+                       }</code></pre>
+
+                       <p>switch: Especifica diferentes alternativas de bloques de codigo que pueden ser ejecutados.</p>
+
+                       <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(57, 115, 0); font-weight:400;"><span style="color:rgb(192, 6, 167); font-weight:700;">switch</span></span>(expresion) {
+                         <span style="color:rgb(183, 7, 199); font-weight:700;">case</span> x:
+                           <span style="color:rgb(136, 136, 136); font-weight:400;">// bloque de codigo 1</span>
+                           <span style="color:rgb(189, 2, 189); font-weight:700;">break</span>;
+                         <span style="color:rgb(184, 3, 201); font-weight:700;">case</span> y:
+                           <span style="color:rgb(136, 136, 136); font-weight:400;">// bloque de codigo 2</span>
+                           <span style="color:rgb(211, 4, 201); font-weight:700;">break</span>;
+                         <span style="color:rgb(197, 6, 197); font-weight:700;">default</span>:
+                           <span style="color:rgb(136, 136, 136); font-weight:400;">// bloque de codigo 3</span>
+                       }
+                       
+                       </code></pre>
+                       
+                           <div id="article--author" class="riuske">
+                            <img src="../assets/images/riuske.png" id="profile--author">
+                            <div>
+                                <span>Escrito por:</span>
+                                <h4>Riuske Nishime Robleto</h4>
+                            </div>
+
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>JSON</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center"></p>
+                    <span id="article--sep"></span>
+
+                    <p>JSON o JavaScript Object Notation es un formato para almacenar y transportar datos. Usualmente se utiliza cuando los datos son enviados desde un server hacia una pagina web.</p>
+
+                    <p>Los datos de JSON se escriben como parejas de nombre/valores que consisten en un nombre de campo despues de dos puntos y por utlimo un valor.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(80, 238, 32); font-weight:400;">&quot;primerNombre&quot;</span>:<span style="color:rgb(62, 238, 18); font-weight:400;">&quot;Riuske&quot;</span></code></pre>
+
+                    <p>En el caso de los objetos, estos se escriben entre llaves y pueden contener multiples parejas de nombre/valores.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)">{<span style="color:rgb(30, 236, 40); font-weight:400;">&quot;animaCarnivoro&quot;</span>:<span style="color:rgb(94, 252, 21); font-weight:400;">&quot;Tigre&quot;</span>, <span style="color:rgb(57, 236, 41); font-weight:400;">&quot;animalHerbivoro&quot;</span>:<span style="color:rgb(34, 253, 27); font-weight:400;">&quot;panda&quot;</span>}</code></pre>
+
+                    <p>Los arreglos se escriben dentro de corchetes y pueden tener objetos.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 254, 254)"><span style="color:rgb(88, 248, 25); font-weight:400;">&quot;Zoologico&quot;</span>:[
+                       {<span style="color:rgb(73, 247, 29); font-weight:400;">&quot;animaCarnivoro&quot;</span>:<span style="color:rgb(22, 236, 57); font-weight:400;">&quot;Tigre&quot;</span>, <span style="color:rgb(84, 252, 17); font-weight:400;">&quot;animalHerbivoro&quot;</span>:<span style="color:rgb(76, 247, 25); font-weight:400;">&quot;panda&quot;</span>}
+                       ]</code></pre>
+
+                    <p>El uso común que se le da a JSON es para leer los datos desde un servidor web y poder desplegarlos en una pagina web.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(192, 3, 199); font-weight:700;">let</span> textoZoo = &#x27;{ <span style="color:rgb(9, 219, 9); font-weight:400;">&quot;zoologico&quot;</span> : [&#x27; +
+                       &#x27;{ <span style="color:rgb(7, 196, 23); font-weight:400;">&quot;animalCarnivoro&quot;</span>:<span style="color:rgb(136, 0, 0); font-weight:400;">&quot;Tigre&quot;</span> , <span style="color:rgb(2, 211, 54); font-weight:400;">&quot;animalherbivoro&quot;</span>:<span style="color:rgb(34, 218, 10); font-weight:400;">&quot;Panda&quot;</span> } ]}&#x27;;</code></pre>
+
+                    <p>Luego se utiliza la función JSON.parse() para poder convertilo a un objeto.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(253, 253, 253)"><span style="color:rgb(180, 2, 165); font-weight:700;">const</span> obj = <span style="color:rgb(255, 255, 255); font-weight:400;">JSON</span>.parse(textoZoo);</code></pre>
+
+                    <p>Y con eso ya se puede usar como un objeto.</p>
+
+                    
+
+
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+
+                </article>
+
+            </section>
+        </div>
+
+
+
+        <footer id="footer--area">
+            <img src="../assets/icons/logo--simplified.svg" id="brand--footer" alt="teamfactorizacion">
+            <h1>Team Factorización</h1>
+            <span>©2022 Team Factorización</span>
+            <div id="social--footer">
+                <a href="https://www.facebook.com/profile.php?id=100022601452185" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/44/44646.png" id="icon--social"></a>
+                <a href="https://twitter.com/DavidQuintR" target="_blank"><img src="https://cobaev37mecatepec.neocities.org/twitter.png" id="icon--social"></a>
+                <a href="https://www.instagram.com/ponce3201/" target="_blank"><img src="https://www.pngmart.com/files/21/Instagram-Logo-Silhoutte-PNG-Image.png" id="icon--social"></a>
+            </div>
+        </footer>
+    </body>
+</html>

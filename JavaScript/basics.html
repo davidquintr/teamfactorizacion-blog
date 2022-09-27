@@ -44,7 +44,7 @@
                 </div></a>
                 
             </aside> 
-
+            <!--aspectos esenciales de javascript-->
             <section>
                 <article class="main--article introduction">
                     <div id="article--comment">
@@ -63,49 +63,130 @@
                     <h2>Plantilla para todos</h2>
                     <h4>17 de Septiembre de 2022</h4>
                     <img src="../assets/images/cel.png" class="topimg--article dino">
-                    <p id="article--desc" class="center">Asi funciona un texto normal, de esta manera podemos hablar de lo que queramos, incluso podemos hablar de la santa inquisición, hitler y los judíos y más allá de eso, podemos hablar de la tierra plana y las falsedades de la NASA</p>
+                    <p id="article--desc" class="center">Sintaxis de JavaScript </p>
                     <span id="article--sep"></span>
+                    <p>Cuando se trata de JavaScript, este se define en 2 tipos de valores, literales y variables.</p>
 
-                    <!--TEXTO CON IMAGEN-->
-                    <div id="article--comment">
-                        <p>Aqui podemos ver como comentamos una foto de una manera no optima, la verdad da asco lo cutre que queda pero no tengo de otra si quiero dejarlo bonito y no usar el asqueroso float. Por otra parte, esta foto es de cuando me encarcelaron por mis crímenes de lesa-humanidad en 32 paises distintos. <a href="https://youtu.be/BapxCy_J7Rc">Aqui pueden ver el video</a></p> 
-                        <img src="/../assets/images/dibujito 2.png" class="img--article idk">
-                    </div>
+                    <p>Para los valores literales las 2 reglas que siempre se tienen que tener en cuenta son: los numeros se escriben con o sin decimal y que los strings son textos escritos entre comillas dobles o simples</p>
+                    <pre><code id="htmlViewer" style="color:rgb(140, 34, 189)">
+24.50
+50
+<span style="color:rgb(27, 212, 67); font-weight:400;">&quot;Riuske&quot;</span>
+<span style="color:rgb(21, 211, 31); font-weight:400;">&#x27;Erick&#x27;</span></code></pre>
 
-                    <!--VIDEO INCRUSTADO DENTRO DEL POST-->
-                    <h3 class="center">Asi se verá un subtitulo y un video insertado</h3>
-                    
-                    <div id="article--insertcent">
-                        <iframe width="854" height="480" src="https://www.youtube.com/embed/j2Xcv0k-RwQ" title="Ubuntu VS Fedora ¿Cual es MEJOR sistema operativo? // Español 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                    <p>En el caso de las variables estan se usan para almacenar datos. JavaScript usa las palabras claves var, let y const para declarar variables, el "=" es para asignar valores.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(183, 50, 209); font-weight:700;">var</span> costo = <span style="color:rgb(46, 139, 192); font-weight:400;">90</span></code></pre>
+
+                    <p>En caso de los operadores se utiliza: +, -, * y / para calcular variables</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 250, 250)">(5 + 4)*6-10/18</code></pre>
+
+                    <p>Y en caso de querer poner comentarios se pueden utilizar // o /* al principio y */ al final</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(161, 159, 159)">// esto funciona como comentario</span>
+                        <span style="color:rgb(136, 136, 136); font-weight:400;">/*O de esta manera*/</span></code></pre>
+
+                    <p>En HTML, lo que es codigo JavaScript se inserta dentro de las etiquetas "Script".</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(243, 9, 9); font-weight:700;">script</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">
+                       <span style="color:rgb(33, 224, 192); font-weight:400;">document</span>.getElementById(<span style="color:rgb(253, 125, 5); font-weight:400;">&quot;nose&quot;</span>).innerHTML = <span style="color:rgb(67, 241, 14); font-weight:400;">&quot;Ejemplo de Script&quot;</span>;
+                       </span><span style="color:rgb(255, 253, 253); font-weight:400;">&lt;/<span style="color:rgb(250, 0, 0); font-weight:700;">script</span>&gt;</span></code></pre>
+
+                    <p>Script también puede ser colocado tanto en el body como en el head. Al mismo tiempo pueden ser colocados en archivos externos.</p>
+
+                    <p>En caso de que un script se coloque de forma externa, este puede ser referenciado ya sea con un URL, con un camino o sin tener un sendero.</p>
 
 
                     <!--ETIQUETA PRE PARA LOS EJEMPLOS DENTRO DEL POST-->
                     <pre>
-                        if(buttonEsp.style.backgroundColor == "rgb(24, 44, 57)")
-                        return;
-                    </pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(255, 7, 7); font-weight:700;">script</span> <span style="color:rgb(146, 9, 173); font-weight:400;">src</span>=<span style="color:rgb(63, 219, 15); font-weight:400;">&quot;https://www.youtube.com/watch?v=KXxXr0RxGDE&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(248, 23, 23); font-weight:700;">script</span>&gt;</span>
+                       
+                       <span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(238, 1, 1); font-weight:700;">script</span> <span style="color:rgb(124, 14, 214); font-weight:400;">src</span>=<span style="color:rgb(25, 206, 8); font-weight:400;">&quot;/js/myScript.js&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(235, 8, 8); font-weight:700;">script</span>&gt;</span>
+                       
+                       <span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(255, 0, 0); font-weight:700;">script</span> <span style="color:rgba(150, 13, 192, 0.993); font-weight:400;">src</span>=<span style="color:rgb(59, 236, 15); font-weight:400;">&quot;myScript.js&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(255, 0, 0); font-weight:700;">script</span>&gt;</span></code></pre>
+                        
+                        <div id="article--author" class="riuske">
+                            <img src="../assets/images/riuske.png" id="profile--author">
+                            <div>
+                                <span>Escrito por:</span>
+                                <h4>Riuske Nishime Robleto</h4>
+                            </div>
+                        </div>
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>JavaScript Declaraciones</h2>
+                    <h4>23 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Descripción de lo que se tiene que tener en cuenta a la hora de hacer declaraciones</p>
+                    <span id="article--sep"></span>
+
+                    <p>Las declaraciones estan compuestas por valores, operadores, expresiones, palabras claves y comentarios. Dichas declaraciones son ejecutadas una por una en el mismo orden que son codificadas.</p>
+                    <p>Los puntos y coma al final de cada ejecutable se encargan de separar las declaraciones de JavaScript. Cuando los ejecutables son se parados por punto y coma se permiten ubicar varias declaraciones en una linea.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 251, 251)"><span style="color:rgb(233, 233, 233); font-weight:700;">var</span> z = o;
+<span style="color:rgb(173, 37, 201); font-weight:700;">let</span> a; <span style="color:rgb(189, 57, 216); font-weight:700;">var</span> o = <span style="color:rgb(54, 140, 221); font-weight:400;">10</span>;</code></pre>
+
+                    <p>JavaScript tiene la función de agrupar declaraciones dentro de bloques de codigo dentro de llaves. Tiene el proposito de definir declaraciones que se ejecutan juntos.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(253, 253, 253)"><span style="color:rgb(255, 255, 255); font-weight:700;">function</span> <span style="color:rgb(136, 0, 0); font-weight:700;">bloques</span>(<span style="color:rgb(221, 221, 221); font-weight:400;"></span>)</span>{
+                    <span style="color:rgb(47, 158, 223); font-weight:400;">document</span>.getElementById(<span style="color:rgb(37, 224, 46); font-weight:400;">&quot;demo1&quot;</span>).innerHTML = <span style="color:rgb(7, 182, 30); font-weight:400;">&quot;Si&quot;</span>;
+                    <span style="color:rgb(42, 199, 219); font-weight:400;">document</span>.getElementByClassName(<span style="color:rgb(47, 214, 47); font-weight:400;">&quot;Lac&quot;</span>)[<span style="color:rgb(37, 25, 211); font-weight:400;">12</span>];
+                    }</code></pre>
 
                     <!--TABLA DE EJEMPLO DENTRO DEL POST-->
                     <table>
                         <tbody>
                             <thead>
-                                <td>Parte 1</td>
-                                <td>Parte 2</td>
-                                <td>Parte 3</td>
+                                <td>Palabras claves</td>
+                                <td>Descripción</td>
                             </thead>
                             <tr>
-                                <td>Doctor Strange</td>
-                                <td>WandaVision</td>
-                                <td>Doctor Strange in The Multiverse of Madness</td>
+                                <td>var</td>
+                                <td>Declara variables</td>
+                            </tr>
+
+                            <tr>
+                                <td>let</td>
+                                <td>Declara bloques de variables</td>
+                            </tr>
+                                <td>const</td>
+                                <td>Declara un bloque de constante</td>
+
+
+                            <tr>
+                                <td>if</td>
+                                <td>Define un bloque de declaraciones que son ejecutados en una condición</td>
+                            </tr>
+
+                            <tr>
+                                <td>switch</td>
+                                <td>Define un bloque de declaraciones que son ejecutados en casos diferentes</td>
+                            </tr>
+
+                            <tr>
+                                <td>for</td>
+                                <td>Define un bloque de declaraciones que se ejecuta en un buqle</td> 
+                            </tr>
+
+                            <tr>
+                                <td>function</td>
+                                <td>Declara una función</td>
+                            </tr>
+
+                            <tr>
+                                <td>return</td>
+                                <td>Sale de una función</td>
                             </tr>
                             <tr>
-                                <td>Spider-Man 2</td>
-                                <td>Spider-Man into the Spiderverse</td>
-                                <td>Spider-Man No way Godzilla</td>
+                                <td>try</td>
+                                <td>Implementa un error que manera un bloque de declaraciones</td>
                             </tr>
                         </tbody>
                     </table>
+
 
                     <!--AUTORES DEL POST-->
                     <div id="article--author">
@@ -126,9 +207,77 @@
                         <img src="../assets/images/erick.png" id="profile--author">
                         <div>
                             <span>Escrito por:</span>
-                            <h4>Erick González Gallegos</h4>
+                            <h4>Riuske Nishime Robleto</h4>
                         </div>
+
+                </article>
+
+                <article class="main--article" id="plantilla">
+                    <h2>JavaScript Output</h2>
+                    <h4>24 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">JavaScript despliega datos de diferentes maneras</p>
+                    <span id="article--sep"></span>
+
+                    <p>JavaScript Output define las formas para mostrar la salida de un codigo. La salida puede mostrarse de cuatro maneras distintas.</p>
+
+                    <p>innerHTML: Se utiliza para acceder a un elemento HTML.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(245, 244, 244)"><span style="color:rgb(49, 165, 231); font-weight:400;">document</span>.getElementById(<span style="color:rgb(238, 199, 28); font-weight:400;">&quot;demo&quot;</span>).innerHTML = <span style="color:rgb(34, 231, 83); font-weight:400;">&quot;lo digo&quot;</span>;</code></pre>
+
+                    <p>document.write(): Se utiliza principalmente para propositos de prueba. En caso de que se utilice document.write() despues de un HTML, todos los HTML que existen se borraran.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(243, 162, 41)"><span style="color:rgb(52, 227, 233); font-weight:400;">document</span>.write(elemento);</code></pre>
+
+                    <p>window.alert(): muestra el contenido en una caja de alerta. Cabe aclarar que la palabra "window" se puede saltar al ser un objeto de alcance global.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(216, 32, 32); font-weight:400;">window</span>.alert(<span style="color:rgb(56, 216, 34); font-weight:400;">&quot;Alerta de prueba&quot;</span>);</code></pre>
+
+                    <p>console.log(): Se ocupa para fines de depuración.</p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(197, 17, 77); font-weight:700;">&lt;script&gt;</span>
+                               <span style="color:rgb(230, 226, 43); font-weight:700;">console</span>.log(<span style="color:rgb(46, 195, 221); font-weight:400;">20</span>+<span style="color:rgb(39, 220, 226); font-weight:400;">3</span>);
+                           <span style="color:rgb(168, 14, 91); font-weight:700;">&lt;/script&gt;</span></code></pre>
+
+                           <div id="article--author" class="riuske">
+                            <img src="../assets/images/riuske.png" id="profile--author">
+                            <div>
+                                <span>Escrito por:</span>
+                                <h4>Riuske Nishime Robleto</h4>
+                            </div>
+
+                </article>
+
+
+                <article class="main--article" id="plantilla">
+                    <h2>Cambiar contenido HTML con JavaScript</h2>
+                    <h4>23 de Septiembre de 2022</h4>
+                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Etiquetas para cambiar contenido en HTML</p>
+                    <span id="article--sep"></span>
+
+                    
+                    <p>Usualmente el contenido de HTML se cambia con tags como p, span, etc. Sin embargo en JavaScript se utilizan lo que son los metodos DOM que son los que tienen acceso a los tags HTML.</p><br>
+                    <p>Dentro de estos metodos tenemos getElementById() el cual retorna un elemento objeto que esta representando un elemento HTML con un id que combine con el objeto especifico.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(226, 226, 226)"><span style="color:rgb(10, 177, 46); font-weight:400;">document</span>.getElementById(<span style="color:rgb(167, 11, 11); font-weight:400;">&quot;cambiar&quot;</span>).innerHTML = <span style="color:rgb(184, 20, 20); font-weight:400;">&quot;HTML JavaScript&quot;</span>;</code></pre>
+                    
+                    <p>Luego esta la etiqueta getElementByTagName que similar a como funciona getElementById, solo que retorna elementos con nombres de etiquetas parecidos<p>
+                    
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(232, 255, 25); font-weight:700;">let</span> elementos = <span style="color:rgb(132, 236, 28); font-weight:400;">document</span>.getElementsByTagName(nombreTag);</code></pre>
+
+                    <p>Tambien existe la etiqueta getElementByClassName  que devuelve una lista de los elementos con el nodo especifico que contiene el nombre de la clase.</p>
+
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(255, 251, 44); font-weight:700;">let</span> elementos = <span style="color:rgb(156, 248, 63); font-weight:400;">document</span>.getElementsByClassName(nombres);</code></pre>
+
+                    <h3 class="center">Asi se verá un subtitulo y un video insertado</h3>
+                    
+                    <div id="article--insertcent">
+                        <iframe width="854" height="480" src="https://www.youtube.com/embed/j2Xcv0k-RwQ" title="Ubuntu VS Fedora ¿Cual es MEJOR sistema operativo? // Español 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
+
                     <div id="article--author" class="riuske">
                         <img src="../assets/images/riuske.png" id="profile--author">
                         <div>
@@ -138,9 +287,10 @@
                     </div>
                 </article>
 
-                
             </section>
         </div>
+
+
 
         <footer id="footer--area">
             <img src="../assets/icons/logo--simplified.svg" id="brand--footer" alt="teamfactorizacion">
