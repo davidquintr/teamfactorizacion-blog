@@ -50,58 +50,40 @@
                         <img src="../assets/icons/javascriptIcon.png" id="javascript--logo" class="img--article idk intro" alt="javascriptlogo">
                         <div>
                             <h1 id="high--title">JavaScript</h1>
-                            <h2>Aspectos escenciales de JavaScript</h2>
+                            <h2>Manejo de fechas</h2>
                         </div>
                     </div>
                 </article>
 
                 <article class="main--article" id="plantilla">
-                    <h2>Sintaxis</h2>
-                    <h4>23 de Septiembre de 2022</h4>
+                    <h2>Salida de fechas</h2>
+                    <h4>25 de Septiembre de 2022</h4>
                     <img src="../assets/images/cel.png" class="topimg--article dino">
-                    <p id="article--desc" class="center">Sintaxis de JavaScript </p>
+                    <p id="article--desc" class="center">Maneras de generar objetos de tiempo en JavaScript</p>
                     <span id="article--sep"></span>
 
-                    <p>Cuando se trata de JavaScript, este se define en 2 tipos de valores, literales y variables.</p>
+                    <p>JavaScript por defecto utiliza la zona horaria del navegador y muestra una fecha como un string.</p>
+                    <p>Para crear objetos de tiempo se utiliza el constructor new Date(), sin embargo este tiene 4 maneras de hacerlo:</p>
+                    
+                    <p>-Para generar la fecha y el tiempo actual.</p>
 
-                    <p>Para los valores literales las 2 reglas que siempre se tienen que tener en cuenta son: los numeros se escriben con o sin decimal y que los strings son textos escritos entre comillas dobles o simples</p>
-                    <pre><code id="htmlViewer" style="color:rgb(140, 34, 189)">
-24.50
-50
-<span style="color:rgb(27, 212, 67); font-weight:400;">&quot;Riuske&quot;</span>
-<span style="color:rgb(21, 211, 31); font-weight:400;">&#x27;Erick&#x27;</span></code></pre>
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(184, 4, 169); font-weight:700;">const</span> actual = <span style="color:rgb(165, 2, 165); font-weight:700;">new</span> <span style="color:rgb(255, 255, 255); font-weight:400;">Date</span>();</code></pre>
+                     
+                    <p>-En caso de que se quiera generar una fecha y tiempo en especifico.</p>
 
-                    <p>En el caso de las variables estan se usan para almacenar datos. JavaScript usa las palabras claves var, let y const para declarar variables, el "=" es para asignar valores.</p>
+                    <pre><code id="htmlViewer" style="color:rgb(255, 242, 242)"><span style="color:rgb(129, 0, 180); font-weight:700;">const</span> d = new Date(<span style="color:rgb(2, 106, 190); font-weight:400;">2022</span>, <span style="color:rgb(0, 114, 180); font-weight:400;">07</span>, <span style="color:rgb(1, 110, 173); font-weight:400;">18</span>, <span style="color:rgb(5, 121, 167); font-weight:400;">18</span>, <span style="color:rgb(0, 128, 160); font-weight:400;">24</span>, <span style="color:rgb(6, 138, 161); font-weight:400;">10</span>, <span style="color:rgb(4, 123, 153); font-weight:400;">40</span>);</code></pre>
 
-                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(183, 50, 209); font-weight:700;">var</span> costo = <span style="color:rgb(46, 139, 192); font-weight:400;">90</span></code></pre>
+                    <p>Cabe aclarar que el orden que se tiene que poner los valores es el siguiente: año, mes, dia, hora, minuto, segundos y milisegundos. Ademas de que si se intenta especificar un valor mayor al limite hara un overflow para al proximo valor.</p>
+                    <p>Por ejemplo si se pone en mes un 13 el valor y el año es 2003, pasara un overflow y el año pasara a ser 2004. Igualmente si se intenta hacer los mismo con los otros valores pasaria lo mismo.</p>
 
-                    <p>En caso de los operadores se utiliza: +, -, * y / para calcular variables</p>
+                    <p>-El new Date(dateString) crea un nuevo objeto de tiempo desde un date string.</p>
 
-                    <pre><code id="htmlViewer" style="color:rgb(255, 250, 250)">(5 + 4)*6-10/18</code></pre>
+                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(133, 3, 184); font-weight:700;">const</span> tiempoString = <span style="color:rgb(135, 4, 196); font-weight:700;">new</span> <span style="color:rgb(255, 255, 255); font-weight:400;">Date</span>(<span style="color:rgb(61, 255, 22); font-weight:400;">&quot;Junio, 2019 09:33:29&quot;</span>);</code></pre>
 
-                    <p>Y en caso de querer poner comentarios se pueden utilizar // o /* al principio y */ al final</p>
+                    <p>-Por ultimo el new Date(miliseconds) crea un objeto tiempo como tiempo cero mas milisegundos. Es decir JavaScript almacena las fechas en milisegundos desde 1 de enero de 1970 00:00:00 UTC(esto significa hora universal coordinada), desde esa fecha se suman los milisegundos puestos. </p>
 
-                    <pre><code id="htmlViewer" style="color:rgb(161, 159, 159)">// esto funciona como comentario</span>
-                        <span style="color:rgb(136, 136, 136); font-weight:400;">/*O de esta manera*/</span></code></pre>
+                    <pre><code id="htmlViewer" style="color:rgb(255, 254, 254)"><span style="color:rgb(150, 4, 163); font-weight:700;">const</span> milisegundos = <span style="color:rgb(161, 4, 161); font-weight:700;">new</span> <span style="color:rgb(57, 115, 0); font-weight:400;">Date</span>(<span style="color:rgb(0, 108, 170); font-weight:400;">1000000000000</span>);</code></pre>
 
-                    <p>En HTML, lo que es codigo JavaScript se inserta dentro de las etiquetas "Script".</p>
-
-                    <pre>
-                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(243, 9, 9); font-weight:700;">script</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">
-                       <span style="color:rgb(33, 224, 192); font-weight:400;">document</span>.getElementById(<span style="color:rgb(253, 125, 5); font-weight:400;">&quot;nose&quot;</span>).innerHTML = <span style="color:rgb(67, 241, 14); font-weight:400;">&quot;Ejemplo de Script&quot;</span>;
-                       </span><span style="color:rgb(255, 253, 253); font-weight:400;">&lt;/<span style="color:rgb(250, 0, 0); font-weight:700;">script</span>&gt;</span></code></pre>
-
-                    <p>Script también puede ser colocado tanto en el body como en el head. Al mismo tiempo pueden ser colocados en archivos externos.</p>
-
-                    <p>En caso de que un script se coloque de forma externa, este puede ser referenciado ya sea con un URL, con un camino o sin tener un sendero.</p>
-
-                    <pre>
-                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(255, 7, 7); font-weight:700;">script</span> <span style="color:rgb(146, 9, 173); font-weight:400;">src</span>=<span style="color:rgb(63, 219, 15); font-weight:400;">&quot;https://www.youtube.com/watch?v=KXxXr0RxGDE&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(248, 23, 23); font-weight:700;">script</span>&gt;</span>
-                       
-                       <span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(238, 1, 1); font-weight:700;">script</span> <span style="color:rgb(124, 14, 214); font-weight:400;">src</span>=<span style="color:rgb(25, 206, 8); font-weight:400;">&quot;/js/myScript.js&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(235, 8, 8); font-weight:700;">script</span>&gt;</span>
-                       
-                       <span style="color:rgb(255, 255, 255); font-weight:400;">&lt;<span style="color:rgb(255, 0, 0); font-weight:700;">script</span> <span style="color:rgba(150, 13, 192, 0.993); font-weight:400;">src</span>=<span style="color:rgb(59, 236, 15); font-weight:400;">&quot;myScript.js&quot;</span>&gt;</span><span style="color:rgb(255, 255, 255); font-weight:400;">&lt;/<span style="color:rgb(255, 0, 0); font-weight:700;">script</span>&gt;</span></code></pre>
-                        
                         <div id="article--author" class="riuske">
                             <img src="../assets/images/riuske.png" id="profile--author">
                             <div>
@@ -112,71 +94,41 @@
                 </article>
 
                 <article class="main--article" id="plantilla">
-                    <h2>JavaScript Declaraciones</h2>
-                    <h4>23 de Septiembre de 2022</h4>
+                    <h2>Formatos de fecha</h2>
+                    <h4>25 de Septiembre de 2022</h4>
                     <img src="../assets/images/cel.png" class="topimg--article dino">
-                    <p id="article--desc" class="center">Descripción de lo que se tiene que tener en cuenta a la hora de hacer declaraciones</p>
+                    <p id="article--desc" class="center">Diferentes formatos que se utilizan a la hora de utilizar alguna función de fecha</p>
                     <span id="article--sep"></span>
 
-                    <p>Las declaraciones estan compuestas por valores, operadores, expresiones, palabras claves y comentarios. Dichas declaraciones son ejecutadas una por una en el mismo orden que son codificadas.</p>
-                    <p>Los puntos y coma al final de cada ejecutable se encargan de separar las declaraciones de JavaScript. Cuando los ejecutables son se parados por punto y coma se permiten ubicar varias declaraciones en una linea.</p>
-
-                    <pre><code id="htmlViewer" style="color:rgb(255, 251, 251)"><span style="color:rgb(233, 233, 233); font-weight:700;">var</span> z = o;
-<span style="color:rgb(173, 37, 201); font-weight:700;">let</span> a; <span style="color:rgb(189, 57, 216); font-weight:700;">var</span> o = <span style="color:rgb(54, 140, 221); font-weight:400;">10</span>;</code></pre>
-
-                    <p>JavaScript tiene la función de agrupar declaraciones dentro de bloques de codigo dentro de llaves. Tiene el proposito de definir declaraciones que se ejecutan juntos.</p>
-
-                    <pre><code id="htmlViewer" style="color:rgb(253, 253, 253)"><span style="color:rgb(255, 255, 255); font-weight:700;">function</span> <span style="color:rgb(136, 0, 0); font-weight:700;">bloques</span>(<span style="color:rgb(221, 221, 221); font-weight:400;"></span>)</span>{
-                    <span style="color:rgb(47, 158, 223); font-weight:400;">document</span>.getElementById(<span style="color:rgb(37, 224, 46); font-weight:400;">&quot;demo1&quot;</span>).innerHTML = <span style="color:rgb(7, 182, 30); font-weight:400;">&quot;Si&quot;</span>;
-                    <span style="color:rgb(42, 199, 219); font-weight:400;">document</span>.getElementByClassName(<span style="color:rgb(47, 214, 47); font-weight:400;">&quot;Lac&quot;</span>)[<span style="color:rgb(37, 25, 211); font-weight:400;">12</span>];
-                    }</code></pre>
 
                     <table>
                         <tbody>
                             <thead>
-                                <td>Palabras claves</td>
+                                <td>Tipo</td>
                                 <td>Descripción</td>
+                                <td>Ejemplo</td>
                             </thead>
                             <tr>
-                                <td>var</td>
-                                <td>Declara variables</td>
+                                <td>Fecha ISO</td>
+                                <td>La sintaxis de este formato es (YYYY-MM-DD). 
+                                    En caso de agregar tiempo es (YYYY-MM-DDTHH:MM:SSZ)</td>
+                                <td>const ISO = new Date("2019-11-23"); 
+                                    const ISO = new Date("2019-11-23T21:00:10");</td>
                             </tr>
 
                             <tr>
-                                <td>let</td>
-                                <td>Declara bloques de variables</td>
-                            </tr>
-                                <td>const</td>
-                                <td>Declara un bloque de constante</td>
-
-
-                            <tr>
-                                <td>if</td>
-                                <td>Define un bloque de declaraciones que son ejecutados en una condición</td>
+                                <td>Fecha corta</td>
+                                <td>Se escriben de esta manera: "MM/DD/YYYY"</td>
+                                <td>const corto = new Date("10/18/2020")</td>
                             </tr>
 
                             <tr>
-                                <td>switch</td>
-                                <td>Define un bloque de declaraciones que son ejecutados en casos diferentes</td>
-                            </tr>
-
-                            <tr>
-                                <td>for</td>
-                                <td>Define un bloque de declaraciones que se ejecuta en un buqle</td> 
-                            </tr>
-
-                            <tr>
-                                <td>function</td>
-                                <td>Declara una función</td>
-                            </tr>
-
-                            <tr>
-                                <td>return</td>
-                                <td>Sale de una función</td>
-                            </tr>
-                            <tr>
-                                <td>try</td>
-                                <td>Implementa un error que manera un bloque de declaraciones</td>
+                                <td>Fecha larga</td>
+                                <td>La sintaxis es "MMM DD YYYY". 
+                                    Los meses y dias pueden cambiar de orden y los meses tambien pueden ser escritos con el nombre completo</td>
+                                <td>const largo = new Date("Jul 18 2040");
+                                    const largo = new Date("17 enero 2010");
+                                </td>
                             </tr>
                         </tbody>
                     </table>
