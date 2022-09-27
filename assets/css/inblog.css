@@ -178,6 +178,10 @@ tr > td:first-child{
     .main--article > h2{
         font-size: 25px;
     }
+
+    .img--article{
+        max-width: 80%;
+    }
 }
 
 @media screen and (max-width: 450px) {
