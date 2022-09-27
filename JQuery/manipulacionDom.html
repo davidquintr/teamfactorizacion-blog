@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/basic.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/inblog.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+        <title>JQuery - Manipulación del DOM</title>
+        <link rel="icon" href="/assets/icons/logo--simplified.svg">
+    </head>
+
+    <body>
+        <header id="main--header">
+            <div id="desp--aside">
+                <input type="checkbox" class="checkbox" id="menu-toogle"/>
+                <img src="..assets/icons/menuIcon.png">
+            </div>  
+            <div id="title--header">
+                <img src="../assets/icons/logo--simplified.svg" id="brand--header" alt="teamfactorizacion">
+                <h1>Team Factorización</h1>
+            </div>
+            <div id="cont--header">
+                <nav id="nav--header">
+                    <ul id="list--header">
+                        <li class="item--nav"><a href="../../index.html">Inicio</a></li>
+                        <li class="item--nav"><a href="../JavaScript.html">JavaScript</a></li>
+                        <li class="item--nav"><a href="../JQuery.html">JQuery</a></li>
+                        <li class="item--nav"><a href="">Acerca de</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <div id="page--struct">
+    
+            <aside id="main--aside">
+                <a href="#callback"><div class="item--aside home">
+                    <h3>Ejecución ordenada</h3>
+                </div></a>
+                <a href="#detener-animaciones"><div class="item--aside home">
+                    <h3>Detener animaciones</h3>
+                </div></a>
+                <a href="#animaciones"><div class="item--aside home">
+                    <h3>Animaciones</h3>
+                </div></a>
+                <a href="#deslizamiento"><div class="item--aside home">
+                    <h3>Deslizamiento</h3>
+                </div></a>
+                <a href="#desvanecimiento"><div class="item--aside home">
+                    <h3>Desvanecimiento</h3>
+                </div></a>
+                <a href="#mostrar-ocultar"><div class="item--aside home">
+                    <h3>Mostrar y ocultar</h3>
+                </div></a>
+            </aside> 
+
+            <section>
+                <article class="main--article introduction">
+                    <div id="article--comment">
+                        <img src="../assets/icons/jqueryIcon.png" id="javascript--logo" class="img--article idk intro" alt="jquerylogo" style="filter: invert(1);">
+                        <div>
+                            <h1 id="high--title">JQuery</h1>
+                            <h2>Manipulación del DOM</h2>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="mostrar-ocultar">
+                    <h2>Manejo de CSS en JQuery</h2>
+                    <h4>26 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Método para manipular las propiedades CSS desde JQuery</p>
+                    <span id="article--sep"></span>
+
+                    <p>A través de un selector y la función CSS de JQuery, podemos cambiar la totalidad de los propiedades CSS:</p>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#cambiar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).css(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;background-color&quot;</span>,<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;black&quot;</span>)
+                            });
+                        });</code></pre>
+                    </div>
+                    <p>De esta manera se puede afectar más de una propiedad:</p>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#cambiar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).css({<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;background-color&quot;</span>:<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;black&quot;</span>, <span style="color:rgb(187, 204, 238); font-weight:400;">&quot;color&quot;</span>:<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;white&quot;</span>})
+                            });
+                        });</code></pre>
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="mostrar-ocultar">
+                    <h2>Manejo de clases en elementos del DOM</h2>
+                    <h4>26 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Método para agregar y remover clases a elementos del DOM</p>
+                    <span id="article--sep"></span>
+
+                    <p>En JQuery tenemos diferente métodos para conocer el qué hacer con un elemento del DOM y sus clases</p>
+                    <table>
+                        <tbody> 
+                            <thead>
+                                <td>Sintaxis</td>
+                                <td>Evento</td>
+                            </thead>
+                            <tr>
+                                <td>addClass()</td>
+                                <td>Agrega una o más clases a los elementos seleccionados.</td>
+                            </tr>
+                            <tr>
+                                <td>removeClass()</td>
+                                <td>Remove una o más clases a los elementos seleccionados.</td>
+                            </tr>
+                            <tr>
+                                <td>toggleClass()</td>
+                                <td>Alterna la disposición de las clases agregadas</td>
+                            </tr>
+                            <tr>
+                                <td>css()</td>
+                                <td>Configura o retorna los atributos de estilo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h3>addClass() & removeClass()</h3>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#poner&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).addClass(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;cajaran&quot;</span>)
+                            });
+                            
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#quitar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).removeClass(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;cajaran&quot;</span>)
+                            });
+                        });</code></pre>
+                        <img src="../assets/anims/addremoveclass.gif" class="img--article">
+                    </div>
+                    <p class="center">De esta manera, se puede comprobar el funcionamiento de colocar y quitar una clase a un elemento del DOM</p>
+
+                    <h3>toggleClass()</h3>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).toggleClass(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;cajaran&quot;</span>)
+                            });
+                        });</code></pre>
+                        <img src="../assets/anims/toggleclassanim.gif" class="img--article">
+                    </div>
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <footer id="footer--area">
+            <img src="../assets/icons/logo--simplified.svg" id="brand--footer" alt="teamfactorizacion">
+            <h1>Team Factorización</h1>
+            <span>©2022 Team Factorización</span>
+            <div id="social--footer">
+                <a href="https://www.facebook.com/profile.php?id=100022601452185" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/44/44646.png" id="icon--social"></a>
+                <a href="https://twitter.com/DavidQuintR" target="_blank"><img src="https://cobaev37mecatepec.neocities.org/twitter.png" id="icon--social"></a>
+                <a href="https://www.instagram.com/ponce3201/" target="_blank"><img src="https://www.pngmart.com/files/21/Instagram-Logo-Silhoutte-PNG-Image.png" id="icon--social"></a>
+            </div>
+        </footer>
+    </body>
+</html>
