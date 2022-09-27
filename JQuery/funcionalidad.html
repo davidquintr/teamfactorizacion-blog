@@ -64,6 +64,72 @@
                 </article>
 
                 <article class="main--article" id="sintaxis-jquery">
+                    <h2>Deslizamiento</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">Se aprenderán técnicas para aplicar efecto de deslizamiento a la aparición a un elemento del DOM</p>
+                    <span id="article--sep"></span>
+                    
+                    <p>Este comando funciona de manera muy similar a como "fade", a diferencia de este último, lo que se hace es realizar una animación de aparición manipulando sus tamaños.<br>Podemos usar los siguientes:</p>
+                    <ul>
+                        <li>slideDown()</li>
+                        <li>slideUp()</li>
+                        <li>slideToggle()</li>
+                    </ul>
+
+                    <p>A diferencia de "fade", no existe una manera de hacer un punto medio entre su aparición o desaparición, en cualquier caso solo se podría desplegar y replegar.</p>
+
+                    <h3 class="center">Ejemplo:</h3>
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).slideToggle();</code></pre>
+                    </div>
+
+                    <h3>slideDown</h3>
+                    <p>Este funciona para desplegar un elemento que antes estaba invisible (con "display:none").</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                   $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).slideDown(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;slow&quot;</span>);
+                               });
+                           });</code></pre>
+                        <img src="../assets/anims/slidedownanims.gif" class="img--article">
+                    </div>
+                    
+                    <h3>slideUp</h3>
+                    <p>Este es la unificación de los dos anteriores, funciona para ambos estados.</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                   $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).slideToggle(<span style="color:rgb(187, 204, 238); font-weight:400;">1000</span>);
+                               });
+                           });</code></pre>
+                        <img src="../assets/anims/slideupanims.gif" class="img--article">
+                    </div>
+
+                    <h3>slideToggle</h3>
+                    <p>Este funciona para desplegar un elemento visible y lo alterna a "display:none" al terminar la animación.</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                               $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                   $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).slideUp(<span style="color:rgb(187, 204, 238); font-weight:400;">1000</span>);
+                               });
+                           });</code></pre>
+                        <img src="../assets/anims/slidetoggleanims.gif" class="img--article">
+                    </div>
+
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="sintaxis-jquery">
                     <h2>Desvanecimiento</h2>
                     <h4>24 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
