@@ -56,8 +56,6 @@
                     </div>
                 </article>
 
-
-                <!--PLANTILLA NORMAL-->
                 <article class="main--article" id="plantilla">
                     <!--TITULO, DATOS Y CONTENIDO DEL POST-->
                     <h2>Plantilla para todos</h2>
@@ -267,6 +265,382 @@
                     </div>
                 </article>
 
+                <article class="main--article" id="plantilla">
+                    <h2>Funciones</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <p id="article--desc" class="center">Una función en JavaScript representa un bloque de código designado para la realización de una tarea en específico. Esta tarea suele ser requerida en diversas partes del código.
+                        La función en javaScript se ejecuta en el momento en que se llama o invoca a la función en particular.                    <br> Estructura: 
+                    </p>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170);">function</span> <span style="color:rgb(255, 255, 255);">myFunction</span>(<span style="color:rgb(255, 255, 255);">p1, p2</span>) </span>{
+                         <span style="color:rgb(170, 119, 170);">return</span> p1 + p2;   <span style="color:rgb(153, 204, 102);">// La funcion (myFunction) retorna la suma de p1 y p2</span>
+                       }</code></pre>
+
+                    <p>
+                        En este ejemplo p1 y p2 funcionan como parámetros de la función, los parámetros van entre los paréntesis y separados por comas, son datos o variables provenientes de donde se invoca a la función, estos tienen que ser digitados en el momento en el que se llama a la función.
+                    </p>
+                    <h3>Invocación </h3>
+                    <p>
+                        El código dentro de la función será ejecutado cuando se llame a la función, puede ser invocada cuando:
+                    </p>
+                    <ul>
+                        <li>Ocurra un evento (se presione un botón).</li>
+                        <li>Se llame desde un código JavaScript.</li>
+                        <li>Sea invocado automáticamente.</li>
+                    </ul>
+                    <h3>Retorno</h3>
+                    <p>
+                        Cuando se llega a la sentencia de return, la función dejará de ejecutarse. Si la función fue invocada desde una declaración, JavaScript regresará al apartado del código que corresponde.
+                        Las funciones suelen proporcionar un valor de retorno. el valor de retorno es devuelto a donde es llamada la función aquí un ejemplo:                        
+                    </p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170);">let</span> x = multiplicar(<span style="color:rgb(187, 204, 238);">4</span>, <span style="color:rgb(187, 204, 238);">3</span>);   <span style="color:rgb(153, 204, 102);">// x recibira el valor de retorno de la funcion</span>
+                       
+                       <span style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170);">function</span> <span style="color:rgb(255, 255, 255);">myFunction</span>(<span style="color:rgb(255, 255, 255);">a, b</span>) </span>{
+                         <span style="color:rgb(170, 119, 170);">   return</span> a * b;<span style="color:rgb(153, 204, 102);">// Retorna el producto de a y b</span>
+                       }</code></pre>
+
+                    <h3>Función como valor de variable</h3>
+                    <p>
+                        La función también puede ser usada de la misma manera que se usan las variables, en todo tipos de fórmulas, asignaciones y cálculos.
+                    </p>
+
+                    <h3>Variables locales</h3>
+                    <p>
+                        Todas las variables declaradas dentro de una función serán locales. Solo se puede acceder a las variables locales dentro de la función. intentar usarlas fuera de la misma no corresponde a su valor de dentro.
+                    </p>
+
+                    <pre>
+                         <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(153, 204, 102);">// Aqui no se puede usar x</span>
+                         <span style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170);">function</span> <span style="color:rgb(255, 255, 255);">myFunction</span>(<span style="color:rgb(255, 255, 255);"></span>) </span>{
+                         <span style="color:rgb(170, 119, 170);">let</span> x = <span style="color:rgb(187, 204, 238);">15</span>;
+                         <span style="color:rgb(153, 204, 102);">// Aqui se puede usar x</span>
+                       }
+                       
+                    <span style="color:rgb(153, 204, 102);">// Aqui no se puede usar x</span></code></pre>
+
+
+                    <span id="article--sep"></span>
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                </article>
+
+
+
+                <article class="main--article" id="plantilla">
+                    <h2>Objetos</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <p id="article--desc" class="center">
+                        los objetos son un conjunto de variables. Un objeto Estudiante puede contener varias variables como Nombre, Apellido, Grado, Promedio. Para poder declarar esto se haria de la siguiente manera:                     
+                    </p>
+                        <pre>
+                            <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(255, 255, 255);">const</span> estudiante = {Nombre:<span style="color:rgb(187, 204, 238);">&quot;David&quot;</span>, Apellido:<span style="color:rgb(187, 204, 238);">&quot;Quintanilla&quot;</span>, promedio:<span style="color:rgb(187, 204, 238);">90</span>};</code></pre>
+                    <h3>Parametros</h3>
+                    <p>
+                        En este ejemplo p1 y p2 funcionan como parámetros de la función, los parámetros son datos o variables provenientes de donde se invoca a la función, estos tienen que ser digitados en el momento en el que se llama a la función.
+                    </p>
+
+                    <h3>Métodos de objetos</h3>
+                    <p>Los objetos también pueden contener métodos. Métodos son acciones que pueden ser realizadas por objetos. Métodos son guardados en propiedades como definiciones de funciones.</p>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170);">const</span> persona = {
+                         nombre   : <span style="color:rgb(187, 204, 238);">&quot;Julissa&quot;</span>,
+                         apellido : <span style="color:rgb(187, 204, 238);">&quot;Lopez&quot;</span>,
+                         id       : <span style="color:rgb(187, 204, 238);">202130011731</span>,
+                         fullname : function() {
+                           <span style="color:rgb(170, 119, 170);">return</span> <span style="color:rgb(170, 119, 170);">this</span>.nombre + <span style="color:rgb(187, 204, 238);">&quot; &quot;</span> + <span style="color:rgb(170, 119, 170);">this</span>.apellido;
+                         }
+                       };</code></pre>
+                    <h3>¿Que es this?</h3>
+                    <p>En JavaScript, esto se refiere al mismo objeto.</p>
+                    
+                    <span id="article--sep"></span>
+                    
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                </article>
+
+
+
+                <article class="main--article" id="plantilla">
+                    <h2>Eventos</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <p id="article--desc" class="center">
+                        Un evento HTML puede ser una acción que realiza el navegador o algo que hace un usuario.
+                        Estos son algunos ejemplos de eventos HTML:
+                    </p>
+                    <ul>
+                        <li>Una página web HTML ha terminado de cargarse</li>
+                        <li>Se cambió un campo de entrada HTML</li>
+                        <li>Se hizo clic en un botón HTML</li>
+                    </ul>
+                    <p>
+                        A menudo, cuando suceden los eventos, es posible que desee hacer algo. JavaScript le permite ejecutar código cuando se detectan eventos. HTML permite que los atributos del controlador de eventos, con código JavaScript, se agreguen a los elementos HTML.
+                    </p>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);">&lt;element <span style="color:rgb(170, 119, 170);">event</span>=<span style="color:rgb(187, 204, 238);">&#x27;some JavaScript&#x27;</span>&gt;</code></pre>
+                    <p>Ejemplo aplicado</p>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(255, 255, 255);">&lt;<span style="color:rgb(170, 119, 170);">button</span> <span style="color:rgb(255, 255, 255);">onclick</span>=<span style="color:rgb(187, 204, 238);">&quot;document.getElementById(&#x27;demo&#x27;).innerHTML = Date()&quot;</span>&gt;</span>The time is?<span style="color:rgb(255, 255, 255);">&lt;/<span style="color:rgb(170, 119, 170);">button</span>&gt;</span></code></pre>
+                    <h3>Los eventos en HTML mas usados</h3>
+                    <table>
+                        <thead>
+                            <td>Evento</</td>
+                            <td>Descripcion</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>onchange</td>
+                                <td>Un elemento HTML que ha sido cambiado</td>
+                            </tr>
+                            <tr>
+                                <td>onclick</td>
+                                <td>El usuario clickea un elemento HTML</td>
+                            </tr>
+                            <tr>
+                                <td>onmouseover</td>
+                                <td>El usuario mueve el mouse sobre un elemento HTML</td>
+                            </tr>
+                            <tr>
+                                <td>onmouseout</td>
+                                <td>El usuario aparta el mouse de un elemento HTML</td>
+                            </tr>
+                            <tr>
+                                <td>onkeydown</td>
+                                <td>El usuario presiona una tecla</td>
+                            </tr>
+                            <tr>
+                                <td>onload</td>
+                                <td>EL buscador ha finalizado de cargar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <span id="article--sep"></span>
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                </article>
+
+
+
+                <article class="main--article" id="plantilla">
+                    <h2>typeof</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <p id="article--desc" class="center">
+                        En JavaScript hay 5 diferentes tipos de datos que pueden contener valores:
+                    </p>
+                    <ul>
+                        <li>string</li>
+                        <li>number</li>
+                        <li>boolean</li>
+                        <li>object</li>
+                        <li>function</li>
+                    </ul>
+                    <p>
+                        hay 6 diferentes tipos de objetos:
+                    </p>
+                    <ul>
+                        <li>Object</li>
+                        <li>Date</li>
+                        <li>Array</li>
+                        <li>String</li>
+                        <li>Number</li>
+                        <li>Boolean</li>
+                    </ul>
+                    <p>
+                        El operador typeof se utiliza para encontrar el tipo de dato correspondiente a una determinada variable.
+                    </p>
+
+                    <h3>Tipos de retorno</h3>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170);">typeof</span> <span style="color:rgb(187, 204, 238);">&quot;Helena&quot;</span>                <span style="color:rgb(187, 204, 238);">//</span> Returns <span style="color:rgb(187, 204, 238);">&quot;string&quot;</span>
+                       <span style="color:rgb(170, 119, 170);">typeof</span> <span style="color:rgb(187, 204, 238);">3.14</span>                    // Returns <span style="color:rgb(187, 204, 238);">&quot;number&quot;</span>
+                       <span style="color:rgb(170, 119, 170);">typeof</span> <span style="color:rgb(185, 210, 172);">false</span>                   <span style="color:rgb(187, 204, 238);">//</span> Returns <span style="color:rgb(187, 204, 238);">&quot;boolean&quot;</span>
+                       <span style="color:rgb(170, 119, 170);">typeof</span> [<span style="color:rgb(187, 204, 238);">1</span>,<span style="color:rgb(187, 204, 238);">2</span>,<span style="color:rgb(187, 204, 238);">3</span>,<span style="color:rgb(187, 204, 238);">4</span>]               <span style="color:rgb(187, 204, 238);">//</span> Returns <span style="color:rgb(187, 204, 238);">&quot;object&quot;</span>
+                       <span style="color:rgb(170, 119, 170);">typeof</span> {name:<span style="color:rgb(187, 204, 238); ">&#x27;Lopez&#x27;</span>, age:<span style="color:rgb(187, 204, 238);">18</span>}  <span style="color:rgb(187, 204, 238);">//</span> Returns <span style="color:rgb(187, 204, 238);">&quot;object&quot;</span></code></pre>
+                    
+                    <h3>Según la naturaleza de los datos</h3>
+                    <p>
+                        Un dato primitivo representa el valor de un único dato sin ninguna propiedad adicional o método. el operador typeof muestra estos siendo: string, number, boolean, undefined.
+                        Un dato complejo representa los valores de diferentes datos agrupados, al conjunto de datos se le denomina objeto, no importa si es Object, array o null. solo cuando es function devuelve el valor anónimo.
+                    </p>
+
+                    <h3>Undefined y Null</h3>
+                    <p>
+                        Aunque ambos representan algo similar como es la ausencia de datos específicos, es muy importante evitar confundir o mezclar sus significados. la propiedad typeof de una variable declarada pero sin darle un valor será undefined, para que otra tenga la propiedad  null tiene que ser declarada con ese “valor”.
+                    </p>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(170, 119, 170);">typeof</span> <span style="color:rgb(185, 210, 172);">undefined</span>           <span style="color:rgb(153, 204, 102);">// undefined</span>
+                       <span style="color:rgb(170, 119, 170);">typeof</span> <span style="color:rgb(185, 210, 172);">null</span>                <span style="color:rgb(153, 204, 102);">// object</span></code></pre>
+                    
+                    <h3>Operador instanceof</h3>
+                    <p>
+                        El operador instanceof retorna verdadero si un objeto es una instancia del objeto especificado.
+                    </p>
+                    <span id="article--sep"></span>
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                </article>
+
+
+
+                <article class="main--article" id="plantilla">
+                    <h2>Métodos de String</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <p id="article--desc" class="center">
+                        Los valores primitivos como “David Parrales” no suelen tener propiedades o métodos porque estos no son objetos. Sin embargo, en JavaScript los métodos y propiedades no están restringidos para los datos primitivos, porque JS los trata como objetos a la hora de ejecutar métodos y propiedades.
+                    </p>
+                    
+                    <h3>String Length</h3>
+                    <p>
+                        La propiedad length devuelve el tamaño de un string. Un ejemplo de esto podría ser:
+                    </p>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(221, 68, 0); font-weight:400;">let</span> txt = <span style="color:rgb(187, 204, 238);">&quot;Te quiero mucho Henry Cavill&quot;</span>;
+                       <span style="color:rgb(221, 68, 0);">let</span> length = txt.length;</code></pre>
+                    
+                    <h3>String slice</h3>
+                    <p>
+                        slice() extrae una parte específica del string y retorna el pedazo extraído como un nuevo string. El método requiere de 2 parámetros: La posición del carácter de inicio y la posición del carácter como marca final (Sin incluir a este mismo). Un ejemplo de su uso podría ser:
+                    </p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(255, 255, 255);">let</span> fruits = <span style="color:rgb(187, 204, 238);">&quot;Apple, Banana, Kiwi&quot;</span>;
+                       <span style="color:rgb(255, 255, 255);">let</span> part = fruits.slice(<span style="color:rgb(187, 204, 238);">7</span>, <span style="color:rgb(187, 204, 238);">13</span>);   //retorna <span style="color:rgb(187, 204, 238);">&quot;Banana&quot;</span></code></pre>
+
+                    <h3>String substring<h3>
+                    <p>
+                        Es similar a slice() pero la diferencia es que los valores de inicio y final menores que 0 son tratados como 0 en substring(). Si omites el segundo parámetro retornara lo que falte del string.
+                    </p>
+
+                    <h3>String substr</h3>
+                    <p>
+                        Es similar a slice(), la diferencia recae en que el segundo parámetro de substr() representa el tamaño del fragmento extraído del string.
+                    </p>
+
+                    <h3>Reemplazar contenido</h3>
+                    <p>
+                        El método replace(), como su nombre indica, reemplaza un fragmento del string por otro valor:
+                    </p>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(221, 68, 0);">let</span> texto = <span style="color:rgb(187, 204, 238);">&quot;Temporada de patos!&quot;</span>;
+                       <span style="color:rgb(221, 68, 0);">let</span> nueTexto = texto.replace(<span style="color:rgb(187, 204, 238);">&quot;patos&quot;</span>, <span style="color:rgb(187, 204, 238);">&quot;conejos&quot;</span>);</code></pre>
+                    
+                    <h3>Convertir a mayúscula o minúscula</h3>   
+                    <p>
+                        Un string es convertido a mayúsculas al utilizar el método toUpperCase(). 
+                        Un string es convertido a minúsculas al utilizar el método toLowerCase().
+                    </p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(221, 68, 0);">let</span> texto = <span style="color:rgb(187, 204, 238);">&quot;Hello World!&quot;</span>;
+                       <span style="color:rgb(221, 68, 0);">let</span> textoEnMayus = texto.toUpperCase();</code></pre>
+
+                    <h3>String concat</h3>
+                    <p>
+                        concat() une 2 o más strings. Puede ser usado en lugar de los operadores de suma.
+                    </p>
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(255, 255, 255);">texto</span> = <span style="color:rgb(187, 204, 238);">&quot;Hola&quot;</span> + <span style="color:rgb(187, 204, 238);">&quot; &quot;</span> + <span style="color:rgb(187, 204, 238);">&quot;Mundo!&quot;</span><span style="color:rgb(153, 204, 102);">;</span>
+                       <span style="color:rgb(255, 255, 255);">texto</span> = <span style="color:rgb(187, 204, 238);">&quot;Hola&quot;</span>.concat(<span style="color:rgb(187, 204, 238);">&quot; &quot;</span>, <span style="color:rgb(187, 204, 238);">&quot;Mundo!&quot;</span>)<span style="color:rgb(153, 204, 102);">;</span></code></pre>
+                    
+                    <p>(Estas 2 lineas de codigo hacen lo mismo)</p>
+                    
+                    <h3>Remover espacios en blanco</h3>
+                    <p>El método trim() remueve los espacios en blanco de todo el string.
+                        El método trimStart() remueve los espacios en blanco al principio del string.
+                        El método trimEnd() remueve los espacios en blanco al final del string.
+                        </p>
+
+                    <h3>String padding</h3>
+                    <p>
+                        El método padStart() sirve para rellenar un string con otro string, requiere de 2 parámetros uno según la cantidad de veces que quiere rellenar con el string y el otro parametro seria el string en sí mismo que desea agregar. También está padEnd() que sería lo mismo solo que en vez de ser al principio es al final del string.
+                    </p>
+
+                    <h3>Extraer un carácter</h3>
+                    <p>
+                        El método charAt() devuelve el carácter correspondiente al índice, según el parámetro fijado en la función.
+                    </p>
+
+                    <h3>Convertir a array<h3>
+                    <p>
+                        Un string puede convertirse en un array utilizando el método split().
+                    </p>
+                       <span id="article--sep"></span>
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                </article>
+
+
+
+                <article class="main--article" id="plantilla">
+                    <h2>String Search</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <h3>Posición con índice</h3>
+                    <p id="article--desc" class="center">
+                        El método indexOf() devuelve la posición del primer carácter de un texto específico en un string.
+                    </p>
+
+                    <pre>
+                        <code id="htmlViewer" style="color:rgb(255, 255, 255);"><span style="color:rgb(221, 68, 0);">let</span> carta = <span style="color:rgb(187, 204, 238);">&quot;Amo las verduras!&quot;</span>;
+                       carta.indexOf(<span style="color:rgb(187, 204, 238);">&quot;verduras&quot;</span>);</code></pre>
+                    <p>
+                        El método lastIndexOf() retorna la posición del último carácter de un texto específico en un string. Ambos devuelven -1 si el texto no es encontrado en el string.
+                    </p>
+                    
+                    <p>
+                        El método search() busca un string para un valor especificado y retorna la posición que concuerde con el seleccionado. Similar al indexOf() sin embargo este no puede tomar una segunda posición para empezar como argumento.
+                    </p>
+
+                    <h3>String match</h3>
+                    <p>
+                        El método match() busca un string dentro de otro string que concuerde con el expresado en el parámetro y retorna lo que encuentre como un arreglo.
+                    </p>
+                    
+                    <h3>String includes</h3>
+                    <p>
+                        El método includes() retorna verdadero o falso dependiendo si un string contiene un valor especificado.
+                    </p>
+
+                    <h3>Según el carácter</h3>
+                    <p>
+                        El método startsWith() retorna verdadero o falso dependiendo si el string empieza con el carácter especificado. El método endsWith() retorna verdadero o falso dependiendo si el string termina con el carácter especificado.
+                    </p>
+                    
+                    <span id="article--sep"></span>
+                    <div id="article--author">
+                        <img src="../assets/images/erick.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Erick González Gallegos</h4>
+                        </div>
+                    </div>
+                </article>
             </section>
         </div>
 
