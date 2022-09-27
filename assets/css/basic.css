@@ -257,14 +257,19 @@ article{
     }
 
     section{
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     article{
         width: auto;
         max-width: 90%;
+    }
+
+    #page-struct{
+        align-items: center;
+
     }
       
 }
