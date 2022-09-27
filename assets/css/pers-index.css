@@ -5,6 +5,7 @@
 .introduction{
     display: flex;
     background-color: #5086c1;
+    width: 90%;
     justify-content: center;
     margin-bottom: 0;
     height: 300px;
@@ -18,17 +19,13 @@
     width: 100px;
 }
 
-section{
-    width: 90%;
-}
-
 .not-all{
     display: flex;
     flex-direction: column;
 }
 
 .not-all, #article--sep{
-    width: 70%;       
+    width: 80%;       
 }
 
 .img--article{
@@ -126,4 +123,19 @@ section{
 #cg--color{
     margin: 5px;
     color: #c1eaff;
+}
+
+.item--aside{
+    align-items: center;
+}
+
+@media screen and (max-width: 990px) {
+
+    #high--title{
+        font-size: 45px;
+    }
+
+    #article--comment > div > p{
+        font-size: 25px;
+    }
 }

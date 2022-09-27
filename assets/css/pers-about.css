@@ -1,0 +1,33 @@
+#main--aside{
+    display: none;
+}
+
+.introduction{
+    display: flex;
+    background-color: #5086c1;
+    width: 90%;
+    justify-content: center;
+    margin-bottom: 0;
+    height: 150px;
+}
+
+#cg--color{
+    margin: 5px;
+    color: #c1eaff;
+}
+
+#profile--author{
+    width: 192px;
+    height: 192px;
+}
+
+@media screen and (max-width: 990px) {
+
+    #high--title{
+        font-size: 45px;
+    }
+
+    #article--comment > div > p{
+        font-size: 25px;
+    }
+}

@@ -71,7 +71,7 @@ article{
     display: flex;
     align-items: center;
     font-size: 18px;
-    gap: 100px;
+    gap: 75px;
 }
 
 .item--nav > a{
@@ -230,8 +230,12 @@ article{
         flex-direction: column;
     }
 
+    #main--header{
+        flex-direction: column;
+    }
+
     #main--aside{
-        top: 84px;
+        top: 146px;
         flex-direction:row;
         overflow-x: auto;
     }
@@ -240,8 +244,16 @@ article{
         min-width: 200px;
     }
 
+    .item--aside > h3{
+        font-size: 20px;
+    }
+
     #list--header{
         gap: 50px;
+    }
+
+    .item--nav > a{
+        font-size: 24px;
     }
 
     section{
