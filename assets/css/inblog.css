@@ -180,10 +180,14 @@ tr > td:first-child{
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 450px) {
     .main--article{
         margin: 0;
         margin-top: 15px;
         margin-bottom: 15px;
+    }
+
+    .item--aside > h3{
+        font-size: 12px;
     }
 }

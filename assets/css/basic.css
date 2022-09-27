@@ -226,17 +226,6 @@ article{
     width: 250px;
 }
 
-@media screen and (max-width: 450px) {
-    #title--header{
-        gap: 0;
-        flex-direction: column;
-    }
-
-    #title--header > h1{
-        margin: 0;
-    }
-}
-
 @media screen and (max-width: 990px) {
 
     #page--struct{
@@ -248,7 +237,7 @@ article{
     }
 
     #main--aside{
-        top: 147px;
+        top: 145px;
         flex-direction:row;
         overflow-x: auto;
     }
@@ -275,4 +264,24 @@ article{
         align-items: center;
     }
       
+}
+
+
+@media screen and (max-width: 450px) {
+    #main--aside{
+        top:167px;
+    }
+    
+    #title--header{
+        gap: 0;
+        flex-direction: column;
+    }
+
+    #title--header > h1{
+        margin: 0;
+    }
+
+    .item--aside{
+        height: 32px;
+    }
 }
