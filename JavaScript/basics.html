@@ -6,7 +6,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
-        <title>Team Factorización - JavaScript</title>
+        <title>JavaScript - Aspectos esenciales</title>
         <link rel="icon" href="/assets/icons/logo--simplified.svg">
     </head>
 
@@ -26,7 +26,7 @@
                         <li class="item--nav"><a href="../../index.html">Inicio</a></li>
                         <li class="item--nav"><a href="../JavaScript.html">JavaScript</a></li>
                         <li class="item--nav"><a href="../JQuery.html">JQuery</a></li>
-                        <li class="item--nav"><a href="">Acerca de</a></li>
+                        <li class="item--nav"><a href="acerca-de.html">Acerca de</a></li>
                     </ul>
                 </nav>
             </div>
@@ -34,13 +34,36 @@
         </header>
         
         <div id="page--struct">
-            
             <aside id="main--aside">
-                <a href="#article--author"><div class="item--aside home">
-                    <h3>Autores</h3>
+                <a href="#sintaxisjs"><div class="item--aside home">
+                    <h3>Sintaxis JS</h3>
                 </div></a>
-                <a href="#plantilla"><div class="item--aside home">
-                    <h3>1. Introducción JavaScript</h3>
+                <a href="#declaraciones"><div class="item--aside home">
+                    <h3>Declaraciones</h3>
+                </div></a>
+                <a href="#output"><div class="item--aside home">
+                    <h3>Output</h3>
+                </div></a>
+                <a href="#cambiar-cont-js"><div class="item--aside home">
+                    <h3>Cambiar contenido HTML con JS</h3>
+                </div></a>
+                <a href="#funciones"><div class="item--aside home">
+                    <h3>Funciones</h3>
+                </div></a>
+                <a href="#objetos"><div class="item--aside home">
+                    <h3>Objetos</h3>
+                </div></a>
+                <a href="#eventos"><div class="item--aside home">
+                    <h3>Eventos</h3>
+                </div></a>
+                <a href="#typeof"><div class="item--aside home">
+                    <h3>TypeOf</h3>
+                </div></a>
+                <a href="#metodos-string"><div class="item--aside home">
+                    <h3>Métodos de String</h3>
+                </div></a>
+                <a href="#string-search"><div class="item--aside home">
+                    <h3>String Search</h3>
                 </div></a>
                 
             </aside> 
@@ -51,26 +74,26 @@
                         <img src="../assets/icons/javascriptIcon.png" id="javascript--logo" class="img--article idk intro" alt="javascriptlogo">
                         <div>
                             <h1 id="high--title">JavaScript</h1>
-                            <h2>Aspectos escenciales de JavaScript</h2>
+                            <h2>Aspectos esenciales de JavaScript</h2>
                         </div>
                     </div>
                 </article>
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="sintaxisjs">
                     <!--TITULO, DATOS Y CONTENIDO DEL POST-->
-                    <h2>Plantilla para todos</h2>
+                    <h2>Sintaxis de JS</h2>
                     <h4>17 de Septiembre de 2022</h4>
-                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <img src="../assets/images/bannersyntaxjs.png" class="topimg--article dino">
                     <p id="article--desc" class="center">Sintaxis de JavaScript </p>
                     <span id="article--sep"></span>
                     <p>Cuando se trata de JavaScript, este se define en 2 tipos de valores, literales y variables.</p>
 
                     <p>Para los valores literales las 2 reglas que siempre se tienen que tener en cuenta son: los numeros se escriben con o sin decimal y que los strings son textos escritos entre comillas dobles o simples</p>
                     <pre><code id="htmlViewer" style="color:rgb(140, 34, 189)">
-24.50
-50
-<span style="color:rgb(27, 212, 67); font-weight:400;">&quot;Riuske&quot;</span>
-<span style="color:rgb(21, 211, 31); font-weight:400;">&#x27;Erick&#x27;</span></code></pre>
+                    24.50
+                    50
+                    <span style="color:rgb(27, 212, 67); font-weight:400;">&quot;Riuske&quot;</span>
+                    <span style="color:rgb(21, 211, 31); font-weight:400;">&#x27;Erick&#x27;</span></code></pre>
 
                     <p>En el caso de las variables estan se usan para almacenar datos. JavaScript usa las palabras claves var, let y const para declarar variables, el "=" es para asignar valores.</p>
 
@@ -114,10 +137,10 @@
                         </div>
                 </article>
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="declaraciones">
                     <h2>JavaScript Declaraciones</h2>
                     <h4>23 de Septiembre de 2022</h4>
-                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <img src="../assets/images/bannersyntaxjs.png" class="topimg--article dino">
                     <p id="article--desc" class="center">Descripción de lo que se tiene que tener en cuenta a la hora de hacer declaraciones</p>
                     <span id="article--sep"></span>
 
@@ -196,10 +219,10 @@
 
                 </article>
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="output">
                     <h2>JavaScript Output</h2>
                     <h4>24 de Septiembre de 2022</h4>
-                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <img src="../assets/images/bannersyntaxjs.png" class="topimg--article dino">
                     <p id="article--desc" class="center">JavaScript despliega datos de diferentes maneras</p>
                     <span id="article--sep"></span>
 
@@ -235,10 +258,10 @@
                 </article>
 
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="cambiar-cont-js">
                     <h2>Cambiar contenido HTML con JavaScript</h2>
                     <h4>23 de Septiembre de 2022</h4>
-                    <img src="../assets/images/cel.png" class="topimg--article dino">
+                    <img src="../assets/images/bannersyntaxjs.png" class="topimg--article dino">
                     <p id="article--desc" class="center">Etiquetas para cambiar contenido en HTML</p>
                     <span id="article--sep"></span>
 
@@ -265,7 +288,7 @@
                     </div>
                 </article>
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="funciones">
                     <h2>Funciones</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <p id="article--desc" class="center">Una función en JavaScript representa un bloque de código designado para la realización de una tarea en específico. Esta tarea suele ser requerida en diversas partes del código.
@@ -333,7 +356,7 @@
 
 
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="objetos">
                     <h2>Objetos</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <p id="article--desc" class="center">
@@ -373,7 +396,7 @@
 
 
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="eventos">
                     <h2>Eventos</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <p id="article--desc" class="center">
@@ -438,7 +461,7 @@
 
 
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="typeof">
                     <h2>typeof</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <p id="article--desc" class="center">
@@ -504,7 +527,7 @@
 
 
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="metodos-string">
                     <h2>Métodos de String</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <p id="article--desc" class="center">
@@ -598,7 +621,7 @@
 
 
 
-                <article class="main--article" id="plantilla">
+                <article class="main--article" id="string-search">
                     <h2>String Search</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <h3>Posición con índice</h3>
