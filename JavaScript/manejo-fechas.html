@@ -143,33 +143,68 @@
                 </article>
 
                 <article class="main--article" id="plantilla">
-                    <h2>JavaScript Output</h2>
-                    <h4>24 de Septiembre de 2022</h4>
+                    <h2>Metodos Get Date</h2>
+                    <h4>25 de Septiembre de 2022</h4>
                     <img src="../assets/images/cel.png" class="topimg--article dino">
-                    <p id="article--desc" class="center">JavaScript despliega datos de diferentes maneras</p>
+                    <p id="article--desc" class="center">Metedos utilizables para conseguir información de un objeto fecha</p>
                     <span id="article--sep"></span>
 
-                    <p>JavaScript Output define las formas para mostrar la salida de un codigo. La salida puede mostrarse de cuatro maneras distintas.</p>
+                    <table>
+                        <tbody>
+                            <thead>
+                                <td>Tipo</td>
+                                <td>Descripción</td>
+                                <td>Sintaxis</td>
+                            </thead>
+                            <tr>
+                                <td>getFullYear()</td>
+                                <td>Obtiene el año como número de 4 dígitos(YYYY)</td>
+                                <td>Const year = new Date();     year.getFullYear();</td>
+                            </tr>
 
-                    <p>innerHTML: Se utiliza para acceder a un elemento HTML.</p>
+                            <tr>
+                                <td>getMonth()</td>
+                                <td>Obtiene el mes en número del 0 al 11</td>
+                                <td>Const mes = new Date();     mes.getMonth();</td>
+                            </tr>
 
-                    <pre><code id="htmlViewer" style="color:rgb(245, 244, 244)"><span style="color:rgb(49, 165, 231); font-weight:400;">document</span>.getElementById(<span style="color:rgb(238, 199, 28); font-weight:400;">&quot;demo&quot;</span>).innerHTML = <span style="color:rgb(34, 231, 83); font-weight:400;">&quot;lo digo&quot;</span>;</code></pre>
+                            <tr>
+                                <td>getDate();</td>
+                                <td>Obtiene el dia en núnmero del 1 al 31</td>
+                                <td>Const fecha = new Date();     fecha.getDate();</td>
+                            </tr>
 
-                    <p>document.write(): Se utiliza principalmente para propositos de prueba. En caso de que se utilice document.write() despues de un HTML, todos los HTML que existen se borraran.</p>
+                            <tr>
+                                <td>getHours();</td>
+                                <td>retorna la hora de una fecha como número del 0 al 23</td>
+                                <td>Const hora = new Date();     hora.getHours();</td>
+                            </tr>
 
-                    <pre><code id="htmlViewer" style="color:rgb(243, 162, 41)"><span style="color:rgb(52, 227, 233); font-weight:400;">document</span>.write(elemento);</code></pre>
+                            <tr>
+                                <td>getMinutes();</td>
+                                <td>Retorna los minutos de una fecha como número del 0 al 59</td>
+                                <td>Const minutos = new Date();     minutos.getMinutes();</td>
+                            </tr>
 
-                    <p>window.alert(): muestra el contenido en una caja de alerta. Cabe aclarar que la palabra "window" se puede saltar al ser un objeto de alcance global.</p>
+                            <tr>
+                                <td>getSeconds();</td>
+                                <td>Retorna los segundos de una fecha como número del 0 al 59</td>
+                                <td>Const segundos = new Date();     dia.getSeconds();</td>
+                            </tr>
 
-                    <pre>
-                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(216, 32, 32); font-weight:400;">window</span>.alert(<span style="color:rgb(56, 216, 34); font-weight:400;">&quot;Alerta de prueba&quot;</span>);</code></pre>
+                            <tr>
+                                <td>getMiliseconds();</td>
+                                <td>Retorna los milisegundos de una fecha como número del 0 al 999</td>
+                                <td>Const milisegundos = new Date();     milisegundos.getMiliseconds();</td>
+                            </tr>
 
-                    <p>console.log(): Se ocupa para fines de depuración.</p>
-
-                    <pre>
-                        <code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(197, 17, 77); font-weight:700;">&lt;script&gt;</span>
-                               <span style="color:rgb(230, 226, 43); font-weight:700;">console</span>.log(<span style="color:rgb(46, 195, 221); font-weight:400;">20</span>+<span style="color:rgb(39, 220, 226); font-weight:400;">3</span>);
-                           <span style="color:rgb(168, 14, 91); font-weight:700;">&lt;/script&gt;</span></code></pre>
+                            <tr>
+                                <td>getDay();</td>
+                                <td>Retorna el dia de la semana como número del 0 al 6</td>
+                                <td>Const dia = new Date();     dia.getDay();</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                            <div id="article--author" class="riuske">
                             <img src="../assets/images/riuske.png" id="profile--author">
@@ -182,31 +217,64 @@
 
 
                 <article class="main--article" id="plantilla">
-                    <h2>Cambiar contenido HTML con JavaScript</h2>
-                    <h4>23 de Septiembre de 2022</h4>
+                    <h2>Metodos set Date</h2>
+                    <h4>25 de Septiembre de 2022</h4>
                     <img src="../assets/images/cel.png" class="topimg--article dino">
-                    <p id="article--desc" class="center">Etiquetas para cambiar contenido en HTML</p>
+                    <p id="article--desc" class="center"></p>
                     <span id="article--sep"></span>
 
                     
-                    <p>Usualmente el contenido de HTML se cambia con tags como p, span, etc. Sin embargo en JavaScript se utilizan lo que son los metodos DOM que son los que tienen acceso a los tags HTML.</p><br>
-                    <p>Dentro de estos metodos tenemos getElementById() el cual retorna un elemento objeto que esta representando un elemento HTML con un id que combine con el objeto especifico.</p>
+                    <table>
+                        <tbody>
+                            <thead>
+                                <td>Tipo</td>
+                                <td>Descripción</td>
+                                <td>Sintaxis</td>
+                            </thead>
+                            <tr>
+                                <td>setFullYear()</td>
+                                <td>Establece el año como número</td>
+                                <td>Const year = new Date();     year.setFullYear(2005);</td>
+                            </tr>
 
-                    <pre><code id="htmlViewer" style="color:rgb(226, 226, 226)"><span style="color:rgb(10, 177, 46); font-weight:400;">document</span>.getElementById(<span style="color:rgb(167, 11, 11); font-weight:400;">&quot;cambiar&quot;</span>).innerHTML = <span style="color:rgb(184, 20, 20); font-weight:400;">&quot;HTML JavaScript&quot;</span>;</code></pre>
-                    
-                    <p>Luego esta la etiqueta getElementByTagName que similar a como funciona getElementById, solo que retorna elementos con nombres de etiquetas parecidos<p>
-                    
-                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(232, 255, 25); font-weight:700;">let</span> elementos = <span style="color:rgb(132, 236, 28); font-weight:400;">document</span>.getElementsByTagName(nombreTag);</code></pre>
+                            <tr>
+                                <td>setMonth()</td>
+                                <td>Establece el mes de una fecha del 0 al 11</td>
+                                <td>Const mes = new Date();     mes.setMonth(2);</td>
+                            </tr>
 
-                    <p>Tambien existe la etiqueta getElementByClassName  que devuelve una lista de los elementos con el nodo especifico que contiene el nombre de la clase.</p>
+                            <tr>
+                                <td>setDate();</td>
+                                <td>Establece el dia de una fecha del 1 al 31</td>
+                                <td>Const fecha = new Date();     fecha.setDate(25);</td>
+                            </tr>
 
-                    <pre><code id="htmlViewer" style="color:rgb(255, 255, 255)"><span style="color:rgb(255, 251, 44); font-weight:700;">let</span> elementos = <span style="color:rgb(156, 248, 63); font-weight:400;">document</span>.getElementsByClassName(nombres);</code></pre>
+                            <tr>
+                                <td>setHours();</td>
+                                <td>Establece las horas de una fecha del 0 al 23</td>
+                                <td>Const hora = new Date();     hora.setHours(14);</td>
+                            </tr>
 
-                    <h3 class="center">Asi se verá un subtitulo y un video insertado</h3>
-                    
-                    <div id="article--insertcent">
-                        <iframe width="854" height="480" src="https://www.youtube.com/embed/j2Xcv0k-RwQ" title="Ubuntu VS Fedora ¿Cual es MEJOR sistema operativo? // Español 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                            <tr>
+                                <td>setMinutes();</td>
+                                <td>Establece los minutos de una fecha del 0 al 59</td>
+                                <td>Const minutos = new Date();     minutos.setMinutes(58);</td>
+                            </tr>
+
+                            <tr>
+                                <td>setSeconds();</td>
+                                <td>Establece los segundos de una fecha del 0 al 59</td>
+                                <td>Const segundos = new Date();     dia.setSeconds(5);</td>
+                            </tr>
+
+                            <tr>
+                                <td>setTime();</td>
+                                <td>Establece la fecha y el tiempo al sumar o restar en miliseconds</td>
+                                <td>Const fechas = new Date();     fechas.setTime(120000000000);</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
 
                     <div id="article--author" class="riuske">
                         <img src="../assets/images/riuske.png" id="profile--author">
