@@ -157,6 +157,20 @@ tr > td:first-child{
         word-wrap: break-word;
     }
 
+    code{
+        word-wrap: break-word;
+    }
+
+    table{
+
+    }
+
+    th, td{
+        font-size: 12px;
+        word-wrap: break-word;
+        padding: 5px;
+    }
+
     #article--comment{
         flex-direction: column;
     }
