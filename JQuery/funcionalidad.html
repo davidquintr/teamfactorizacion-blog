@@ -64,6 +64,44 @@
                 </article>
 
                 <article class="main--article" id="sintaxis-jquery">
+                    <h2>Detener animaciones</h2>
+                    <h4>25 de Septiembre de 2022</h4>
+                    <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
+                    <p id="article--desc" class="center">En la ejecución de animaciones, se puede detener.</p>
+                    <span id="article--sep"></span>
+                    
+                    <p>En JQuery se pueden realizar las animaciones, pero si se necesita detener o interrumpir alguna de estas, se puede usar "stop()" como un método para interrumpir la animación.<br>Podemos apreciar la sintaxis:</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>).stop();</code></pre>
+                    </div>
+
+                    <p>En un ejemplo práctico, se puede hacer de la siguiente manera:</p>
+
+                    <div id="article--comment">
+                        <pre><code id="htmlViewer" style="color:rgb(255, 255, 255);">$(<span style="color:rgb(221, 68, 0); font-weight:400;">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#alternar&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                <span style="color:rgb(170, 119, 170); font-weight:400;">var</span> caja = $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>)
+                                caja.animate({<span style="color:rgb(255, 255, 255); font-weight:700;">fontSize</span>: <span style="color:rgb(187, 204, 238); font-weight:400;">&#x27;52px&#x27;</span>},<span style="color:rgb(187, 204, 238); font-weight:400;">3000</span>);
+                            });
+                            $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#detener&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;"><span style="color:rgb(170, 119, 170); font-weight:400;">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;"></span>)</span>{
+                                <span style="color:rgb(170, 119, 170); font-weight:400;">var</span> caja = $(<span style="color:rgb(187, 204, 238); font-weight:400;">&quot;#caja1&quot;</span>)
+                                caja.stop();
+                            });
+                        });</code></pre>
+                        <img src="../assets/anims/animstop.gif" class="img--article">
+                    </div>
+                    
+                    <div id="article--author">
+                        <img src="../assets/images/deibi.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Quintanilla Ruiz</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="main--article" id="sintaxis-jquery">
                     <h2>Animaciones</h2>
                     <h4>25 de Septiembre de 2022</h4>
                     <img src="../assets/images/bannersyntaxjquery.png" class="topimg--article dino">
