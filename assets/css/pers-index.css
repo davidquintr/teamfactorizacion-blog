@@ -137,10 +137,17 @@
 
     #high--title{
         font-size: 30px;
-
     }
 
     #article--comment > div > p{
         font-size: 25px;
+    }
+
+    #internal--element{
+        width: 280px;
+    }
+
+    #backforicon{
+        flex-direction: column;
     }
 }

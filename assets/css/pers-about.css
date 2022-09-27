@@ -24,10 +24,24 @@
 @media screen and (max-width: 990px) {
 
     #high--title{
-        font-size: 45px;
+        font-size: 20px;
     }
 
     #article--comment > div > p{
-        font-size: 25px;
+        font-size: 20px;
+    }
+
+    #article--author > div > span{
+        word-break: break-all;
+        font-size: 10px;
+    }
+
+    #article--author > div > h4{
+        font-size: 15px;
+    }
+
+    #profile--author{
+        width: 128px;
+        height: 128px;
     }
 }
