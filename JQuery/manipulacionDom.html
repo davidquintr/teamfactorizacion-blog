@@ -45,6 +45,10 @@
                 <a href="#metodoSet"><div class="item--aside home">
                     <h3>2. Métodos set()</h3>
                 </div></a>
+
+                <a href="#addElement"><div class="item--aside home">
+                    <h3>3. Métodos add()</h3>
+                </div></a>
             </aside> 
 
             <section>
@@ -247,6 +251,73 @@
                     
                 </article>
 
+
+                <!--POST METODO ADD-->
+                <article class="main--article" id="addElement">
+                    <!--TITULO, DATOS Y CONTENIDO DEL POST-->
+                    <h2>jQuery </h2>
+                    <h4>12 de Septiembre de 2022</h4>
+                    
+                    <p id="article--desc" class="center">
+                        Para agregar contenido en jQuery se utilizan cuatro métodos 
+                        <ol>
+                            <li><b>append()</b>: Inserta contenido al final del elemento seleccionado</li>
+                            <br>
+                            <li><b>prepend()</b>: Inserta contenido al principio de los elementos seleccionados</li>
+                            <br>
+                            <li><b>after()</b>: Inserta contenido después de los elmentos seleccionados</li>
+                            <br>
+                            <li><b>before()</b>: Inserta contenido antes de los elementos seleccionados</li>
+                        </ol>
+                    </p>
+                    <span id="article--sep"></span>
+
+                   <h2 class="center">Ejemplo de uso</h2> 
+                   <h3 class="center">HTML</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;"><span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;p1&quot;</span>&gt;</span>Texto<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">p</span>&gt;</span>
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span>
+                     <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>elmento<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">li</span>&gt;</span>
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">ol</span>&gt;</span>
+                   
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton1&quot;</span>&gt;</span>adjuntar texto<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                   <span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span> <span style="color:rgb(255, 255, 255); font-weight:700;background:rgba(0, 0, 0, 0);">id</span>=<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;boton2&quot;</span>&gt;</span>adjuntar elemento<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);">&lt;/<span style="color:rgb(170, 119, 170); font-weight:700;background:rgba(0, 0, 0, 0);">button</span>&gt;</span>
+                   
+                   </code></pre>
+                   <h3 class="center">CSS</h3>
+                   <pre>
+                    <code id="htmlViewer" style="color:rgb(255, 255, 255); font-weight:400;background-color:rgb(51, 51, 51);background:rgb(51, 51, 51);display:block;padding: .5em;">  $(<span style="color:rgb(221, 68, 0); font-weight:400;background:rgba(0, 0, 0, 0);">document</span>).ready(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                     
+                       $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton1&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                         $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#p1&quot;</span>).append(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;&lt;i&gt; Texto agregado&lt;/i&gt;&quot;</span>);
+                       });
+                     
+                       $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;#boton2&quot;</span>).click(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"><span style="color:rgb(170, 119, 170); font-weight:400;background:rgba(0, 0, 0, 0);">function</span>(<span style="color:rgb(255, 255, 255); font-weight:400;background:rgba(0, 0, 0, 0);"></span>)</span>{
+                         $(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;ol&quot;</span>).append(<span style="color:rgb(187, 204, 238); font-weight:400;background:rgba(0, 0, 0, 0);">&quot;&lt;li&gt;elemento agregado&lt;/li&gt;&quot;</span>);
+                       });
+                   
+                     
+                     });
+                   </code></pre>
+
+                    <!--AUTORES DEL POST-->
+                    <div id="article--author">
+                        <img src="../assets/images/ponce.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>David Parrales Ponce</h4>
+                        </div>
+                    </div>
+                    
+                    <div id="article--author" class="riuske">
+                        <img src="../assets/images/riuske.png" id="profile--author">
+                        <div>
+                            <span>Escrito por:</span>
+                            <h4>Riuske Nishime Robleto</h4>
+                        </div>
+                    </div>
+
+                </article>
 
             </section>
         </div>
