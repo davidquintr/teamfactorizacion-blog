@@ -237,18 +237,25 @@ article{
     }
 
     #main--aside{
-        top: 145px;
+        top: 108px;
         flex-direction:row;
         overflow-x: auto;
     }
 
     .item--aside{
         min-width: 200px;
+        height: 30px;
     }
 
     #list--header{
         gap: 25px;
+        margin: 10px;
     }
+
+    #title--header > h1{
+        margin: 10px;
+    }
+
     section{
         width: 100%;
         margin-left: 0;
@@ -273,22 +280,33 @@ article{
 
 @media screen and (max-width: 450px) {
     #main--aside{
-        top:151px;
+        top:44px;
     }
 
     #item--nav{
         font-size: 17px;
     }
 
-    
+    #main--header{
+        flex-direction: row;
+    }
+
+    #list--header{
+        margin: 10px;
+    }
+
+    #brand--header{
+        width: 32px;
+        height: 32px;
+    }
+
     #title--header{
         gap: 0;
         flex-direction: column;
     }
 
     #title--header > h1{
-        font-size: 20px;
-        margin: 0;
+        display: none;
     }
 
     .item--aside{

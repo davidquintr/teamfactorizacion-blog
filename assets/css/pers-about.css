@@ -27,12 +27,7 @@
         font-size: 20px;
     }
 
-    #article--comment > div > p{
-        font-size: 20px;
-    }
-
     #article--author > div > span{
-        word-break: break-all;
         font-size: 10px;
     }
 
